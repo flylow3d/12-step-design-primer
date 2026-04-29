@@ -1460,17 +1460,28 @@
   </div>
   <div class="slide-body">
     <div class="col-left">
-      <div class="section-label">Overview</div>
-      <div class="placeholder">[ Add Step 6 explanation text here ]</div>
+      <div class="section-label">Overview — Two Questions</div>
+      <ul>
+        <li><b>What</b> are all the parts of the system?</li>
+        <li><b>How</b> do the parts fit together (and perform FR0)?</li>
+      </ul>
+      <p>Detailed Design translates the <b>Logical Design</b> (Decomposition) into the <b>Physical Architecture</b>.</p>
+      <div class="section-label" style="margin-top:12px;">Step 6.1 — Derive the BOM</div>
+      <p>Derive Physical Architecture Components from the Decomposition; capture as a <b>Bill of Material (BOM)</b>. Components come from your <b>PSs</b> — one PS may yield multiple components.</p>
+      <p style="font-size:11px;color:#666;font-style:italic;">Example: a "toolbox" PS may include a socket wrench, 10/12 mm sockets, flat-head screwdriver, etc.</p>
     </div>
     <div class="col-right">
-      <div class="section-label">Detailed Design Example / Diagram</div>
-      <div class="placeholder">[ Add diagram, drawing, or table here ]</div>
+      <div class="section-label">Figure 1 — Detailed Design</div>
+      <img src="Images/Step 6 Fig 1.png" alt="Step 6 Detailed Design figure" style="width:100%;height:auto;max-height:440px;object-fit:contain;border:1px solid #ddd;border-radius:3px;margin-top:4px;">
     </div>
   </div>
   <div class="key-points">
     <div class="kp-label">Key Points</div>
-    <ul><li>[ Add key points here ]</li></ul>
+    <ul>
+      <li>Detailed Design translates Logical Design (Decomposition) into Physical Architecture.</li>
+      <li>Step 6.1 — Components are derived from the PSs and captured in a Bill of Material (BOM).</li>
+      <li>One PS may yield multiple components depending on level of decomposition.</li>
+    </ul>
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
@@ -1478,11 +1489,52 @@
   </div>
 </div>
 
-<!-- STEP 6 — SUB-SLIDE 2 -->
+<!-- STEP 6 — SUB-SLIDE 2: BOM EXAMPLE -->
 <div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 6 - Detailed Design</div></div><div class="step-badge">Step 6</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-header">
+    <div><div class="header-title">Step 6.1 — Bill of Material (BOM) Example</div></div>
+    <div class="step-badge">Step 6.1</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">BOM — Components Derived From PSs</div>
+      <p style="margin-bottom:8px;">Each row is a physical component traced from a PS in the Decomposition. Capture description, spec, quantity, and procurement status.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Component Description</th>
+            <th>Component Spec</th>
+            <th style="width:8%;">Qty</th>
+            <th style="width:10%;">Ordered?</th>
+            <th style="width:10%;">Received?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supply Connections</td>
+            <td>3/8&quot; compression on faucet, 1/2&quot; female NPT on supply</td>
+            <td>2</td>
+            <td>2</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Power Supply</td>
+            <td>110 VAC in, 12 VDC out, &gt;200 W out</td>
+            <td>1</td>
+            <td>1</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="key-points">
+    <div class="kp-label">Key Points</div>
+    <ul>
+      <li>The BOM lists every physical part needed; each row should trace back to a PS in the Decomposition.</li>
+      <li>Procurement status (Ordered?, Received?) is tracked directly in the BOM during build.</li>
+    </ul>
+  </div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 45</div></div>
 </div>
 

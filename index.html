@@ -1943,7 +1943,7 @@
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
-     SLIDE 52 — STEP 8: VERIFICATION TEST PLAN
+     SLIDE 53 — STEP 8: VERIFICATION TEST PLAN
 ══════════════════════════════════════════════════════════════ -->
 <div class="slide" id="slide-17">
   <div class="slide-header">
@@ -1954,17 +1954,31 @@
   </div>
   <div class="slide-body">
     <div class="col-left">
-      <div class="section-label">Overview</div>
-      <div class="placeholder">[ Add Step 8 explanation text here ]</div>
+      <div class="section-label">Verification — Did we build it right?</div>
+      <p style="margin-bottom:6px;">Two key questions:</p>
+      <ul>
+        <li>Did we build the product/system <b>correctly</b> &mdash; to the design specifications?</li>
+        <li>Does the design function according to the specification (<b>FRm</b>)?</li>
+      </ul>
+      <p style="margin-bottom:6px;">Verification is a set of activities that compares a system <b>as built</b> against the required characteristics and design specifications (specified requirements, design description, and the system itself).</p>
+      <div class="section-label" style="margin-top:10px;">Glossary</div>
+      <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Verification Requirement</b> &mdash; what characteristic of the system requires verification, tied to an FRm.</p>
+      <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Verification Event</b> &mdash; the specific event (test) that satisfies the requirement.</p>
+      <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Test Configuration</b> &mdash; the items, devices, software, and people required to run the test.</p>
+      <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Test Procedure</b> &mdash; the step-by-step process to conduct the verification event.</p>
     </div>
     <div class="col-right">
-      <div class="section-label">Verification Plan Table</div>
-      <div class="placeholder">[ Add test plan table or example here ]</div>
+      <div class="section-label">Verification Flow</div>
+      <img src="Images/Step 8 - Fig 1.png" alt="Step 8 Verification flow diagram" style="width:100%;object-fit:contain;object-position:top;border-radius:3px;margin-top:4px;">
     </div>
   </div>
   <div class="key-points">
     <div class="kp-label">Key Points</div>
-    <ul><li>[ Add key points here ]</li></ul>
+    <ul>
+      <li>Verification answers two questions: <b>Did we build it right?</b> and <b>Does it achieve the FRm's?</b></li>
+      <li>Verification compares the system <b>as built</b> to its design specifications &mdash; not to user needs (that's Validation, Step 9).</li>
+      <li>Each FRm gets a Verification Requirement, Event, Configuration, and Procedure.</li>
+    </ul>
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
@@ -1972,11 +1986,75 @@
   </div>
 </div>
 
-<!-- STEP 8 — SUB-SLIDE 2 -->
+<!-- STEP 8 — SUB-SLIDE 2: VERIFICATION EXAMPLE (FAUCET LEAK TEST) -->
 <div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 8 - Verification Test Plan</div></div><div class="step-badge">Step 8</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-header">
+    <div><div class="header-title">Step 8 — Verification Example: Faucet Leak Test</div></div>
+    <div class="step-badge">Step 8</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">Verification Plan — Worked Example</div>
+      <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr 0.7fr;gap:6px;font-size:12px;margin-top:4px;margin-bottom:8px;">
+        <div style="padding:6px 8px;background:#f4f4f4;border-radius:3px;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:10px;letter-spacing:0.6px;margin-bottom:3px;">FRm</div>
+          <div><b>FRm3.2a:</b> Maximize number of successful (leak-free) valve cycles.<br><b>Threshold:</b> &gt;20k cycles</div>
+        </div>
+        <div style="padding:6px 8px;background:#f4f4f4;border-radius:3px;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:10px;letter-spacing:0.6px;margin-bottom:3px;">Verification Requirement</div>
+          <div>Verify no water leaks from faucet.</div>
+        </div>
+        <div style="padding:6px 8px;background:#f4f4f4;border-radius:3px;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:10px;letter-spacing:0.6px;margin-bottom:3px;">Verification Event</div>
+          <div>Faucet Leak Test</div>
+        </div>
+        <div style="padding:6px 8px;background:#f4f4f4;border-radius:3px;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:10px;letter-spacing:0.6px;margin-bottom:3px;">Conducted By</div>
+          <div>Joe Smith</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1.6fr;gap:8px;flex:1;min-height:0;">
+        <div style="padding:8px 10px;background:#fdfaf4;border:1px solid #e8d4a8;border-radius:3px;font-size:12px;overflow:hidden;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:11px;letter-spacing:0.6px;margin-bottom:5px;">Test Configuration</div>
+          <ul style="margin:0;padding-left:16px;line-height:1.5;">
+            <li>Dual-Handle Faucet</li>
+            <li>360° Lighted Test Stand</li>
+            <li>Handle-Adjustment Robot</li>
+            <li>Handle-Gripping Fixture</li>
+            <li>Hot &amp; Cold Water Supply Lines</li>
+            <li>Water Colorizer</li>
+            <li>Leak-Test Operator</li>
+          </ul>
+        </div>
+        <div style="padding:8px 10px;background:#fdfaf4;border:1px solid #e8d4a8;border-radius:3px;font-size:12px;overflow:hidden;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:11px;letter-spacing:0.6px;margin-bottom:5px;">Test Procedure (Standard Work)</div>
+          <ol style="margin:0;padding-left:16px;line-height:1.6;font-size:13px;color:#333;">
+            <li>Mount faucet in leak test stand</li>
+            <li>Connect test supply lines</li>
+            <li>Activate colorizer</li>
+            <li>Test hot water leakage:
+              <ol type="a" style="margin-top:2px;padding-left:18px;line-height:1.6;font-size:13px;">
+                <li>Check leakage with faucet off (30 s, all angles); document status</li>
+                <li>Repeat 30 s inspection at 20%, 40%, 60%, 80%, and 100% flow rate</li>
+                <li>Robotically cycle 10k times (full-open &harr; full-closed)</li>
+                <li>Repeat incremental flow rate test at 10k cycles</li>
+                <li>Cycle 10k more times; repeat incremental flow rate test</li>
+              </ol>
+            </li>
+            <li>Repeat steps 4a&ndash;4e for cold water</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="key-points">
+    <div class="kp-label">Key Points</div>
+    <ul>
+      <li>Each FRm traces to a Verification Requirement &rarr; Event &rarr; Configuration &rarr; Procedure.</li>
+      <li>The Test Procedure is detailed enough that a different operator could repeat the test and reach the same results.</li>
+      <li>The Test Configuration enumerates <b>everything</b> needed to run the test: hardware, fixtures, software, and people.</li>
+    </ul>
+  </div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 54</div></div>
 </div>
 
@@ -2231,7 +2309,7 @@
   </div>
   <div class="np-children">
     <div class="np-child" data-slide="52" onclick="goToSlide(52)">Overview</div>
-    <div class="np-child" data-slide="53" onclick="goToSlide(53)">Part 2</div>
+    <div class="np-child" data-slide="53" onclick="goToSlide(53)">Verification Example</div>
   </div>
   <div class="np-item" data-slide="54" onclick="goToSlide(54)"><span class="snum">Step 9</span>Validation Test Plan</div>
   <div class="np-item" data-slide="55" onclick="goToSlide(55)"><span class="snum">Step 10</span>Build a High-Quality Solution</div>

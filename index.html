@@ -150,24 +150,40 @@
     flex: 1;
     padding: 16px 18px;
     border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
   }
   .col-right {
     flex: 1;
     padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
   }
   .col-full {
     flex: 1;
     padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  /* Direct-child images auto-shrink to fit available column height
+     (prevents bottom-cropping in standard/widescreen present modes). */
+  .col-left > img, .col-right > img, .col-full > img {
+    flex: 0 1 auto;
+    min-height: 0;
   }
 
   /* ── Content within columns ── */
   .section-label {
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: #CFB991;
-    font-weight: bold;
-    margin-bottom: 6px;
+    letter-spacing: 1.4px;
+    color: #5C4A21;
+    font-weight: 800;
+    margin-bottom: 7px;
   }
   .col-left p, .col-right p, .col-full p {
     font-size: 13px;
@@ -191,7 +207,7 @@
     background: #fdfaf4;
     padding: 20px;
     text-align: center;
-    color: #999;
+    color: #666;
     font-size: 12px;
     font-style: italic;
     min-height: 120px;
@@ -606,7 +622,7 @@
       Prof. David S. Cochran, Ph.D.<br>
       Joseph J. Smith
     </p>
-    <p style="color:#888; font-size:11px; text-align:center;">Version 0.1 · 2026-04-28</p>
+    <p style="color:#555; font-size:11px; text-align:center;">Version 0.1 · 2026-04-28</p>
   </div>
 
   <div class="slide-footer">
@@ -646,11 +662,11 @@
       <div class="toc-item" onclick="goToSlide(40)">Step 5 · Design and Process FMEA</div>
       <div class="toc-item" onclick="goToSlide(43)">Step 6 · Detailed Design</div>
       <div class="toc-item" onclick="goToSlide(45)">Step 7 · Design For X (DFX) Methods</div>
-      <div class="toc-item" onclick="goToSlide(51)">Step 8 · Verification Test Plan</div>
-      <div class="toc-item" onclick="goToSlide(53)">Step 9 · Validation Test Plan</div>
-      <div class="toc-item" onclick="goToSlide(54)">Step 10 · Build a High-Quality Solution</div>
-      <div class="toc-item" onclick="goToSlide(55)">Step 11 · Standard Work Instructions</div>
-      <div class="toc-item" onclick="goToSlide(59)">Step 12 · Verification, Validation, and Final Cost</div>
+      <div class="toc-item" onclick="goToSlide(52)">Step 8 · Verification Test Plan</div>
+      <div class="toc-item" onclick="goToSlide(54)">Step 9 · Validation Test Plan</div>
+      <div class="toc-item" onclick="goToSlide(55)">Step 10 · Build a High-Quality Solution</div>
+      <div class="toc-item" onclick="goToSlide(56)">Step 11 · Standard Work Instructions</div>
+      <div class="toc-item" onclick="goToSlide(60)">Step 12 · Verification, Validation, and Final Cost</div>
     </div>
   </div>
 
@@ -696,17 +712,26 @@
   </div>
   <div class="slide-body">
     <div class="col-left">
-      <div class="section-label">Overview</div>
-      <div class="placeholder">[ Add explanation text here ]</div>
+      <div class="section-label">The Four Aspects of a System</div>
+      <p style="margin-bottom:8px;"><b style="color:#5C4A21;">Work / Actions:</b> Standard Work &mdash; communicated and trained to use.</p>
+      <p style="margin-bottom:8px;"><b style="color:#5C4A21;">Structure:</b> Organization, Improvement, Reward/Compensation, and Defined Normal.</p>
+      <p style="margin-bottom:8px;"><b style="color:#5C4A21;">Thinking:</b> Logical Design &mdash; what is our design intention?</p>
+      <p style="margin-bottom:8px;"><b style="color:#5C4A21;">Tone:</b> Mindset, Attitude, Perspective.</p>
     </div>
     <div class="col-right">
-      <div class="section-label">Flame Model Diagram</div>
-      <div class="placeholder">[ Add flame model image here ]</div>
+      <div class="section-label">Flame Model of a System</div>
+      <img src="Images/Flame Model.png" alt="Flame Model of a System diagram" style="width:100%;max-height:370px;object-fit:contain;object-position:top;display:block;margin-top:4px;border-radius:3px;">
+      <p style="font-size:9px;color:#666;font-style:italic;margin-top:6px;">Source: Cochran, D. S. (2010). "Enterprise Engineering, Creating Sustainable Systems with Collective System Design &ndash; Part II," <i>The Journal of Reliability, Maintainability, Supportability in Systems Engineering</i>, Spring Journal. pp. 16&ndash;21.</p>
     </div>
   </div>
   <div class="key-points">
     <div class="kp-label">Key Points</div>
-    <ul><li>[ Add key points here ]</li></ul>
+    <ul>
+      <li>Poorly designed systems fail people &mdash; people are NOT the cause of system failures.</li>
+      <li>The goal is <b>collective</b> agreement on the design &mdash; not a "perfect" design in your eyes.</li>
+      <li>A well-functioning team comes first; only then can you reach a buildable, testable, and improvable solution.</li>
+      <li>All four aspects of a system must work together.</li>
+    </ul>
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
@@ -1460,19 +1485,53 @@
   </div>
   <div class="slide-body">
     <div class="col-left">
-      <div class="section-label">Overview — Two Questions</div>
-      <ul>
-        <li><b>What</b> are all the parts of the system?</li>
-        <li><b>How</b> do the parts fit together (and perform FR0)?</li>
-      </ul>
-      <p>Detailed Design translates the <b>Logical Design</b> (Decomposition) into the <b>Physical Architecture</b>.</p>
+      <div style="min-height:170px;">
+        <div class="section-label">Overview — Two Questions</div>
+        <ul>
+          <li><b>What</b> are all the parts of the system?</li>
+          <li><b>How</b> do the parts fit together (and perform FR0)?</li>
+        </ul>
+        <p>Detailed Design translates the <b>Logical Design</b> (Decomposition) into the <b>Physical Architecture</b>.</p>
+      </div>
       <div class="section-label" style="margin-top:12px;">Step 6.1 — Derive the BOM</div>
       <p>Derive Physical Architecture Components from the Decomposition; capture as a <b>Bill of Material (BOM)</b>. Components come from your <b>PSs</b> — one PS may yield multiple components.</p>
       <p style="font-size:11px;color:#666;font-style:italic;">Example: a "toolbox" PS may include a socket wrench, 10/12 mm sockets, flat-head screwdriver, etc.</p>
     </div>
     <div class="col-right">
-      <div class="section-label">Figure 1 — Detailed Design</div>
-      <img src="Images/Step 6 Fig 1.png" alt="Step 6 Detailed Design figure" style="width:100%;height:auto;max-height:440px;object-fit:contain;border:1px solid #ddd;border-radius:3px;margin-top:4px;">
+      <div style="height:170px;display:flex;flex-direction:column;">
+        <div class="section-label" style="margin-bottom:0;">Figure 1 — Detailed Design</div> <br>
+        <div style="flex:1;min-height:0;">
+          <img src="Images/Step 6 Fig 1.png" alt="Step 6 Detailed Design figure" style="width:100%;height:100%;object-fit:contain;object-position:top;border-radius:3px;">
+        </div>
+      </div>
+      <div class="section-label" style="margin-top:12px;">BOM Example</div>
+      <table style="font-size:10px;">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Spec</th>
+            <th style="width:8%;">Qty</th>
+            <th style="width:11%;">Ord?</th>
+            <th style="width:11%;">Recv?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supply Connections</td>
+            <td>3/8&quot; comp. on faucet, 1/2&quot; female NPT on supply</td>
+            <td>2</td>
+            <td>2</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Power Supply</td>
+            <td>110 VAC in, 12 VDC out, &gt;200 W</td>
+            <td>1</td>
+            <td>1</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
   <div class="key-points">
@@ -1489,50 +1548,29 @@
   </div>
 </div>
 
-<!-- STEP 6 — SUB-SLIDE 2: BOM EXAMPLE -->
+<!-- STEP 6.2 — COMMUNICATE THE PHYSICAL ARCHITECTURE -->
 <div class="slide">
   <div class="slide-header">
-    <div><div class="header-title">Step 6.1 — Bill of Material (BOM) Example</div></div>
-    <div class="step-badge">Step 6.1</div>
+    <div><div class="header-title">Step 6.2 — Communicate the Physical Architecture</div></div>
+    <div class="step-badge">Step 6.2</div>
   </div>
   <div class="slide-body">
     <div class="col-full">
-      <div class="section-label">BOM — Components Derived From PSs</div>
-      <p style="margin-bottom:8px;">Each row is a physical component traced from a PS in the Decomposition. Capture description, spec, quantity, and procurement status.</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Component Description</th>
-            <th>Component Spec</th>
-            <th style="width:8%;">Qty</th>
-            <th style="width:10%;">Ordered?</th>
-            <th style="width:10%;">Received?</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Supply Connections</td>
-            <td>3/8&quot; compression on faucet, 1/2&quot; female NPT on supply</td>
-            <td>2</td>
-            <td>2</td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Power Supply</td>
-            <td>110 VAC in, 12 VDC out, &gt;200 W out</td>
-            <td>1</td>
-            <td>1</td>
-            <td>No</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="section-label">Step 6.2 — Arrange the BOM Components</div>
+      <p>Determine what diagrams/methods are appropriate to communicate your design. Use these diagrams/methods to arrange the BOM components to communicate the physical architecture — <i>i.e., how do these components fit together to implement the PSs to achieve the FRs?</i></p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:8px;margin-top:6px;flex:1;min-height:0;">
+        <img src="Images/Step 6.2 Fig 1.png" alt="Step 6.2 Figure 1" style="width:100%;height:100%;min-height:0;object-fit:contain;border-radius:3px;">
+        <img src="Images/Step 6.2 Fig 2.png" alt="Step 6.2 Figure 2" style="width:100%;height:100%;min-height:0;object-fit:contain;border-radius:3px;">
+        <img src="Images/Step 6.2 Fig 3.png" alt="Step 6.2 Figure 3" style="width:100%;height:100%;min-height:0;object-fit:contain;border-radius:3px;">
+        <img src="Images/Step 6.2 Fig 4.png" alt="Step 6.2 Figure 4" style="width:100%;height:100%;min-height:0;object-fit:contain;border-radius:3px;">
+      </div>
     </div>
   </div>
   <div class="key-points">
     <div class="kp-label">Key Points</div>
     <ul>
-      <li>The BOM lists every physical part needed; each row should trace back to a PS in the Decomposition.</li>
-      <li>Procurement status (Ordered?, Received?) is tracked directly in the BOM during build.</li>
+      <li>Pick diagrams/methods that effectively communicate how the components fit together.</li>
+      <li>Goal: show how components implement the PSs to achieve the FRs.</li>
     </ul>
   </div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 45</div></div>
@@ -1568,36 +1606,340 @@
   </div>
 </div>
 
-<!-- STEP 7 — SUB-SLIDES 2-6 -->
+<!-- STEP 7 — SUB-SLIDE: DESIGN FOR ASSEMBLY (DFA) -->
 <div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 7 - Design For X (DFX) Methods</div></div><div class="step-badge">Step 7</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-header">
+    <div><div class="header-title">Step 7 — Design For Assembly (DFA)</div></div>
+    <div class="step-badge">DFA</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">Goal of DFA</div>
+      <p>Reduce the number of components and interfaces — resulting in fewer parts and fewer assembly steps.</p>
+      <div class="section-label" style="margin-top:10px;">DFA Process — Three Questions per Component</div>
+      <table style="margin-top:4px;margin-bottom:8px;">
+        <thead>
+          <tr>
+            <th style="width:5%;text-align:center;">#</th>
+            <th>Question</th>
+            <th style="width:18%;text-align:center;">Answer (Y / N)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center;">1</td>
+            <td>Does the component have to <b>move</b> relative to other components in the assembly?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:26px;"></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">2</td>
+            <td>Is the component made of <b>different material</b> for aesthetic or functional reasons?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:26px;"></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;">3</td>
+            <td>Does the component have to be <b>separate</b> to guarantee access for repair, maintenance, or other components?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:26px;"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="background:#fdfaf4;border-left:3px solid #CFB991;padding:8px 12px;font-style:italic;color:#333;margin-top:6px;">
+        If the answer is <b>"no"</b> to all three questions, the part should most likely be combined with an adjacent part.
+      </p>
+    </div>
+  </div>
+  <div class="key-points">
+    <div class="kp-label">Key Points</div>
+    <ul>
+      <li>DFA refines an existing design to reduce complications and cost during assembly.</li>
+      <li>Goal: fewer parts and interfaces &rarr; fewer assembly steps, lower cost, simpler BOM.</li>
+      <li>Three reasons to keep a part separate: relative motion, different material, or required service access.</li>
+    </ul>
+  </div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 47</div></div>
 </div>
+<!-- STEP 7 — SUB-SLIDE: DESIGN FOR MANUFACTURING (DFM) -->
 <div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 7 - Design For X (DFX) Methods</div></div><div class="step-badge">Step 7</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-header">
+    <div><div class="header-title">Step 7 — Design For Manufacturing (DFM)</div></div>
+    <div class="step-badge">DFM</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">Goal of DFM</div>
+      <p style="margin-bottom:6px;">Reduce unnecessary design complexities that impact manufacturing in terms of quality, cost, lead time, etc.</p>
+      <table style="margin-top:4px;font-size:11px;">
+        <colgroup>
+          <col style="width:5%;">
+          <col style="width:67%;">
+          <col style="width:28%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th style="text-align:center;padding:3px 7px;">#</th>
+            <th style="padding:3px 7px;">Question</th>
+            <th style="text-align:center;padding:3px 7px;">Answer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="3" style="background:#e8d4a8;color:#5C4A21;font-weight:bold;text-transform:uppercase;letter-spacing:0.8px;font-size:10px;padding:3px 8px;">Material</td></tr>
+          <tr>
+            <td style="text-align:center;padding:3px 7px;">1</td>
+            <td style="padding:3px 7px;">What are the applicable material choices for your design?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding:3px 7px;">2</td>
+            <td style="padding:3px 7px;">What material did you choose for your design and why?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding:3px 7px;">3</td>
+            <td style="padding:3px 7px;">What impact does your material choice have on the manufacturing process?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+          </tr>
+          <tr><td colspan="3" style="background:#e8d4a8;color:#5C4A21;font-weight:bold;text-transform:uppercase;letter-spacing:0.8px;font-size:10px;padding:3px 8px;">Process Considerations</td></tr>
+          <tr>
+            <td style="text-align:center;padding:3px 7px;">4</td>
+            <td style="padding:3px 7px;">What manufacturing process/technology will you use to produce your design to achieve the desired cost?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding:3px 7px;">5</td>
+            <td style="padding:3px 7px;">List (or illustrate) the manufacturing processes/operations required to produce your design.</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+          </tr>
+          <tr><td colspan="3" style="background:#e8d4a8;color:#5C4A21;font-weight:bold;text-transform:uppercase;letter-spacing:0.8px;font-size:10px;padding:3px 8px;">Design Considerations</td></tr>
+          <tr>
+            <td style="text-align:center;padding:3px 7px;">6</td>
+            <td style="padding:3px 7px;">What characteristics of your design affect the manufacturing processes?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding:3px 7px;">7</td>
+            <td style="padding:3px 7px;">Based on your understanding of the manufacturing processes, how have you removed unnecessary complexity in your design?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+          </tr>
+          <tr><td colspan="3" style="background:#e8d4a8;color:#5C4A21;font-weight:bold;text-transform:uppercase;letter-spacing:0.8px;font-size:10px;padding:3px 8px;">Environment</td></tr>
+          <tr>
+            <td style="text-align:center;padding:3px 7px;">8</td>
+            <td style="padding:3px 7px;">What impact does the operating environment have on your design?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+          </tr>
+          <tr><td colspan="3" style="background:#e8d4a8;color:#5C4A21;font-weight:bold;text-transform:uppercase;letter-spacing:0.8px;font-size:10px;padding:3px 8px;">Compliance and Testing</td></tr>
+          <tr>
+            <td style="text-align:center;padding:3px 7px;">9</td>
+            <td style="padding:3px 7px;">What standards must your design meet?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding:3px 7px;">10</td>
+            <td style="padding:3px 7px;">Identify the basic tests that your design must undergo.</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="key-points">
+    <div class="kp-label">Key Points</div>
+    <ul>
+      <li>DFM addresses complexity that drives quality issues, cost, and lead time during manufacturing.</li>
+      <li>Five categories to evaluate: Material, Process, Design, Environment, and Compliance/Testing.</li>
+      <li>The questions force explicit decisions about material, process, and design &mdash; informing the manufacturing strategy.</li>
+    </ul>
+  </div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 48</div></div>
 </div>
+<!-- STEP 7 — SUB-SLIDE: DESIGN FOR ADDITIVE MANUFACTURING (DFAM) -->
 <div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 7 - Design For X (DFX) Methods</div></div><div class="step-badge">Step 7</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-header">
+    <div><div class="header-title">Step 7 — Design For Additive Manufacturing (DFAM)</div></div>
+    <div class="step-badge">DFAM</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">Goal of DFAM</div>
+      <p style="margin-bottom:6px;">Assess the potential quality of a part to be made using an AM process by giving intuitive feedback and indirectly suggesting changes to improve the design.</p>
+      <div class="section-label" style="margin-top:6px;">DFAM Worksheet</div>
+      <img src="Images/Step 7 - DFAM.png" alt="DFAM Worksheet — eight scoring categories with totals" style="display:block;width:100%;max-height:360px;object-fit:contain;object-position:top;margin-top:2px;">
+      <p style="font-size:9px;color:#666;font-style:italic;margin-top:4px;text-align:right;">Source: Booth, Alperovich, Reid, &amp; Ramani (2016). "The Design for Additive Manufacturing Worksheet," ASME IDETC/CIE, DETC2016-60407. <a href="https://engineering.purdue.edu/reidlab/assets/DETC2016-60407.pdf" target="_blank" rel="noopener" style="color:#5C4A21;text-decoration:underline;">[PDF]</a></p>
+    </div>
+  </div>
+  <div class="key-points">
+    <div class="kp-label">Key Points</div>
+    <ul>
+      <li>DFAM helps novice and intermittent AM users avoid common print and prototyping failures.</li>
+      <li>Eight worksheet categories &mdash; mark one option per category, sum across rows for an overall score.</li>
+      <li>Total score maps to a recommendation: needs redesign, consider redesign, moderate likelihood, or higher likelihood of success.</li>
+    </ul>
+  </div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 49</div></div>
 </div>
+<!-- STEP 7 — SUB-SLIDE: SOFTWARE DESIGN (DFX) -->
 <div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 7 - Design For X (DFX) Methods</div></div><div class="step-badge">Step 7</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-header">
+    <div><div class="header-title">Step 7 — DFX: Software Design</div></div>
+    <div class="step-badge">Software</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">Goal of Software Design</div>
+      <p style="margin-bottom:6px;">Create a blueprint that outlines the structure, behavior, and interactions of the software components needed to achieve the desired functionality &mdash; while meeting quality attributes such as reliability, scalability, and maintainability.</p>
+      <table style="margin-top:4px;font-size:11px;">
+        <colgroup>
+          <col style="width:24%;">
+          <col style="width:48%;">
+          <col style="width:28%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th style="padding:3px 7px;">Principle</th>
+            <th style="padding:3px 7px;">Question</th>
+            <th style="text-align:center;padding:3px 7px;">Answer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:4px 7px;font-weight:bold;color:#5C4A21;">Modularity</td>
+            <td style="padding:4px 7px;">How will you break the system into smaller parts for easier understanding and reuse?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:26px;"></td>
+          </tr>
+          <tr>
+            <td style="padding:4px 7px;font-weight:bold;color:#5C4A21;">Separation of Concerns</td>
+            <td style="padding:4px 7px;">How will you organize the system for simpler maintenance and testing?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:26px;"></td>
+          </tr>
+          <tr>
+            <td style="padding:4px 7px;font-weight:bold;color:#5C4A21;">Correctness</td>
+            <td style="padding:4px 7px;">How will you ensure the software behaves as intended?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:26px;"></td>
+          </tr>
+          <tr>
+            <td style="padding:4px 7px;font-weight:bold;color:#5C4A21;">Efficiency</td>
+            <td style="padding:4px 7px;">How will you make the software perform tasks effectively?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:26px;"></td>
+          </tr>
+          <tr>
+            <td style="padding:4px 7px;font-weight:bold;color:#5C4A21;">DRY <span style="font-weight:normal;color:#666;font-size:10px;">(Don't Repeat Yourself)</span></td>
+            <td style="padding:4px 7px;">How will you avoid repeating code to keep things clear and reusable?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:26px;"></td>
+          </tr>
+          <tr>
+            <td style="padding:4px 7px;font-weight:bold;color:#5C4A21;">Scalability</td>
+            <td style="padding:4px 7px;">How can we ensure the software functions as designed in spite of increased demand?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:26px;"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="key-points">
+    <div class="kp-label">Key Points</div>
+    <ul>
+      <li>Software Design is the DFX equivalent for software-bearing systems &mdash; a blueprint of structure, behavior, and interactions.</li>
+      <li>Six principles guide the blueprint: Modularity, Separation of Concerns, Correctness, Efficiency, DRY, and Scalability.</li>
+      <li>Each principle pushes a specific quality attribute &mdash; reliability, maintainability, performance, or scalability.</li>
+    </ul>
+  </div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 50</div></div>
 </div>
+
+<!-- STEP 7 — SUB-SLIDE: MANUFACTURING SYSTEM DESIGN (MSD) -->
 <div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 7 - Design For X (DFX) Methods</div></div><div class="step-badge">Step 7</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-header">
+    <div><div class="header-title">Step 7 — Manufacturing System Design (MSD)</div></div>
+    <div class="step-badge">MSD</div>
+  </div>
+  <div class="slide-body" style="flex-direction:column;">
+    <div style="padding:14px 20px 12px;border-bottom:1px solid #ddd;">
+      <div class="section-label">Task</div>
+      <p style="margin-bottom:4px;">Complete the 7 FRs of Manufacturing System Design for your project.</p>
+      <div class="section-label" style="margin-top:10px;">Discussion Questions</div>
+      <p style="margin-bottom:4px;"><b>Q1:</b> Do you agree with the 7 FRs? Would you add or remove any of the FRs?</p>
+      <div style="background:#fff;border:1px dashed #b89a5e;height:30px;border-radius:3px;margin-bottom:6px;"></div>
+      <p style="margin-bottom:4px;"><b>Q2:</b> State your PSs for achieving the FRs of your Manufacturing System Design.</p>
+      <div style="background:#fff;border:1px dashed #b89a5e;height:30px;border-radius:3px;"></div>
+    </div>
+    <div style="padding:10px 20px 8px;flex:1;min-height:0;display:flex;flex-direction:column;">
+      <div class="section-label">7 FRs of Manufacturing System Design</div>
+      <img src="Images/Step 7 - MSD.png" alt="The 7 Functional Requirements of Manufacturing System Design" style="flex:1;min-height:0;width:100%;object-fit:contain;object-position:top;border-radius:3px;margin-top:4px;">
+    </div>
+  </div>
+  <div class="key-points">
+    <div class="kp-label">Key Points</div>
+    <ul>
+      <li>Manufacturing System Design specifies the FRs (functional requirements) the production system must meet.</li>
+      <li>The 7 FRs are a starting framework &mdash; agreement, additions, or removals must be justified for each project.</li>
+      <li>Each FR drives a corresponding PS (physical solution) &mdash; the means by which the requirement is achieved.</li>
+    </ul>
+  </div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 51</div></div>
+</div>
+
+<!-- STEP 7 — SUB-SLIDE: DESIGN FOR COST REDUCTION -->
+<div class="slide">
+  <div class="slide-header">
+    <div><div class="header-title">Step 7 — DFX: Design For Cost Reduction</div></div>
+    <div class="step-badge">Cost</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">The 5-Step Algorithm</div>
+      <p style="margin-bottom:6px;">Five sequential steps for reducing complexity and cost &mdash; popularized by Elon Musk. <b>Order matters: do not skip ahead.</b></p>
+      <table style="margin-top:4px;font-size:11px;">
+        <colgroup>
+          <col style="width:5%;">
+          <col style="width:24%;">
+          <col style="width:71%;">
+        </colgroup>
+        <thead>
+          <tr>
+            <th style="text-align:center;padding:3px 7px;">#</th>
+            <th style="padding:3px 7px;">Step</th>
+            <th style="padding:3px 7px;">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="text-align:center;padding:5px 7px;font-weight:bold;color:#5C4A21;">1</td>
+            <td style="padding:5px 7px;font-weight:bold;color:#5C4A21;">Question every requirement</td>
+            <td style="padding:5px 7px;">Each must come from a <b>named person</b>, not a department (not "the legal department" or "the safety department"). Question it regardless of who said it &mdash; requirements from smart people are the most dangerous because they're less likely to be challenged. Then make them less dumb.</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding:5px 7px;font-weight:bold;color:#5C4A21;">2</td>
+            <td style="padding:5px 7px;font-weight:bold;color:#5C4A21;">Delete any part or process you can</td>
+            <td style="padding:5px 7px;">You may have to add them back later. If you don't end up adding back at least <b>10%</b>, you didn't delete enough.</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding:5px 7px;font-weight:bold;color:#5C4A21;">3</td>
+            <td style="padding:5px 7px;font-weight:bold;color:#5C4A21;">Simplify and optimize</td>
+            <td style="padding:5px 7px;">Only after Step 2 &mdash; a common mistake is to simplify or optimize something that <b>shouldn't exist</b>.</td>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding:5px 7px;font-weight:bold;color:#5C4A21;">4</td>
+            <td style="padding:5px 7px;font-weight:bold;color:#5C4A21;">Accelerate cycle time</td>
+            <td style="padding:5px 7px;">Every process can be sped up &mdash; but only after the first three steps. <i>"I mistakenly spent a lot of time accelerating processes that I later realized should have been deleted."</i></td>
+          </tr>
+          <tr>
+            <td style="text-align:center;padding:5px 7px;font-weight:bold;color:#5C4A21;">5</td>
+            <td style="padding:5px 7px;font-weight:bold;color:#5C4A21;">Automate</td>
+            <td style="padding:5px 7px;">Comes last. Don't automate before requirements have been questioned, parts/processes deleted, and bugs shaken out.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:9px;color:#666;font-style:italic;margin-top:5px;text-align:right;">Source: Isaacson, W. (2023). <i>Elon Musk</i>. Simon &amp; Schuster.</p>
+    </div>
+  </div>
+  <div class="key-points">
+    <div class="kp-label">Key Points</div>
+    <ul>
+      <li>Order is critical &mdash; most cost-reduction failures come from automating or optimizing what shouldn't exist.</li>
+      <li>Step 1 is people-driven: every requirement must trace to a named person who can be questioned.</li>
+      <li>If you don't add back &sim;10% of what you deleted in Step 2, you didn't delete enough.</li>
+    </ul>
+  </div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 52</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -1626,7 +1968,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 52</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 53</div>
   </div>
 </div>
 
@@ -1635,7 +1977,7 @@
   <div class="slide-header"><div><div class="header-title">Step 8 - Verification Test Plan</div></div><div class="step-badge">Step 8</div></div>
   <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 53</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 54</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -1664,7 +2006,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 54</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 55</div>
   </div>
 </div>
 
@@ -1694,7 +2036,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 55</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 56</div>
   </div>
 </div>
 
@@ -1724,17 +2066,11 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 56</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 57</div>
   </div>
 </div>
 
 <!-- STEP 11 — SUB-SLIDES 2-4 -->
-<div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 11 - Standard Work Instructions</div></div><div class="step-badge">Step 11</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 57</div></div>
-</div>
 <div class="slide">
   <div class="slide-header"><div><div class="header-title">Step 11 - Standard Work Instructions</div></div><div class="step-badge">Step 11</div></div>
   <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
@@ -1746,6 +2082,12 @@
   <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 59</div></div>
+</div>
+<div class="slide">
+  <div class="slide-header"><div><div class="header-title">Step 11 - Standard Work Instructions</div></div><div class="step-badge">Step 11</div></div>
+  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
+  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 60</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -1774,7 +2116,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 60</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 61</div>
   </div>
 </div>
 
@@ -1867,42 +2209,43 @@
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="43" onclick="goToSlide(43)">Overview</div>
-    <div class="np-child" data-slide="44" onclick="goToSlide(44)">Part 2</div>
+    <div class="np-child" data-slide="43" onclick="goToSlide(43)">6.1</div>
+    <div class="np-child" data-slide="44" onclick="goToSlide(44)">6.2</div>
   </div>
-  <div class="np-item np-parent" data-slide="45" data-first="45" data-last="50" onclick="toggleStep(this, 45)">
+  <div class="np-item np-parent" data-slide="45" data-first="45" data-last="51" onclick="toggleStep(this, 45)">
     <span class="np-parent-label"><span class="snum">Step 7</span>Design For X (DFX)</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
     <div class="np-child" data-slide="45" onclick="goToSlide(45)">Overview</div>
-    <div class="np-child" data-slide="46" onclick="goToSlide(46)">Part 2</div>
-    <div class="np-child" data-slide="47" onclick="goToSlide(47)">Part 3</div>
-    <div class="np-child" data-slide="48" onclick="goToSlide(48)">Part 4</div>
-    <div class="np-child" data-slide="49" onclick="goToSlide(49)">Part 5</div>
-    <div class="np-child" data-slide="50" onclick="goToSlide(50)">Part 6</div>
+    <div class="np-child" data-slide="46" onclick="goToSlide(46)">DFA</div>
+    <div class="np-child" data-slide="47" onclick="goToSlide(47)">DFM</div>
+    <div class="np-child" data-slide="48" onclick="goToSlide(48)">DFAM</div>
+    <div class="np-child" data-slide="49" onclick="goToSlide(49)">Software</div>
+    <div class="np-child" data-slide="50" onclick="goToSlide(50)">MSD</div>
+    <div class="np-child" data-slide="51" onclick="goToSlide(51)">Cost Reduction</div>
   </div>
-  <div class="np-item np-parent" data-slide="51" data-first="51" data-last="52" onclick="toggleStep(this, 51)">
+  <div class="np-item np-parent" data-slide="52" data-first="52" data-last="53" onclick="toggleStep(this, 52)">
     <span class="np-parent-label"><span class="snum">Step 8</span>Verification Test Plan</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="51" onclick="goToSlide(51)">Overview</div>
-    <div class="np-child" data-slide="52" onclick="goToSlide(52)">Part 2</div>
+    <div class="np-child" data-slide="52" onclick="goToSlide(52)">Overview</div>
+    <div class="np-child" data-slide="53" onclick="goToSlide(53)">Part 2</div>
   </div>
-  <div class="np-item" data-slide="53" onclick="goToSlide(53)"><span class="snum">Step 9</span>Validation Test Plan</div>
-  <div class="np-item" data-slide="54" onclick="goToSlide(54)"><span class="snum">Step 10</span>Build a High-Quality Solution</div>
-  <div class="np-item np-parent" data-slide="55" data-first="55" data-last="58" onclick="toggleStep(this, 55)">
+  <div class="np-item" data-slide="54" onclick="goToSlide(54)"><span class="snum">Step 9</span>Validation Test Plan</div>
+  <div class="np-item" data-slide="55" onclick="goToSlide(55)"><span class="snum">Step 10</span>Build a High-Quality Solution</div>
+  <div class="np-item np-parent" data-slide="56" data-first="56" data-last="59" onclick="toggleStep(this, 56)">
     <span class="np-parent-label"><span class="snum">Step 11</span>Standard Work Instructions</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="55" onclick="goToSlide(55)">Overview</div>
-    <div class="np-child" data-slide="56" onclick="goToSlide(56)">Part 2</div>
-    <div class="np-child" data-slide="57" onclick="goToSlide(57)">Part 3</div>
-    <div class="np-child" data-slide="58" onclick="goToSlide(58)">Part 4</div>
+    <div class="np-child" data-slide="56" onclick="goToSlide(56)">Overview</div>
+    <div class="np-child" data-slide="57" onclick="goToSlide(57)">Part 2</div>
+    <div class="np-child" data-slide="58" onclick="goToSlide(58)">Part 3</div>
+    <div class="np-child" data-slide="59" onclick="goToSlide(59)">Part 4</div>
   </div>
-  <div class="np-item" data-slide="59" onclick="goToSlide(59)"><span class="snum">Step 12</span>Verification, Validation &amp; Final Cost</div>
+  <div class="np-item" data-slide="60" onclick="goToSlide(60)"><span class="snum">Step 12</span>Verification, Validation &amp; Final Cost</div>
 </div>
 
 </div><!-- end #main-layout -->

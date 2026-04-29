@@ -1,0 +1,16 @@
+# Whitelist approach: ignore everything in root, then explicitly include.
+# This folder also holds private/internal material that must NOT be published.
+
+/*
+!/.gitignore
+!/README.md
+!/index.html
+!/LICENSE
+!/Images/
+
+# Inside whitelisted directories, ignore typical OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.tmp

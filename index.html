@@ -603,9 +603,37 @@
 <div id="slide-stage">
 
 <!-- ══════════════════════════════════════════════════════════════
-     SLIDE 0 — COVER
+     SLIDE 0 — WELCOME TO CLASS
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide active" id="slide-0">
+<div class="slide active" id="slide-welcome">
+  <div style="height:54px;background:#0a3a6b;position:relative;flex-shrink:0;">
+    <div style="position:absolute;top:0;left:0;right:0;height:5px;background:#CFB991;"></div>
+    <div style="position:absolute;bottom:0;left:0;right:0;height:5px;background:#CFB991;"></div>
+  </div>
+
+  <div style="flex:1;display:flex;flex-direction:column;padding:30px 50px 22px;background:#fff;min-height:0;">
+    <div style="flex:1;display:flex;align-items:center;gap:30px;min-height:0;">
+      <img src="Images/MCI Logo.png" alt="MCI Management Center Innsbruck Logo" style="max-height:160px;max-width:230px;object-fit:contain;flex-shrink:0;">
+      <img src="Images/MCI Decomp.png" alt="Design Decomposition Diagram" style="flex:1;min-height:0;max-height:260px;object-fit:contain;object-position:center;">
+    </div>
+
+    <div style="border-top:3px solid #CFB991;padding-top:16px;">
+      <h1 style="font-size:34px;color:#0a3a6b;margin:0 0 6px 0;font-weight:bold;line-height:1.1;letter-spacing:0.4px;">Project Systems Engineering</h1>
+      <p style="font-size:18px;color:#333;margin:0 0 14px 0;font-weight:500;">Lecture Notes 2026</p>
+      <p style="font-size:13px;color:#444;margin:0;line-height:1.5;">Prof. Erwin Rauch and Prof. David Cochran</p>
+    </div>
+  </div>
+
+  <div class="slide-footer">
+    <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 1</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════
+     SLIDE 1 — COVER
+══════════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-0">
   <div class="slide-header">
     <div>
       <div class="slide-header header-title">12 Step Design Process Primer</div>
@@ -627,7 +655,7 @@
 
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 1</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 2</div>
   </div>
 </div>
 
@@ -642,37 +670,37 @@
   <div class="toc-body">
     <div class="toc-section">
       <h3>Introduction</h3>
-      <div class="toc-item" onclick="goToSlide(2)">Purpose</div>
-      <div class="toc-item" onclick="goToSlide(3)">Flame Model of a System</div>
-      <div class="toc-item" onclick="goToSlide(4)">Information Model for System Design and Engineering</div>
-      <div class="toc-item" onclick="goToSlide(5)">Glossary of Terms</div>
-      <div class="toc-item" onclick="goToSlide(6)">Collective System Design Language Definitions</div>
-      <div class="toc-item" onclick="goToSlide(7)">How-To Access the 12 Step Template and Primer</div>
-      <div class="toc-item" onclick="goToSlide(8)">Tips and Tricks for Using the 12 Step Template in Lucid</div>
-      <div class="toc-item" onclick="goToSlide(9)">Introduction to FRs and FRm's</div>
-      <div class="toc-item" onclick="goToSlide(10)">List of Questions</div>
-      <div class="toc-item" onclick="goToSlide(11)">Parking Lot</div>
+      <div class="toc-item" onclick="goToSlide(3)">Purpose</div>
+      <div class="toc-item" onclick="goToSlide(4)">Flame Model of a System</div>
+      <div class="toc-item" onclick="goToSlide(5)">Information Model for System Design and Engineering</div>
+      <div class="toc-item" onclick="goToSlide(6)">Glossary of Terms</div>
+      <div class="toc-item" onclick="goToSlide(7)">Collective System Design Language Definitions</div>
+      <div class="toc-item" onclick="goToSlide(8)">How-To Access the 12 Step Template and Primer</div>
+      <div class="toc-item" onclick="goToSlide(9)">Tips and Tricks for Using the 12 Step Template in Lucid</div>
+      <div class="toc-item" onclick="goToSlide(10)">Introduction to FRs and FRm's</div>
+      <div class="toc-item" onclick="goToSlide(11)">List of Questions</div>
+      <div class="toc-item" onclick="goToSlide(12)">Parking Lot</div>
     </div>
     <div class="toc-section">
       <h3>The 12 Steps</h3>
-      <div class="toc-item" onclick="goToSlide(12)">Step 1 · Project Introductions and Background</div>
-      <div class="toc-item" onclick="goToSlide(19)">Step 2 · Problem Statement</div>
-      <div class="toc-item" onclick="goToSlide(27)">Step 3 · Conceptual Design Alternatives and Selection</div>
-      <div class="toc-item" onclick="goToSlide(32)">Step 4 · Design Decomposition</div>
-      <div class="toc-item" onclick="goToSlide(40)">Step 5 · Design and Process FMEA</div>
-      <div class="toc-item" onclick="goToSlide(43)">Step 6 · Detailed Design</div>
-      <div class="toc-item" onclick="goToSlide(45)">Step 7 · Design For X (DFX) Methods</div>
-      <div class="toc-item" onclick="goToSlide(52)">Step 8 · Verification Test Plan</div>
-      <div class="toc-item" onclick="goToSlide(54)">Step 9 · Validation Test Plan</div>
-      <div class="toc-item" onclick="goToSlide(55)">Step 10 · Build a High-Quality Solution</div>
-      <div class="toc-item" onclick="goToSlide(56)">Step 11 · Standard Work Instructions</div>
-      <div class="toc-item" onclick="goToSlide(60)">Step 12 · Verification, Validation, and Final Cost</div>
+      <div class="toc-item" onclick="goToSlide(13)">Step 1 · Project Introductions and Background</div>
+      <div class="toc-item" onclick="goToSlide(20)">Step 2 · Problem Statement</div>
+      <div class="toc-item" onclick="goToSlide(28)">Step 3 · Conceptual Design Alternatives and Selection</div>
+      <div class="toc-item" onclick="goToSlide(33)">Step 4 · Design Decomposition</div>
+      <div class="toc-item" onclick="goToSlide(41)">Step 5 · Design and Process FMEA</div>
+      <div class="toc-item" onclick="goToSlide(44)">Step 6 · Detailed Design</div>
+      <div class="toc-item" onclick="goToSlide(46)">Step 7 · Design For X (DFX) Methods</div>
+      <div class="toc-item" onclick="goToSlide(53)">Step 8 · Verification Test Plan</div>
+      <div class="toc-item" onclick="goToSlide(55)">Step 9 · Validation Test Plan</div>
+      <div class="toc-item" onclick="goToSlide(56)">Step 10 · Build a High-Quality Solution</div>
+      <div class="toc-item" onclick="goToSlide(57)">Step 11 · Standard Work Instructions</div>
+      <div class="toc-item" onclick="goToSlide(61)">Step 12 · Verification, Validation, and Final Cost</div>
     </div>
   </div>
 
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 2</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 3</div>
   </div>
 </div>
 
@@ -699,7 +727,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 3</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 4</div>
   </div>
 </div>
 
@@ -735,7 +763,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 4</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 5</div>
   </div>
 </div>
 
@@ -762,7 +790,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 5</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 6</div>
   </div>
 </div>
 
@@ -797,7 +825,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 6</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 7</div>
   </div>
 </div>
 
@@ -824,7 +852,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 7</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 8</div>
   </div>
 </div>
 
@@ -851,7 +879,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 8</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 9</div>
   </div>
 </div>
 
@@ -878,7 +906,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 9</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 10</div>
   </div>
 </div>
 
@@ -905,7 +933,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 10</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 11</div>
   </div>
 </div>
 
@@ -932,7 +960,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 11</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 12</div>
   </div>
 </div>
 
@@ -959,7 +987,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 12</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 13</div>
   </div>
 </div>
 
@@ -1008,7 +1036,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 13</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 14</div>
   </div>
 </div>
 
@@ -1027,7 +1055,7 @@
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 14</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 15</div>
   </div>
 </div>
 <!-- STEP 1 — SUB-SLIDE 3 -->
@@ -1043,7 +1071,7 @@
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 15</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 16</div>
   </div>
 </div>
 <!-- STEP 1 — SUB-SLIDE 4 -->
@@ -1059,7 +1087,7 @@
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 16</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 17</div>
   </div>
 </div>
 <!-- STEP 1 — SUB-SLIDE 5 -->
@@ -1075,7 +1103,7 @@
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 17</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 18</div>
   </div>
 </div>
 <!-- STEP 1 — SUB-SLIDE 6 -->
@@ -1091,7 +1119,7 @@
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 18</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 19</div>
   </div>
 </div>
 <!-- STEP 1 — SUB-SLIDE 7 -->
@@ -1107,7 +1135,7 @@
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 19</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 20</div>
   </div>
 </div>
 
@@ -1137,17 +1165,11 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 20</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 21</div>
   </div>
 </div>
 
 <!-- STEP 2 — SUB-SLIDES 2-8 -->
-<div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 2 - Problem Statement</div></div><div class="step-badge">Step 2</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 21</div></div>
-</div>
 <div class="slide">
   <div class="slide-header"><div><div class="header-title">Step 2 - Problem Statement</div></div><div class="step-badge">Step 2</div></div>
   <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
@@ -1184,6 +1206,12 @@
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 27</div></div>
 </div>
+<div class="slide">
+  <div class="slide-header"><div><div class="header-title">Step 2 - Problem Statement</div></div><div class="step-badge">Step 2</div></div>
+  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
+  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 28</div></div>
+</div>
 
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE 28 — STEP 3: CONCEPTUAL DESIGN ALTERNATIVES AND SELECTION
@@ -1211,17 +1239,11 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 28</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 29</div>
   </div>
 </div>
 
 <!-- STEP 3 — SUB-SLIDES 2-5 -->
-<div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 3 - Conceptual Design Alternatives and Selection</div></div><div class="step-badge">Step 3</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 29</div></div>
-</div>
 <div class="slide">
   <div class="slide-header"><div><div class="header-title">Step 3 - Conceptual Design Alternatives and Selection</div></div><div class="step-badge">Step 3</div></div>
   <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
@@ -1239,6 +1261,12 @@
   <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 32</div></div>
+</div>
+<div class="slide">
+  <div class="slide-header"><div><div class="header-title">Step 3 - Conceptual Design Alternatives and Selection</div></div><div class="step-badge">Step 3</div></div>
+  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
+  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 33</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -1267,17 +1295,11 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 33</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 34</div>
   </div>
 </div>
 
 <!-- STEP 4 — SUB-SLIDES 2-8 -->
-<div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 4 - Design Decomposition</div></div><div class="step-badge">Step 4</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 34</div></div>
-</div>
 <div class="slide">
   <div class="slide-header"><div><div class="header-title">Step 4 - Design Decomposition</div></div><div class="step-badge">Step 4</div></div>
   <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
@@ -1313,6 +1335,12 @@
   <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 40</div></div>
+</div>
+<div class="slide">
+  <div class="slide-header"><div><div class="header-title">Step 4 - Design Decomposition</div></div><div class="step-badge">Step 4</div></div>
+  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
+  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 41</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -1350,7 +1378,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 41</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 42</div>
   </div>
 </div>
 
@@ -1449,7 +1477,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 42</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 43</div>
   </div>
 </div>
 
@@ -1469,7 +1497,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 43</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 44</div>
   </div>
 </div>
 
@@ -1544,7 +1572,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 44</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 45</div>
   </div>
 </div>
 
@@ -1573,7 +1601,7 @@
       <li>Goal: show how components implement the PSs to achieve the FRs.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 45</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 46</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -1602,7 +1630,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 46</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 47</div>
   </div>
 </div>
 
@@ -1656,7 +1684,7 @@
       <li>Three reasons to keep a part separate: relative motion, different material, or required service access.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 47</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 48</div></div>
 </div>
 <!-- STEP 7 — SUB-SLIDE: DESIGN FOR MANUFACTURING (DFM) -->
 <div class="slide">
@@ -1749,7 +1777,7 @@
       <li>The questions force explicit decisions about material, process, and design &mdash; informing the manufacturing strategy.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 48</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 49</div></div>
 </div>
 <!-- STEP 7 — SUB-SLIDE: DESIGN FOR ADDITIVE MANUFACTURING (DFAM) -->
 <div class="slide">
@@ -1774,7 +1802,7 @@
       <li>Total score maps to a recommendation: needs redesign, consider redesign, moderate likelihood, or higher likelihood of success.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 49</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 50</div></div>
 </div>
 <!-- STEP 7 — SUB-SLIDE: SOFTWARE DESIGN (DFX) -->
 <div class="slide">
@@ -1842,7 +1870,7 @@
       <li>Each principle pushes a specific quality attribute &mdash; reliability, maintainability, performance, or scalability.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 50</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 51</div></div>
 </div>
 
 <!-- STEP 7 — SUB-SLIDE: MANUFACTURING SYSTEM DESIGN (MSD) -->
@@ -1874,7 +1902,7 @@
       <li>Each FR drives a corresponding PS (physical solution) &mdash; the means by which the requirement is achieved.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 51</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 52</div></div>
 </div>
 
 <!-- STEP 7 — SUB-SLIDE: DESIGN FOR COST REDUCTION -->
@@ -1939,7 +1967,7 @@
       <li>If you don't add back &sim;10% of what you deleted in Step 2, you didn't delete enough.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 52</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 53</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -1982,7 +2010,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 53</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 54</div>
   </div>
 </div>
 
@@ -2055,7 +2083,7 @@
       <li>The Test Configuration enumerates <b>everything</b> needed to run the test: hardware, fixtures, software, and people.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 54</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 55</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -2069,22 +2097,64 @@
     <div class="step-badge">Step 9</div>
   </div>
   <div class="slide-body">
-    <div class="col-left">
-      <div class="section-label">Overview</div>
-      <div class="placeholder">[ Add Step 9 explanation text here ]</div>
-    </div>
-    <div class="col-right">
-      <div class="section-label">Validation Plan Table</div>
-      <div class="placeholder">[ Add validation plan table or example here ]</div>
+    <div class="col-full">
+      <div class="section-label">Validation — Does it Meet the Customer's Need?</div>
+      <p style="margin-bottom:4px;"><b>Key question:</b> <i>Does what we built do what the customer needs/wants?</i></p>
+      <p style="margin-bottom:6px;">Validation is the process of determining if the product/system/service meets the <b>needs and wants of the customer</b>.</p>
+      <div class="section-label" style="margin-top:8px;">Validation Plan — Worked Example</div>
+      <div style="display:grid;grid-template-columns:1.1fr 1fr 0.7fr 0.9fr;gap:6px;font-size:12px;margin-top:4px;margin-bottom:8px;">
+        <div style="padding:6px 8px;background:#f4f4f4;border-radius:3px;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:10px;letter-spacing:0.6px;margin-bottom:3px;">Objective of Test</div>
+          <div>Gather user feedback regarding use of faucet.</div>
+        </div>
+        <div style="padding:6px 8px;background:#f4f4f4;border-radius:3px;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:10px;letter-spacing:0.6px;margin-bottom:3px;">Validation Event</div>
+          <div>User Feedback: Standard Operation of Faucet</div>
+        </div>
+        <div style="padding:6px 8px;background:#f4f4f4;border-radius:3px;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:10px;letter-spacing:0.6px;margin-bottom:3px;">Conducted By</div>
+          <div>Joe Smith</div>
+        </div>
+        <div style="padding:6px 8px;background:#f4f4f4;border-radius:3px;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:10px;letter-spacing:0.6px;margin-bottom:3px;">Conducted With</div>
+          <div>Shahab Shah<br>Onkar Sonur</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1;min-height:0;">
+        <div style="padding:8px 10px;background:#fdfaf4;border:1px solid #e8d4a8;border-radius:3px;font-size:12px;overflow:hidden;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:11px;letter-spacing:0.6px;margin-bottom:5px;">Test Configuration</div>
+          <p style="margin:0 0 8px 0;font-size:13px;color:#333;line-height:1.5;">Event space, faucet installed in sink basin.</p>
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:11px;letter-spacing:0.6px;margin-bottom:5px;">Test Procedure</div>
+          <ol style="margin:0;padding-left:16px;line-height:1.6;font-size:13px;color:#333;">
+            <li>Organize and host an event.</li>
+            <li>Simulate the different use cases.</li>
+            <li>Ask specific, pointed questions tied to the FRm's.</li>
+            <li>Capture all observations and answers.</li>
+          </ol>
+        </div>
+        <div style="padding:8px 10px;background:#fdfaf4;border:1px solid #e8d4a8;border-radius:3px;font-size:12px;overflow:hidden;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:11px;letter-spacing:0.6px;margin-bottom:5px;">Test Results</div>
+          <p style="margin:0 0 10px 0;font-size:13px;color:#333;line-height:1.5;">Both users agreed that the faucet met their need and functioned as expected.</p>
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:11px;letter-spacing:0.6px;margin-bottom:5px;">Design Validated?</div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="font-size:24px;font-weight:bold;color:#2d6a2d;line-height:1;">YES</div>
+            <div style="font-size:11px;color:#666;font-style:italic;">Customer signature required</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="key-points">
     <div class="kp-label">Key Points</div>
-    <ul><li>[ Add key points here ]</li></ul>
+    <ul>
+      <li>Validation answers <i>"Did we build the right thing?"</i> &mdash; Verification (Step 8) answered <i>"Did we build it right?"</i></li>
+      <li>Validation is conducted <b>with the customer/user</b>, not by the engineering team alone.</li>
+      <li>A "Yes" decision should be backed by a customer signature on the validation record.</li>
+    </ul>
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 55</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 56</div>
   </div>
 </div>
 
@@ -2114,7 +2184,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 56</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 57</div>
   </div>
 </div>
 
@@ -2144,17 +2214,11 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 57</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 58</div>
   </div>
 </div>
 
 <!-- STEP 11 — SUB-SLIDES 2-4 -->
-<div class="slide">
-  <div class="slide-header"><div><div class="header-title">Step 11 - Standard Work Instructions</div></div><div class="step-badge">Step 11</div></div>
-  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
-  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 58</div></div>
-</div>
 <div class="slide">
   <div class="slide-header"><div><div class="header-title">Step 11 - Standard Work Instructions</div></div><div class="step-badge">Step 11</div></div>
   <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
@@ -2166,6 +2230,12 @@
   <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
   <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 60</div></div>
+</div>
+<div class="slide">
+  <div class="slide-header"><div><div class="header-title">Step 11 - Standard Work Instructions</div></div><div class="step-badge">Step 11</div></div>
+  <div class="slide-body"><div class="col-left"><div class="section-label">Overview</div><div class="placeholder">[ Add content here ]</div></div><div class="col-right"><div class="placeholder">[ Add content here ]</div></div></div>
+  <div class="key-points"><div class="kp-label">Key Points</div><ul><li>[ Add key points here ]</li></ul></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 61</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -2194,7 +2264,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 61</div>
+    <div class="footer-text">© Purdue University Fort Wayne · Center of Excellence in Systems Engineering<br>Slide 62</div>
   </div>
 </div>
 
@@ -2207,123 +2277,124 @@
   <div class="np-header"><span>Navigation</span></div>
 
   <div class="np-section">Introduction</div>
-  <div class="np-item active" data-slide="0" onclick="goToSlide(0)">Cover</div>
-  <div class="np-item" data-slide="1" onclick="goToSlide(1)">Table of Contents</div>
-  <div class="np-item" data-slide="2" onclick="goToSlide(2)">Purpose</div>
-  <div class="np-item" data-slide="3" onclick="goToSlide(3)">Flame Model of a System</div>
-  <div class="np-item" data-slide="4" onclick="goToSlide(4)">Information Model</div>
-  <div class="np-item" data-slide="5" onclick="goToSlide(5)">Glossary of Terms</div>
-  <div class="np-item" data-slide="6" onclick="goToSlide(6)">Language Definitions</div>
-  <div class="np-item" data-slide="7" onclick="goToSlide(7)">How-To Access</div>
-  <div class="np-item" data-slide="8" onclick="goToSlide(8)">Tips &amp; Tricks in Lucid</div>
-  <div class="np-item" data-slide="9" onclick="goToSlide(9)">FRs and FRm's</div>
-  <div class="np-item" data-slide="10" onclick="goToSlide(10)">List of Questions</div>
-  <div class="np-item" data-slide="11" onclick="goToSlide(11)">Parking Lot</div>
+  <div class="np-item active" data-slide="0" onclick="goToSlide(0)">Welcome</div>
+  <div class="np-item" data-slide="1" onclick="goToSlide(1)">Cover</div>
+  <div class="np-item" data-slide="2" onclick="goToSlide(2)">Table of Contents</div>
+  <div class="np-item" data-slide="3" onclick="goToSlide(3)">Purpose</div>
+  <div class="np-item" data-slide="4" onclick="goToSlide(4)">Flame Model of a System</div>
+  <div class="np-item" data-slide="5" onclick="goToSlide(5)">Information Model</div>
+  <div class="np-item" data-slide="6" onclick="goToSlide(6)">Glossary of Terms</div>
+  <div class="np-item" data-slide="7" onclick="goToSlide(7)">Language Definitions</div>
+  <div class="np-item" data-slide="8" onclick="goToSlide(8)">How-To Access</div>
+  <div class="np-item" data-slide="9" onclick="goToSlide(9)">Tips &amp; Tricks in Lucid</div>
+  <div class="np-item" data-slide="10" onclick="goToSlide(10)">FRs and FRm's</div>
+  <div class="np-item" data-slide="11" onclick="goToSlide(11)">List of Questions</div>
+  <div class="np-item" data-slide="12" onclick="goToSlide(12)">Parking Lot</div>
 
   <div class="np-section">The 12 Steps</div>
-  <div class="np-item np-parent" data-slide="12" data-first="12" data-last="18" onclick="toggleStep(this, 12)">
+  <div class="np-item np-parent" data-slide="13" data-first="13" data-last="19" onclick="toggleStep(this, 13)">
     <span class="np-parent-label"><span class="snum">Step 1</span>Project Introductions &amp; Background</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="12" onclick="goToSlide(12)">Overview</div>
-    <div class="np-child" data-slide="13" onclick="goToSlide(13)">Part 2</div>
-    <div class="np-child" data-slide="14" onclick="goToSlide(14)">Part 3</div>
-    <div class="np-child" data-slide="15" onclick="goToSlide(15)">Part 4</div>
-    <div class="np-child" data-slide="16" onclick="goToSlide(16)">Part 5</div>
-    <div class="np-child" data-slide="17" onclick="goToSlide(17)">Part 6</div>
-    <div class="np-child" data-slide="18" onclick="goToSlide(18)">Part 7</div>
+    <div class="np-child" data-slide="13" onclick="goToSlide(13)">Overview</div>
+    <div class="np-child" data-slide="14" onclick="goToSlide(14)">Part 2</div>
+    <div class="np-child" data-slide="15" onclick="goToSlide(15)">Part 3</div>
+    <div class="np-child" data-slide="16" onclick="goToSlide(16)">Part 4</div>
+    <div class="np-child" data-slide="17" onclick="goToSlide(17)">Part 5</div>
+    <div class="np-child" data-slide="18" onclick="goToSlide(18)">Part 6</div>
+    <div class="np-child" data-slide="19" onclick="goToSlide(19)">Part 7</div>
   </div>
-  <div class="np-item np-parent" data-slide="19" data-first="19" data-last="26" onclick="toggleStep(this, 19)">
+  <div class="np-item np-parent" data-slide="20" data-first="20" data-last="27" onclick="toggleStep(this, 20)">
     <span class="np-parent-label"><span class="snum">Step 2</span>Problem Statement</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="19" onclick="goToSlide(19)">Overview</div>
-    <div class="np-child" data-slide="20" onclick="goToSlide(20)">Part 2</div>
-    <div class="np-child" data-slide="21" onclick="goToSlide(21)">Part 3</div>
-    <div class="np-child" data-slide="22" onclick="goToSlide(22)">Part 4</div>
-    <div class="np-child" data-slide="23" onclick="goToSlide(23)">Part 5</div>
-    <div class="np-child" data-slide="24" onclick="goToSlide(24)">Part 6</div>
-    <div class="np-child" data-slide="25" onclick="goToSlide(25)">Part 7</div>
-    <div class="np-child" data-slide="26" onclick="goToSlide(26)">Part 8</div>
+    <div class="np-child" data-slide="20" onclick="goToSlide(20)">Overview</div>
+    <div class="np-child" data-slide="21" onclick="goToSlide(21)">Part 2</div>
+    <div class="np-child" data-slide="22" onclick="goToSlide(22)">Part 3</div>
+    <div class="np-child" data-slide="23" onclick="goToSlide(23)">Part 4</div>
+    <div class="np-child" data-slide="24" onclick="goToSlide(24)">Part 5</div>
+    <div class="np-child" data-slide="25" onclick="goToSlide(25)">Part 6</div>
+    <div class="np-child" data-slide="26" onclick="goToSlide(26)">Part 7</div>
+    <div class="np-child" data-slide="27" onclick="goToSlide(27)">Part 8</div>
   </div>
-  <div class="np-item np-parent" data-slide="27" data-first="27" data-last="31" onclick="toggleStep(this, 27)">
+  <div class="np-item np-parent" data-slide="28" data-first="28" data-last="32" onclick="toggleStep(this, 28)">
     <span class="np-parent-label"><span class="snum">Step 3</span>Conceptual Design Alternatives</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="27" onclick="goToSlide(27)">Overview</div>
-    <div class="np-child" data-slide="28" onclick="goToSlide(28)">Part 2</div>
-    <div class="np-child" data-slide="29" onclick="goToSlide(29)">Part 3</div>
-    <div class="np-child" data-slide="30" onclick="goToSlide(30)">Part 4</div>
-    <div class="np-child" data-slide="31" onclick="goToSlide(31)">Part 5</div>
+    <div class="np-child" data-slide="28" onclick="goToSlide(28)">Overview</div>
+    <div class="np-child" data-slide="29" onclick="goToSlide(29)">Part 2</div>
+    <div class="np-child" data-slide="30" onclick="goToSlide(30)">Part 3</div>
+    <div class="np-child" data-slide="31" onclick="goToSlide(31)">Part 4</div>
+    <div class="np-child" data-slide="32" onclick="goToSlide(32)">Part 5</div>
   </div>
-  <div class="np-item np-parent" data-slide="32" data-first="32" data-last="39" onclick="toggleStep(this, 32)">
+  <div class="np-item np-parent" data-slide="33" data-first="33" data-last="40" onclick="toggleStep(this, 33)">
     <span class="np-parent-label"><span class="snum">Step 4</span>Design Decomposition</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="32" onclick="goToSlide(32)">Overview</div>
-    <div class="np-child" data-slide="33" onclick="goToSlide(33)">Part 2</div>
-    <div class="np-child" data-slide="34" onclick="goToSlide(34)">Part 3</div>
-    <div class="np-child" data-slide="35" onclick="goToSlide(35)">Part 4</div>
-    <div class="np-child" data-slide="36" onclick="goToSlide(36)">Part 5</div>
-    <div class="np-child" data-slide="37" onclick="goToSlide(37)">Part 6</div>
-    <div class="np-child" data-slide="38" onclick="goToSlide(38)">Part 7</div>
-    <div class="np-child" data-slide="39" onclick="goToSlide(39)">Part 8</div>
+    <div class="np-child" data-slide="33" onclick="goToSlide(33)">Overview</div>
+    <div class="np-child" data-slide="34" onclick="goToSlide(34)">Part 2</div>
+    <div class="np-child" data-slide="35" onclick="goToSlide(35)">Part 3</div>
+    <div class="np-child" data-slide="36" onclick="goToSlide(36)">Part 4</div>
+    <div class="np-child" data-slide="37" onclick="goToSlide(37)">Part 5</div>
+    <div class="np-child" data-slide="38" onclick="goToSlide(38)">Part 6</div>
+    <div class="np-child" data-slide="39" onclick="goToSlide(39)">Part 7</div>
+    <div class="np-child" data-slide="40" onclick="goToSlide(40)">Part 8</div>
   </div>
-  <div class="np-item np-parent" data-slide="40" data-first="40" data-last="42" onclick="toggleStep(this, 40)">
+  <div class="np-item np-parent" data-slide="41" data-first="41" data-last="43" onclick="toggleStep(this, 41)">
     <span class="np-parent-label"><span class="snum">Step 5</span>Design &amp; Process FMEA</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="40" onclick="goToSlide(40)">Overview</div>
-    <div class="np-child" data-slide="41" onclick="goToSlide(41)">RPN Table</div>
-    <div class="np-child" data-slide="42" onclick="goToSlide(42)">FMEA Example</div>
+    <div class="np-child" data-slide="41" onclick="goToSlide(41)">Overview</div>
+    <div class="np-child" data-slide="42" onclick="goToSlide(42)">RPN Table</div>
+    <div class="np-child" data-slide="43" onclick="goToSlide(43)">FMEA Example</div>
   </div>
-  <div class="np-item np-parent" data-slide="43" data-first="43" data-last="44" onclick="toggleStep(this, 43)">
+  <div class="np-item np-parent" data-slide="44" data-first="44" data-last="45" onclick="toggleStep(this, 44)">
     <span class="np-parent-label"><span class="snum">Step 6</span>Detailed Design</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="43" onclick="goToSlide(43)">6.1</div>
-    <div class="np-child" data-slide="44" onclick="goToSlide(44)">6.2</div>
+    <div class="np-child" data-slide="44" onclick="goToSlide(44)">6.1</div>
+    <div class="np-child" data-slide="45" onclick="goToSlide(45)">6.2</div>
   </div>
-  <div class="np-item np-parent" data-slide="45" data-first="45" data-last="51" onclick="toggleStep(this, 45)">
+  <div class="np-item np-parent" data-slide="46" data-first="46" data-last="52" onclick="toggleStep(this, 46)">
     <span class="np-parent-label"><span class="snum">Step 7</span>Design For X (DFX)</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="45" onclick="goToSlide(45)">Overview</div>
-    <div class="np-child" data-slide="46" onclick="goToSlide(46)">DFA</div>
-    <div class="np-child" data-slide="47" onclick="goToSlide(47)">DFM</div>
-    <div class="np-child" data-slide="48" onclick="goToSlide(48)">DFAM</div>
-    <div class="np-child" data-slide="49" onclick="goToSlide(49)">Software</div>
-    <div class="np-child" data-slide="50" onclick="goToSlide(50)">MSD</div>
-    <div class="np-child" data-slide="51" onclick="goToSlide(51)">Cost Reduction</div>
+    <div class="np-child" data-slide="46" onclick="goToSlide(46)">Overview</div>
+    <div class="np-child" data-slide="47" onclick="goToSlide(47)">DFA</div>
+    <div class="np-child" data-slide="48" onclick="goToSlide(48)">DFM</div>
+    <div class="np-child" data-slide="49" onclick="goToSlide(49)">DFAM</div>
+    <div class="np-child" data-slide="50" onclick="goToSlide(50)">Software</div>
+    <div class="np-child" data-slide="51" onclick="goToSlide(51)">MSD</div>
+    <div class="np-child" data-slide="52" onclick="goToSlide(52)">Cost Reduction</div>
   </div>
-  <div class="np-item np-parent" data-slide="52" data-first="52" data-last="53" onclick="toggleStep(this, 52)">
+  <div class="np-item np-parent" data-slide="53" data-first="53" data-last="54" onclick="toggleStep(this, 53)">
     <span class="np-parent-label"><span class="snum">Step 8</span>Verification Test Plan</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="52" onclick="goToSlide(52)">Overview</div>
-    <div class="np-child" data-slide="53" onclick="goToSlide(53)">Verification Example</div>
+    <div class="np-child" data-slide="53" onclick="goToSlide(53)">Overview</div>
+    <div class="np-child" data-slide="54" onclick="goToSlide(54)">Verification Example</div>
   </div>
-  <div class="np-item" data-slide="54" onclick="goToSlide(54)"><span class="snum">Step 9</span>Validation Test Plan</div>
-  <div class="np-item" data-slide="55" onclick="goToSlide(55)"><span class="snum">Step 10</span>Build a High-Quality Solution</div>
-  <div class="np-item np-parent" data-slide="56" data-first="56" data-last="59" onclick="toggleStep(this, 56)">
+  <div class="np-item" data-slide="55" onclick="goToSlide(55)"><span class="snum">Step 9</span>Validation Test Plan</div>
+  <div class="np-item" data-slide="56" onclick="goToSlide(56)"><span class="snum">Step 10</span>Build a High-Quality Solution</div>
+  <div class="np-item np-parent" data-slide="57" data-first="57" data-last="60" onclick="toggleStep(this, 57)">
     <span class="np-parent-label"><span class="snum">Step 11</span>Standard Work Instructions</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="56" onclick="goToSlide(56)">Overview</div>
-    <div class="np-child" data-slide="57" onclick="goToSlide(57)">Part 2</div>
-    <div class="np-child" data-slide="58" onclick="goToSlide(58)">Part 3</div>
-    <div class="np-child" data-slide="59" onclick="goToSlide(59)">Part 4</div>
+    <div class="np-child" data-slide="57" onclick="goToSlide(57)">Overview</div>
+    <div class="np-child" data-slide="58" onclick="goToSlide(58)">Part 2</div>
+    <div class="np-child" data-slide="59" onclick="goToSlide(59)">Part 3</div>
+    <div class="np-child" data-slide="60" onclick="goToSlide(60)">Part 4</div>
   </div>
-  <div class="np-item" data-slide="60" onclick="goToSlide(60)"><span class="snum">Step 12</span>Verification, Validation &amp; Final Cost</div>
+  <div class="np-item" data-slide="61" onclick="goToSlide(61)"><span class="snum">Step 12</span>Verification, Validation &amp; Final Cost</div>
 </div>
 
 </div><!-- end #main-layout -->
@@ -2465,6 +2536,34 @@
     const slideW = 780;
     const slideH = 660;
 
+    // Pre-load every slide image as a base64 data URL so html2canvas never
+    // taints the canvas (toDataURL fails on a tainted canvas).
+    btn.textContent = 'Loading images…';
+    const imgCache = {};
+    const uniqueSrcs = [...new Set(
+      [...document.querySelectorAll('.slide img')]
+        .map(img => img.getAttribute('src'))
+        .filter(s => s && !s.startsWith('data:'))
+    )];
+    for (const src of uniqueSrcs) {
+      try {
+        // Encode the URL so spaces and other special characters in filenames
+        // (e.g. "MCI Logo.png") don't break fetch.
+        const fetchUrl = encodeURI(src);
+        const resp = await fetch(fetchUrl);
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        const blob = await resp.blob();
+        imgCache[src] = await new Promise((resolve, reject) => {
+          const r = new FileReader();
+          r.onload = () => resolve(r.result);
+          r.onerror = reject;
+          r.readAsDataURL(blob);
+        });
+      } catch (e) {
+        console.warn('Could not pre-load image:', src, e);
+      }
+    }
+
     // Off-screen container — page is never disrupted
     const capture = document.createElement('div');
     capture.style.cssText = 'position:fixed;left:-9999px;top:0;width:' + slideW + 'px;height:' + slideH + 'px;overflow:hidden;';
@@ -2479,14 +2578,23 @@
 
         const clone = slides[i].cloneNode(true);
         clone.style.cssText = 'display:flex;width:' + slideW + 'px;height:' + slideH + 'px;';
-        clone.querySelectorAll('img').forEach(img => img.src = LOGO_B64);
+        // Replace EVERY image src with a data URI so the canvas can never
+        // be tainted. Cache miss falls back to the embedded PFW logo.
+        const cloneImgs = [...clone.querySelectorAll('img')];
+        cloneImgs.forEach(img => {
+          const src = img.getAttribute('src');
+          if (!src || src.startsWith('data:')) return;
+          img.src = imgCache[src] || LOGO_B64;
+        });
         capture.innerHTML = '';
         capture.appendChild(clone);
+        // Wait for all (possibly large) data URIs to finish decoding before capture.
+        await Promise.all(cloneImgs.map(img => (img.decode ? img.decode().catch(() => {}) : Promise.resolve())));
 
         const canvas = await html2canvas(capture, {
           scale: 2,
           useCORS: false,
-          allowTaint: true,
+          allowTaint: false,
           logging: false,
           width: slideW,
           height: slideH

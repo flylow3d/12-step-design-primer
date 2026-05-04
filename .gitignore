@@ -18,3 +18,6 @@ desktop.ini
 # Source-data exports we don't want to publish (CSV/XLSX in Images/)
 Images/*.csv
 Images/*.xlsx
+
+# Personal working notes — do not publish
+Images/Joes Build Notes.md

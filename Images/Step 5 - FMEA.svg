@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 880" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="ar-fmea" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+      <polygon points="0,0 7,3.5 0,7" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- PS-ALT (yellow) -->
+  <rect x="30" y="20" width="180" height="130" rx="10" fill="#ffd966" stroke="#bf9000" stroke-width="2"/>
+  <text x="120" y="60" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Physical</text>
+  <text x="120" y="84" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Solution</text>
+  <text x="120" y="108" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Alternative</text>
+  <text x="120" y="132" text-anchor="middle" font-size="14" fill="#222">(PS-ALT)</text>
+
+  <!-- introduces arrow -->
+  <line x1="120" y1="150" x2="120" y2="206" stroke="#444" stroke-width="2" marker-end="url(#ar-fmea)"/>
+  <rect x="78" y="162" width="84" height="20" fill="#fff"/>
+  <text x="120" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#222">introduces</text>
+
+  <!-- Failure Mode (red) -->
+  <rect x="30" y="210" width="180" height="110" rx="10" fill="#e06666" stroke="#990000" stroke-width="2"/>
+  <text x="120" y="258" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Failure</text>
+  <text x="120" y="284" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Mode</text>
+
+  <!-- caused by arrow -->
+  <line x1="120" y1="320" x2="120" y2="406" stroke="#444" stroke-width="2" marker-end="url(#ar-fmea)"/>
+  <rect x="78" y="352" width="84" height="20" fill="#fff"/>
+  <text x="120" y="368" text-anchor="middle" font-size="13" font-weight="700" fill="#222">caused by</text>
+
+  <!-- Failure Cause (orange) -->
+  <rect x="30" y="410" width="180" height="110" rx="10" fill="#f6b26b" stroke="#bf6d00" stroke-width="2"/>
+  <text x="120" y="458" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Failure</text>
+  <text x="120" y="484" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Cause</text>
+
+  <!-- Mitigation (pale yellow) -->
+  <rect x="270" y="290" width="110" height="90" rx="10" fill="#ffe599" stroke="#bf9000" stroke-width="2"/>
+  <text x="325" y="343" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Mitigation</text>
+
+  <!-- Failure Mode -> Mitigation (no label) -->
+  <line x1="210" y1="305" x2="268" y2="305" stroke="#444" stroke-width="2" marker-end="url(#ar-fmea)"/>
+
+  <!-- mitigated by - Failure Cause (right) up to Mitigation (bottom) -->
+  <path d="M 210 465 L 290 465 L 290 388" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ar-fmea)"/>
+  <rect x="244" y="455" width="92" height="20" fill="#fff"/>
+  <text x="290" y="471" text-anchor="middle" font-size="13" font-weight="700" fill="#222">mitigated by</text>
+
+  <!-- results in - Mitigation (bottom) curves to FR (right side) -->
+  <path d="M 305 380 L 305 625 L 233 625" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ar-fmea)"/>
+  <rect x="274" y="525" width="62" height="20" fill="#fff"/>
+  <text x="305" y="541" text-anchor="middle" font-size="13" font-weight="700" fill="#222">results in</text>
+
+  <!-- FR (green) -->
+  <rect x="30" y="570" width="200" height="110" rx="10" fill="#93c47d" stroke="#38761d" stroke-width="2"/>
+  <text x="130" y="610" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Functional</text>
+  <text x="130" y="636" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Requirement</text>
+  <text x="130" y="662" text-anchor="middle" font-size="14" fill="#222">(FR)</text>
+
+  <!-- specifies - FRm (top) -> FR (bottom) -->
+  <line x1="130" y1="740" x2="130" y2="686" stroke="#444" stroke-width="2" marker-end="url(#ar-fmea)"/>
+  <rect x="100" y="700" width="60" height="20" fill="#fff"/>
+  <text x="130" y="716" text-anchor="middle" font-size="13" font-weight="700" fill="#222">specifies</text>
+
+  <!-- FRm (light blue) -->
+  <rect x="30" y="740" width="200" height="130" rx="10" fill="#9fc5e8" stroke="#1976d2" stroke-width="2"/>
+  <text x="130" y="780" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Functional</text>
+  <text x="130" y="806" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Requirement</text>
+  <text x="130" y="832" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Measure</text>
+  <text x="130" y="858" text-anchor="middle" font-size="14" fill="#222">(FRm)</text>
+
+  <!-- results in - Mitigation curves down and left to FRm (right side) -->
+  <path d="M 345 380 L 345 800 L 233 800" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ar-fmea)"/>
+  <rect x="314" y="700" width="62" height="20" fill="#fff"/>
+  <text x="345" y="716" text-anchor="middle" font-size="13" font-weight="700" fill="#222">results in</text>
+</svg>

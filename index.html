@@ -2939,7 +2939,7 @@
       <p style="margin-bottom:0;"><strong>Detectability:</strong> Can the failure mode be detected? (1–10)</p>
     </div>
     <div class="col-right" style="display:flex; align-items:center; justify-content:center; overflow:hidden;">
-      <img src="Images/Step 5 - Class.png" alt="FMEA Class Diagram" style="max-height:100%; max-width:100%; object-fit:contain;">
+      <img src="Images/Step 5 - FMEA.svg" alt="FMEA Class Diagram — PS-ALT introduces Failure Mode (caused by Failure Cause), mitigated by Mitigation, results in FR (specified by FRm)" style="width:100%;max-width:100%;max-height:100%;height:auto;object-fit:contain;display:block;">
     </div>
   </div>
   <div class="slide-footer">
@@ -3562,8 +3562,62 @@
       <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Test Procedure</b> &mdash; the step-by-step process to conduct the verification event.</p>
     </div>
     <div class="col-right">
-      <div class="section-label">Verification Flow</div>
-      <img src="Images/Step 8 - Fig 1.png" alt="Step 8 Verification flow diagram" style="width:100%;object-fit:contain;object-position:top;border-radius:3px;margin-top:4px;">
+      <div class="section-label">Verification Information Model</div>
+      <div style="display:flex;flex-direction:column;align-items:center;font-family:Arial,sans-serif;color:#1a3a5c;margin-top:4px;">
+
+        <!-- FRm — darker blue -->
+        <div style="background:#5b9bd5;color:#1a3a5c;border:1.5px solid #2e75b6;border-radius:10px;padding:10px 22px;font-weight:bold;text-align:center;font-size:13px;line-height:1.2;min-width:170px;">
+          Functional<br>Requirement Measure<br>(FRm)
+        </div>
+
+        <!-- arrow + verified by -->
+        <div style="display:flex;flex-direction:column;align-items:center;line-height:1;margin:4px 0 0;">
+          <div style="font-size:11.5px;font-weight:bold;color:#1a3a5c;">verified by</div>
+          <div style="font-size:18px;color:#444;line-height:1;">&darr;</div>
+        </div>
+
+        <!-- Verification Requirement — light blue -->
+        <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:9px 22px;font-weight:bold;text-align:center;font-size:13px;line-height:1.2;min-width:170px;">
+          Verification<br>Requirement
+        </div>
+
+        <!-- arrow + verified by -->
+        <div style="display:flex;flex-direction:column;align-items:center;line-height:1;margin:4px 0 0;">
+          <div style="font-size:11.5px;font-weight:bold;color:#1a3a5c;">verified by</div>
+          <div style="font-size:18px;color:#444;line-height:1;">&darr;</div>
+        </div>
+
+        <!-- Verification Event — light blue -->
+        <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:9px 22px;font-weight:bold;text-align:center;font-size:13px;line-height:1.2;min-width:170px;">
+          Verification<br>Event
+        </div>
+
+        <!-- branch SVG: employs -->
+        <svg width="240" height="46" viewBox="0 0 240 46" style="display:block;margin-top:2px;">
+          <defs>
+            <marker id="arr-vim" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto">
+              <polygon points="0,0 7,3.5 0,7" fill="#444"/>
+            </marker>
+          </defs>
+          <line x1="120" y1="0" x2="120" y2="14" stroke="#444" stroke-width="1.5"/>
+          <line x1="58" y1="14" x2="182" y2="14" stroke="#444" stroke-width="1.5"/>
+          <line x1="58" y1="14" x2="58" y2="42" stroke="#444" stroke-width="1.5" marker-end="url(#arr-vim)"/>
+          <line x1="182" y1="14" x2="182" y2="42" stroke="#444" stroke-width="1.5" marker-end="url(#arr-vim)"/>
+          <rect x="98" y="6" width="44" height="16" fill="#fff"/>
+          <text x="120" y="18" font-size="11" font-weight="bold" text-anchor="middle" fill="#1a3a5c">employs</text>
+        </svg>
+
+        <!-- Two boxes at bottom -->
+        <div style="display:flex;gap:30px;">
+          <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:9px 16px;font-weight:bold;text-align:center;font-size:12.5px;line-height:1.2;min-width:90px;">
+            Test<br>Configuration
+          </div>
+          <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:9px 16px;font-weight:bold;text-align:center;font-size:12.5px;line-height:1.2;min-width:90px;">
+            Test<br>Procedure
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
   <div class="key-points">
@@ -3589,7 +3643,11 @@
   <div class="slide-body">
     <div class="col-full">
       <div class="section-label">Verification Plan — Worked Example</div>
-      <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr 0.7fr;gap:6px;font-size:12px;margin-top:4px;margin-bottom:8px;">
+      <div style="display:grid;grid-template-columns:0.9fr 1.2fr 1fr 1fr 0.7fr;gap:6px;font-size:12px;margin-top:4px;margin-bottom:8px;">
+        <div style="padding:6px 8px;background:#f4f4f4;border-radius:3px;">
+          <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:10px;letter-spacing:0.6px;margin-bottom:3px;">FR</div>
+          <div><b>FR3.2:</b> Control water outflow rate.</div>
+        </div>
         <div style="padding:6px 8px;background:#f4f4f4;border-radius:3px;">
           <div style="font-weight:bold;color:#5C4A21;text-transform:uppercase;font-size:10px;letter-spacing:0.6px;margin-bottom:3px;">FRm</div>
           <div><b>FRm3.2a:</b> Maximize number of successful (leak-free) valve cycles.<br><b>Threshold:</b> &gt;20k cycles</div>
@@ -4341,73 +4399,25 @@
       <div class="section-label">Case Example &mdash; "Fresh Water PSs" (Achieve FRs Without Compromise)</div>
 
       <!-- Top callout -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:9px;font-size:11px;color:#222;line-height:1.45;">
-        <b style="color:#5C4A21;">Goal:</b> Achieve <b>all FRs</b> with the <b>least resources</b> &mdash; <i>and without compromise</i>. Each PS satisfies <b>one FR, and only one FR</b>. <span style="font-style:italic;color:#5C4A21;">This is the contrast to "salt-water" PSs that hit a metric while introducing side effects.</span>
+      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:8px;font-size:11px;color:#222;line-height:1.45;">
+        <b style="color:#5C4A21;">Goal:</b> Achieve <b>all FRs</b> with the <b>least resources</b>, <i>without compromise</i>. The <b>Manufacturing System Design (MSD)</b> framework names <b>seven such FRs</b> &mdash; the <i>fresh-water</i> alternative to optimizing single operations.
       </div>
 
-      <!-- Body: 7 FR-PS pairings on the left + annotations on the right -->
-      <div style="display:grid;grid-template-columns:1.05fr 1fr;gap:12px;align-items:start;">
+      <!-- MSD diagram -->
+      <img src="Images/Step 7 - MSD.png" alt="The 7 Functional Requirements of Manufacturing System Design — FR.0 through FR.6 (green cards) with empty PS.0 through PS.6 cards (yellow) for student fill-in" style="width:100%;max-height:230px;height:auto;object-fit:contain;display:block;margin:0 0 8px 0;border-radius:3px;">
 
-        <!-- FR-PS pairings -->
-        <div style="border:1px solid #b89a5e;border-radius:4px;background:#fbf8f0;padding:8px 12px;">
-          <div style="font-size:10.5px;font-weight:bold;color:#5C4A21;letter-spacing:0.5px;text-align:center;margin-bottom:6px;">FR &harr; PS PAIRINGS &mdash; one-to-one</div>
-          <div style="display:flex;flex-direction:column;gap:4px;font-family:'Cambria Math','Times New Roman',serif;">
-            <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;">
-              <div style="background:#e8f5e9;border:1px solid #2e7d32;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#2e7d32;font-size:11px;">FR<sub>1</sub></div>
-              <div style="font-size:14px;color:#444;">&larr;</div>
-              <div style="background:#fff3e0;border:1px solid #bf6d00;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#bf6d00;font-size:11px;">PS<sub>1</sub></div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;">
-              <div style="background:#e8f5e9;border:1px solid #2e7d32;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#2e7d32;font-size:11px;">FR<sub>2</sub></div>
-              <div style="font-size:14px;color:#444;">&larr;</div>
-              <div style="background:#fff3e0;border:1px solid #bf6d00;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#bf6d00;font-size:11px;">PS<sub>2</sub></div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;">
-              <div style="background:#e8f5e9;border:1px solid #2e7d32;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#2e7d32;font-size:11px;">FR<sub>3</sub></div>
-              <div style="font-size:14px;color:#444;">&larr;</div>
-              <div style="background:#fff3e0;border:1px solid #bf6d00;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#bf6d00;font-size:11px;">PS<sub>3</sub></div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;">
-              <div style="background:#e8f5e9;border:1px solid #2e7d32;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#2e7d32;font-size:11px;">FR<sub>4</sub></div>
-              <div style="font-size:14px;color:#444;">&larr;</div>
-              <div style="background:#fff3e0;border:1px solid #bf6d00;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#bf6d00;font-size:11px;">PS<sub>4</sub></div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;">
-              <div style="background:#e8f5e9;border:1px solid #2e7d32;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#2e7d32;font-size:11px;">FR<sub>5</sub></div>
-              <div style="font-size:14px;color:#444;">&larr;</div>
-              <div style="background:#fff3e0;border:1px solid #bf6d00;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#bf6d00;font-size:11px;">PS<sub>5</sub></div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;">
-              <div style="background:#e8f5e9;border:1px solid #2e7d32;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#2e7d32;font-size:11px;">FR<sub>6</sub></div>
-              <div style="font-size:14px;color:#444;">&larr;</div>
-              <div style="background:#fff3e0;border:1px solid #bf6d00;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#bf6d00;font-size:11px;">PS<sub>6</sub></div>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;">
-              <div style="background:#e8f5e9;border:1px solid #2e7d32;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#2e7d32;font-size:11px;">FR<sub>7</sub></div>
-              <div style="font-size:14px;color:#444;">&larr;</div>
-              <div style="background:#fff3e0;border:1px solid #bf6d00;border-radius:3px;padding:3px 9px;text-align:center;font-weight:bold;color:#bf6d00;font-size:11px;">PS<sub>7</sub></div>
-            </div>
-          </div>
+      <!-- Annotations row -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <!-- Takt Zeit -->
+        <div style="border:1px solid #b89a5e;border-radius:3px;background:#fff;padding:6px 11px;font-size:10.5px;color:#222;line-height:1.45;">
+          <b style="color:#5C4A21;">Takt Zeit:</b> <span style="font-style:italic;">not "more is better."</span>
+          <div style="margin-top:3px;">Match the <b>demand rate</b>, don't maximize output. This is the reason for <b>enterprise-design FRs</b>.</div>
         </div>
-
-        <!-- Annotations -->
-        <div style="display:flex;flex-direction:column;gap:7px;">
-
-          <!-- Takt Zeit -->
-          <div style="border:1px solid #b89a5e;border-radius:3px;background:#fff;padding:6px 11px;font-size:10.5px;color:#222;line-height:1.45;">
-            <b style="color:#5C4A21;">Takt Zeit:</b> <span style="font-style:italic;">not "more is better."</span>
-            <div style="margin-top:3px;">Match the <b>demand rate</b>, don't maximize output. This is the reason for <b>enterprise-design FRs</b>.</div>
-          </div>
-
-          <!-- Axiom 1 question -->
-          <div style="background:#fef6c8;border-left:3px solid #5C4A21;padding:6px 11px;font-size:10.5px;color:#222;line-height:1.45;">
-            <b style="color:#5C4A21;">The recurring question (Axiom 1):</b>
-            <div style="margin-top:3px;font-style:italic;color:#5C4A21;font-weight:600;">"Does PS<sub>j</sub> affect the achievement of FR<sub>i</sub>?"</div>
-            <div style="margin-top:3px;">Ask it <b>this way</b>. If the answer is "yes" off-diagonal, you've found <b>path dependency</b> &mdash; or worse, coupling.</div>
-          </div>
-
+        <!-- Axiom 1 question -->
+        <div style="background:#fef6c8;border-left:3px solid #5C4A21;padding:6px 11px;font-size:10.5px;color:#222;line-height:1.45;">
+          <b style="color:#5C4A21;">The recurring question (Axiom 1):</b>
+          <div style="margin-top:3px;font-style:italic;color:#5C4A21;font-weight:600;">"Does PS<sub>j</sub> affect the achievement of FR<sub>i</sub>?"</div>
         </div>
-
       </div>
 
     </div>
@@ -4434,45 +4444,8 @@
       <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:12px;margin-bottom:9px;">
 
         <!-- Visual diagram -->
-        <div style="border:1px solid #b89a5e;border-radius:4px;background:#fbf8f0;padding:10px 8px;">
-          <div style="font-size:10px;font-weight:bold;color:#5C4A21;letter-spacing:0.5px;text-align:center;margin-bottom:8px;">THE METAPHOR</div>
-          <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:6px;align-items:center;">
-
-            <!-- Salt Water (old) -->
-            <div style="text-align:center;">
-              <div style="background:#a89282;color:#fff;border:1.5px solid #5C4A21;border-radius:6px 6px 16px 16px / 6px 6px 12px 12px;padding:18px 6px;font-weight:bold;font-size:11px;">
-                Salt H<sub>2</sub>O
-              </div>
-              <div style="font-size:9px;color:#5C4A21;margin-top:4px;font-style:italic;line-height:1.3;">old system<br>(unconscious thinking)</div>
-            </div>
-
-            <div style="font-size:18px;color:#444;text-align:center;line-height:1;">
-              <div style="font-size:9px;font-style:italic;color:#5C4A21;">poured&nbsp;into</div>
-              <div>&rarr;</div>
-            </div>
-
-            <!-- Fresh Water (new) -->
-            <div style="text-align:center;">
-              <div style="background:#bbdefb;color:#0d47a1;border:1.5px solid #1976d2;border-radius:6px 6px 16px 16px / 6px 6px 12px 12px;padding:18px 6px;font-weight:bold;font-size:11px;">
-                Fresh H<sub>2</sub>O
-              </div>
-              <div style="font-size:9px;color:#5C4A21;margin-top:4px;font-style:italic;line-height:1.3;">the new thing<br>(intended design)</div>
-            </div>
-
-            <div style="font-size:18px;color:#444;text-align:center;line-height:1;">
-              <div style="font-size:9px;font-style:italic;color:#5C4A21;">result</div>
-              <div>=</div>
-            </div>
-
-            <!-- Salt Water again -->
-            <div style="text-align:center;">
-              <div style="background:#a89282;color:#fff;border:1.5px solid #5C4A21;border-radius:6px 6px 16px 16px / 6px 6px 12px 12px;padding:18px 6px;font-weight:bold;font-size:11px;">
-                Salt H<sub>2</sub>O
-              </div>
-              <div style="font-size:9px;color:#5C4A21;margin-top:4px;font-style:italic;line-height:1.3;">still tainted<br>(no real change)</div>
-            </div>
-
-          </div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <img src="Images/Fresh water into Salt Water.png" alt="Fresh Water (Lean / TPS / New Methodology) being poured through a funnel into a tank of Sea (Salt) Water — the Existing Enterprise / Manufacturing System" style="max-width:100%;max-height:330px;height:auto;width:auto;object-fit:contain;display:block;">
         </div>
 
         <!-- Unconscious thinking examples -->
@@ -4480,7 +4453,7 @@
           <div style="border:1px solid #b89a5e;border-radius:3px;background:#fff;padding:6px 11px;font-size:10.5px;color:#222;line-height:1.4;">
             <b style="color:#5C4A21;">Examples of unconscious thinking:</b>
             <ul style="margin:3px 0 0 18px;padding:0;">
-              <li><b>The Unit Cost Equation</b> &mdash; the salt-water lens from page 5.</li>
+              <li><b>The Unit Cost Equation</b> &mdash; the salt-water lens.</li>
               <li><b>AI &amp; computerization of old processes</b> &mdash; new tech, old logic.</li>
               <li>...and many more in any organization that "keeps doing things the way we always have."</li>
             </ul>

@@ -34,8 +34,8 @@
   <text x="120" y="484" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Cause</text>
 
   <!-- Mitigation (pale yellow) -->
-  <rect x="270" y="290" width="110" height="90" rx="10" fill="#ffe599" stroke="#bf9000" stroke-width="2"/>
-  <text x="325" y="343" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Mitigation</text>
+  <rect x="300" y="290" width="110" height="90" rx="10" fill="#ffe599" stroke="#bf9000" stroke-width="2"/>
+  <text x="350" y="343" text-anchor="middle" font-size="17" fill="#222" font-weight="700">Mitigation</text>
 
   <!-- Failure Mode -> Mitigation (no label) -->
   <line x1="210" y1="305" x2="268" y2="305" stroke="#444" stroke-width="2" marker-end="url(#ar-fmea)"/>

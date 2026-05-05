@@ -3,10 +3,12 @@
 
 /*
 !/.gitignore
+!/.env.example
 !/README.md
 !/index.html
 !/LICENSE
 !/Images/
+!/tools/
 
 # Inside whitelisted directories, ignore typical OS/editor noise
 .DS_Store
@@ -21,3 +23,11 @@ Images/*.xlsx
 
 # Personal working notes — do not publish
 Images/Joes Build Notes.md
+
+# Secrets — NEVER commit (your real key lives here)
+.env
+
+# Python build/cache artifacts inside tools/
+tools/__pycache__/
+tools/.venv/
+tools/*.pyc

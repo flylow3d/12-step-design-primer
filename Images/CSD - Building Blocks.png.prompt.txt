@@ -1,0 +1,17 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Clean editorial illustration: layered architecture diagram for 'The Building Blocks of Collective System Design (CSD)'. Cream background with subtle blueprint-grid corners.
+
+TOP: a wide pill-shaped banner labeled 'COLLECTIVE SYSTEM DESIGN (CSD) — 12-Step Methodology' in dark gold, thin black border.
+
+MIDDLE: a 3x3 grid of 9 smaller cards. Each has a tiny icon and a bold one-line label. Subtle alternating accent colors (pale gold / pale slate-blue / pale sage-green). Cards in reading order:
+Row 1: 'Flame Model' (flame icon), 'Axiomatic Design' (two-pillar icon), 'FMEA' (warning triangle)
+Row 2: 'V & V' (checkmark), 'Toyota Prod. System' (factory), 'Use Cases' (stick figure)
+Row 3: 'INCOSE SE' (book), 'Statistical Process Control' (bell curve), 'Design For X' (magnifying glass)
+
+BOTTOM: a wide pill-shaped foundation labeled 'ISO/IEC/IEEE 42010 — Multi-Viewpoint Architecture Description' in slate-blue, supporting everything above. Thin black border.
+
+Thin connecting lines: bottom layer up to each middle card, each middle card up to top banner.
+
+Style: clean modern flat-vector, thin black outlines, no shading, didactic engineering-textbook feel. Wide horizontal 16:9 composition. Sharp legible text.

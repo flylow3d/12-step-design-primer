@@ -3919,10 +3919,211 @@
   </div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 53</div></div>
 </div>
+
 <div class="slide">
   <div class="slide-header">
     <div><div class="header-title">Step 4 - Design Decomposition</div></div>
-    <div class="step-badge">4.4 Procedural Errors</div>
+    <div class="step-badge">4.4 Two Origins of Coupling</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">Two Distinct Mechanisms Behind a Populated Coupling Matrix</div>
+
+      <p style="font-size:11px;line-height:1.45;color:#222;margin:4px 0 8px 0;">The previous two examples both produced full off-diagonal entries in the coupling matrix &mdash; but for genuinely different reasons. Naming the difference helps you spot coupling earlier <i>and</i> choose the right fix.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div style="border:2px solid #d6a960;background:#fdfaf4;border-radius:6px;padding:7px 11px;">
+          <div style="font-weight:bold;color:#5C4A21;font-size:11.5px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">Trivial Coupling</div>
+          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0 0 5px 0;">Two PSs <i>look</i> distinct on paper because they sit at different boundary conditions, but they apply the <b>same mechanism</b> twice. The matrix fills up because the design has effectively doubled one knob.</p>
+          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0;"><b>Recall the <span class="concept-link" onclick="goToConcept('faucet-example')">faucet (4.2)</span>:</b> hot and cold valves are both &ldquo;restriction on a flow path.&rdquo; The uniqueness lives in what is piped behind them &mdash; not in the parameter itself.</p>
+        </div>
+        <div style="border:2px solid #3a7d44;background:#f3faf5;border-radius:6px;padding:7px 11px;">
+          <div style="font-weight:bold;color:#1f5128;font-size:11.5px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">Emergent Coupling</div>
+          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0 0 5px 0;">Two PSs are <i>designed</i> to be independent &mdash; the abstract decomposition says they should be &mdash; but the <b>physical implementation</b> drags an unintended FR along whenever one PS is actuated. Cross-talk emerges from the physics, not from the diagram.</p>
+          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0;"><b>Recall the <span class="concept-link" onclick="goToConcept('barn-beam')">barn beam (4.3)</span>:</b> welding two beams together turns two independent stiffness FRs into one shared structural response. The implementation choice introduced the coupling.</p>
+        </div>
+      </div>
+
+      <div class="key-points" style="margin-top:8px;">
+        <b>Why the distinction matters:</b>
+        <ul>
+          <li><b>Trivial coupling</b> usually signals the decomposition is too coarse &mdash; consider whether the redundant PSs should be collapsed or whether the FRs need to be re-stated more precisely.</li>
+          <li><b>Emergent coupling</b> is what the design matrix is genuinely built to discover &mdash; physics or geometry has introduced an off-diagonal that the abstract decomposition didn&rsquo;t anticipate.</li>
+          <li>The next two slides show emergent coupling in real-world systems where the cross-talk surprised the original designers &mdash; and what they did about it.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 54</div></div>
+</div>
+
+<div class="slide">
+  <div class="slide-header">
+    <div><div class="header-title">Step 4 - Design Decomposition</div></div>
+    <div class="step-badge">4.5 Emergent Coupling &mdash; Aviation</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">Two Aviation Systems Where Roll, Yaw, and Heading Coupled in Surprising Ways</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div style="border:1.5px solid #444;border-radius:6px;padding:7px 10px;background:#fafafa;">
+          <div style="font-weight:bold;color:#1a1a1a;font-size:11.5px;margin-bottom:3px;">Aircraft Ailerons &amp; Adverse Yaw</div>
+          <div style="font-size:10px;color:#222;line-height:1.4;">
+            <div style="margin:2px 0;"><b>FR1</b> Roll (bank angle) &nbsp;&bull;&nbsp; <b>FR2</b> Yaw (heading)</div>
+            <div style="margin:2px 0;"><b>PS1</b> Aileron deflection &nbsp;&bull;&nbsp; <b>PS2</b> Rudder deflection</div>
+            <div style="margin:5px 0;color:#5C4A21;"><b>The cross-talk:</b> The down-going aileron creates more lift &mdash; and induced drag scales with the square of lift. The wing being raised drags harder than the wing being dropped, yawing the nose <i>opposite</i> the intended turn. The off-diagonal isn&rsquo;t just nonzero &mdash; it has the wrong sign.</div>
+            <div style="margin:5px 0;"><b>How designers responded:</b></div>
+            <ul style="margin:2px 0 0 14px;padding:0;font-size:9.5px;line-height:1.35;">
+              <li><b>Coordinated rudder</b> &mdash; pilot adds rudder while rolling (turns the design <i>decoupled / triangular</i>).</li>
+              <li><b>Differential ailerons</b> &mdash; geared so the down-going aileron deflects less, shrinking the asymmetry.</li>
+              <li><b>Frise ailerons</b> &mdash; up-going aileron&rsquo;s leading edge protrudes into the airstream, balancing the drag.</li>
+              <li><b>Spoilerons</b> &mdash; kill lift on the up-going wing instead of generating excess on the other.</li>
+              <li><b>Fly-by-wire mixing</b> &mdash; the flight computer adds rudder automatically (software decoupling).</li>
+            </ul>
+          </div>
+        </div>
+        <div style="border:1.5px solid #444;border-radius:6px;padding:7px 10px;background:#fafafa;">
+          <div style="font-weight:bold;color:#1a1a1a;font-size:11.5px;margin-bottom:3px;">Helicopter Collective &amp; Anti-Torque</div>
+          <div style="font-size:10px;color:#222;line-height:1.4;">
+            <div style="margin:2px 0;"><b>FR1</b> Vertical lift (climb / descend) &nbsp;&bull;&nbsp; <b>FR2</b> Heading (yaw)</div>
+            <div style="margin:2px 0;"><b>PS1</b> Collective pitch &nbsp;&bull;&nbsp; <b>PS2</b> Anti-torque pedals (tail rotor pitch)</div>
+            <div style="margin:5px 0;color:#5C4A21;"><b>The cross-talk:</b> Pulling the collective increases blade pitch, lift, and aerodynamic load. Engine torque rises to keep RPM constant. Newton&rsquo;s third law puts equal-and-opposite torque on the fuselage &mdash; a climb command produces an unwanted yaw. Early prototypes were unflyable until this was solved.</div>
+            <div style="margin:5px 0;"><b>How designers responded:</b></div>
+            <ul style="margin:2px 0 0 14px;padding:0;font-size:9.5px;line-height:1.35;">
+              <li><b>Tail rotor</b> &mdash; sideways thrust cancels reaction torque (the canonical compensating PS).</li>
+              <li><b>Mechanical correlator</b> &mdash; collective lever linked to tail-rotor pitch in hardware (Robinson R22 / R44).</li>
+              <li><b>Coaxial rotors</b> &mdash; two opposite-spinning main rotors cancel torque internally; no tail rotor needed (Ka-50, S-97).</li>
+              <li><b>Tandem rotors</b> &mdash; same idea spread fore-and-aft (CH-47 Chinook).</li>
+              <li><b>NOTAR</b> &mdash; ducted fan + Coanda effect along the tail boom replaces the tail rotor (MD Helicopters).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="key-points" style="margin-top:7px;">
+        <b>What both cases share:</b> a designer sat down believing the PSs were independent. The matrix&rsquo;s nonzero off-diagonals weren&rsquo;t because the PSs were secretly the same &mdash; they were because the implementation introduced physical cross-talk the abstract design didn&rsquo;t anticipate.
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 55</div></div>
+</div>
+
+<div class="slide">
+  <div class="slide-header">
+    <div><div class="header-title">Step 4 - Design Decomposition</div></div>
+    <div class="step-badge">4.6 Emergent Coupling &mdash; Process &amp; Vehicle</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">When Physics or Geometry Couples PSs You Believed Were Independent</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div style="border:1.5px solid #444;border-radius:6px;padding:7px 10px;background:#fafafa;">
+          <div style="font-weight:bold;color:#1a1a1a;font-size:11.5px;margin-bottom:3px;">Chemical Reactor Temperature &amp; Pressure</div>
+          <div style="font-size:10px;color:#222;line-height:1.4;">
+            <div style="margin:2px 0;"><b>FR1</b> Maintain target temperature &nbsp;&bull;&nbsp; <b>FR2</b> Maintain target pressure</div>
+            <div style="margin:2px 0;"><b>PS1</b> Cooling jacket / heater duty &nbsp;&bull;&nbsp; <b>PS2</b> Vent or feed valve</div>
+            <div style="margin:5px 0;color:#5C4A21;"><b>The cross-talk:</b> <i>PV = nRT</i> couples the two for free. Adjust temperature with the jacket, pressure follows. Vent gas to drop pressure, composition shifts; if exothermic, kinetics accelerate, more heat dumps in, temperature rises &mdash; which raises pressure. Every PS reaches into the other FR through the gas law and reaction kinetics simultaneously.</div>
+            <div style="margin:5px 0;"><b>How designers responded:</b></div>
+            <ul style="margin:2px 0 0 14px;padding:0;font-size:9.5px;line-height:1.35;">
+              <li><b>Cascade control</b> &mdash; a master loop (temperature) sets the target of a slave loop (coolant flow), tuned so they don&rsquo;t fight each other.</li>
+              <li><b>Decoupling matrices</b> &mdash; classical multivariable control inverts the steady-state coupling and feeds compensating signals to each PS.</li>
+              <li><b>Model Predictive Control (MPC)</b> &mdash; an internal dynamic model solves an optimization at every time step, naturally handling cross-effects and lag.</li>
+              <li><b>Process design choices</b> &mdash; large vapor headspace, constant-pressure operation, or liquid-phase chemistry each weaken or sidestep the gas-law coupling.</li>
+              <li><b>Inert blanketing</b> &mdash; a regulated nitrogen overlay sets pressure externally, decoupling it from reaction dynamics.</li>
+            </ul>
+          </div>
+        </div>
+        <div style="border:1.5px solid #444;border-radius:6px;padding:7px 10px;background:#fafafa;">
+          <div style="font-weight:bold;color:#1a1a1a;font-size:11.5px;margin-bottom:3px;">Bicycle Steering &amp; Lean</div>
+          <div style="font-size:10px;color:#222;line-height:1.4;">
+            <div style="margin:2px 0;"><b>FR1</b> Direction of travel (heading) &nbsp;&bull;&nbsp; <b>FR2</b> Dynamic balance (lean)</div>
+            <div style="margin:2px 0;"><b>PS1</b> Handlebar angle &nbsp;&bull;&nbsp; <b>PS2</b> Body lean / weight shift</div>
+            <div style="margin:5px 0;color:#5C4A21;"><b>The cross-talk:</b> Above walking speed, to turn right the rider must briefly steer <i>left</i> &mdash; countersteering. The brief left input shifts the contact patches left of the center of mass; the bike falls right; the lean produces the right turn. Trail geometry, gyroscopic precession, and contact-patch location combine so the handlebar PS produces a wrong-sign initial response on heading.</div>
+            <div style="margin:5px 0;"><b>How designers and riders responded:</b></div>
+            <ul style="margin:2px 0 0 14px;padding:0;font-size:9.5px;line-height:1.35;">
+              <li><b>Trail geometry</b> &mdash; rake angle and trail distance tuned so the bike inherently self-recovers from small perturbations.</li>
+              <li><b>Wheel mass &amp; rotational inertia</b> &mdash; bigger heavier wheels add gyroscopic stability at speed.</li>
+              <li><b>Operator training</b> &mdash; riders internalize countersteering implicitly. The human becomes the controller.</li>
+              <li><b>Training wheels</b> &mdash; lean is constrained mechanically; the coupling can&rsquo;t appear because the dimension is locked out.</li>
+              <li><b>Tilting trikes / gyro-stabilized vehicles</b> &mdash; active gyros or linkages control lean independently of steering (Lit Motors C-1).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="key-points" style="margin-top:7px;">
+        <b>The pattern repeats:</b> the design matrix isn&rsquo;t a bookkeeping nuisance &mdash; it&rsquo;s the tool that surfaces these surprises. Once the coupling is named, the team can decide whether to redesign for independence, sequence the adjustments, or add a compensating mechanism.
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 56</div></div>
+</div>
+
+<div class="slide">
+  <div class="slide-header">
+    <div><div class="header-title">Step 4 - Design Decomposition</div></div>
+    <div class="step-badge">4.7 Three Moves to Decouple</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">When Emergent Coupling Appears, Engineers Have Three Levers</div>
+
+      <p style="font-size:11px;line-height:1.45;color:#222;margin:4px 0 8px 0;">Across every emergent-coupling case in this section, designers chose some combination of the three moves below. Each maps cleanly onto the design types from <span class="concept-link" onclick="goToConcept('types-of-designs')">4.1 Types of Designs</span>.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;">
+        <div style="border:2px solid #3a7d44;background:#f3faf5;border-radius:6px;padding:7px 10px;">
+          <div style="font-weight:bold;color:#1f5128;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">1. Eliminate</div>
+          <p style="font-size:10px;line-height:1.4;color:#222;margin:0 0 5px 0;">Redesign the mechanism so the off-diagonals go to zero. The physics that produced the coupling is removed from the design.</p>
+          <div style="font-size:9.5px;color:#5C4A21;background:#e8f3eb;padding:3px 6px;border-radius:3px;margin-bottom:4px;"><b>Result:</b> truly <i>uncoupled</i> design.</div>
+          <ul style="margin:0 0 0 14px;padding:0;font-size:9.5px;line-height:1.35;">
+            <li>Coaxial / tandem helicopter rotors</li>
+            <li>Single-handle mixer cartridge</li>
+            <li>Liquid-phase chemistry (no gas-law coupling)</li>
+            <li>Spoilerons replacing differential ailerons</li>
+          </ul>
+        </div>
+        <div style="border:2px solid #d6a960;background:#fdfaf4;border-radius:6px;padding:7px 10px;">
+          <div style="font-weight:bold;color:#5C4A21;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">2. Compensate</div>
+          <p style="font-size:10px;line-height:1.4;color:#222;margin:0 0 5px 0;">Accept the coupling. Add a sequenced or coordinated PS that cancels the unintended FR shift.</p>
+          <div style="font-size:9.5px;color:#5C4A21;background:#fcf2dd;padding:3px 6px;border-radius:3px;margin-bottom:4px;"><b>Result:</b> <i>decoupled / triangular</i> design &mdash; solvable in order.</div>
+          <ul style="margin:0 0 0 14px;padding:0;font-size:9.5px;line-height:1.35;">
+            <li>Tail rotor on a single-main-rotor helicopter</li>
+            <li>Coordinated rudder during a roll</li>
+            <li>Mechanical correlator (collective &rarr; tail rotor)</li>
+            <li>Cascade control loops in process plants</li>
+          </ul>
+        </div>
+        <div style="border:2px solid #6c63d6;background:#f4f3fb;border-radius:6px;padding:7px 10px;">
+          <div style="font-weight:bold;color:#3a3486;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">3. Manage</div>
+          <p style="font-size:10px;line-height:1.4;color:#222;margin:0 0 5px 0;">Leave the matrix full. Build a controller &mdash; human or computer &mdash; sophisticated enough to fly the coupled system directly.</p>
+          <div style="font-size:9.5px;color:#3a3486;background:#e6e3f5;padding:3px 6px;border-radius:3px;margin-bottom:4px;"><b>Result:</b> <i>coupled but managed</i>.</div>
+          <ul style="margin:0 0 0 14px;padding:0;font-size:9.5px;line-height:1.35;">
+            <li>Trained pilots adding rudder by reflex</li>
+            <li>Cyclists countersteering automatically</li>
+            <li>Model Predictive Control on a reactor</li>
+            <li>Fly-by-wire flight computers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="key-points" style="margin-top:8px;">
+        <b>Takeaway:</b>
+        <ul>
+          <li>Real engineering projects usually combine all three &mdash; eliminate where you can, compensate where you must, manage what is left.</li>
+          <li>The point of the design matrix isn&rsquo;t to enforce zero coupling everywhere. It&rsquo;s to make sure every nonzero off-diagonal was a <i>conscious design choice</i> &mdash; not an accident the team will discover during validation.</li>
+          <li>Choosing earlier is cheaper. A coupling caught here in Step 4 costs a redesign; the same coupling caught in <span class="concept-link" onclick="goToConcept('verification')">Step 8 (Verification)</span> or in the field costs a recall.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 57</div></div>
+</div>
+<div class="slide">
+  <div class="slide-header">
+    <div><div class="header-title">Step 4 - Design Decomposition</div></div>
+    <div class="step-badge">4.8 Procedural Errors</div>
   </div>
   <div class="slide-body">
     <div class="col-full">
@@ -3962,12 +4163,12 @@
       </div>
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 54</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 58</div></div>
 </div>
 <div class="slide">
   <div class="slide-header">
     <div><div class="header-title">Step 4 - Design Decomposition</div></div>
-    <div class="step-badge">4.5 Decomposition Issues</div>
+    <div class="step-badge">4.9 Decomposition Issues</div>
   </div>
   <div class="slide-body">
     <div class="col-full">
@@ -3993,12 +4194,12 @@
       </div>
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 55</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 59</div></div>
 </div>
 <div class="slide">
   <div class="slide-header">
     <div><div class="header-title">Step 4 - Design Decomposition</div></div>
-    <div class="step-badge">4.6 Decomposition Fix</div>
+    <div class="step-badge">4.10 Decomposition Fix</div>
   </div>
   <div class="slide-body">
     <div class="col-full">
@@ -4082,12 +4283,12 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 56</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 60</div></div>
 </div>
 <div class="slide">
   <div class="slide-header">
     <div><div class="header-title">Step 4 - Design Decomposition</div></div>
-    <div class="step-badge">4.7 Cooling System Example</div>
+    <div class="step-badge">4.11 Cooling System Example</div>
   </div>
   <div class="slide-body">
     <div class="col-full">
@@ -4197,14 +4398,14 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 57</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 61</div></div>
 </div>
 
 <!-- STEP 4 — Decision Analysis Worksheet (PS0) -->
 <div class="slide">
   <div class="slide-header">
     <div><div class="header-title">Step 4 - Design Decomposition</div></div>
-    <div class="step-badge">4.8 Decision Analysis</div>
+    <div class="step-badge">4.12 Decision Analysis</div>
   </div>
   <div class="slide-body">
     <div class="col-full" style="display:flex;flex-direction:column;min-height:0;gap:6px;">
@@ -4440,14 +4641,14 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 58</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 62</div></div>
 </div>
 
 <!-- STEP 4 — Decision Analysis: Key Points (Threshold & Goal) -->
 <div class="slide">
   <div class="slide-header">
     <div><div class="header-title">Step 4 - Design Decomposition</div></div>
-    <div class="step-badge">4.9 Decision Analysis Scoring</div>
+    <div class="step-badge">4.13 Decision Analysis Scoring</div>
   </div>
   <div class="slide-body">
     <div class="col-full" style="display:flex;flex-direction:column;min-height:0;gap:10px;">
@@ -4496,14 +4697,14 @@
       <li>Score on a <b>0&ndash;5</b> scale: <b>0 = unacceptable</b> (below threshold &mdash; auto-rejects the alternative); <b>1&ndash;4 = inside the trade space</b> (between threshold and goal); <b>5 = meets or exceeds the Goal</b>.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 59</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 63</div></div>
 </div>
 
 <!-- STEP 4 — Decision Analysis Worked Example -->
 <div class="slide">
   <div class="slide-header">
     <div><div class="header-title">Step 4 - Design Decomposition</div></div>
-    <div class="step-badge">4.10 Decision Analysis Example</div>
+    <div class="step-badge">4.14 Decision Analysis Example</div>
   </div>
   <div class="slide-body">
     <div class="col-full" style="display:flex;flex-direction:column;min-height:0;gap:6px;">
@@ -4710,7 +4911,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 60</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 64</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -5042,7 +5243,7 @@
       <li>Goal: show how components implement the PSs to achieve the FRs.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 66</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 70</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -5147,7 +5348,7 @@
       <li>Three reasons to keep a part separate: relative motion, different material, or required service access.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 68</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 72</div></div>
 </div>
 <!-- STEP 7 — SUB-SLIDE: DESIGN FOR MANUFACTURING (DFM) -->
 <div class="slide">
@@ -5240,7 +5441,7 @@
       <li>The questions force explicit decisions about material, process, and design &mdash; informing the manufacturing strategy.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 69</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 73</div></div>
 </div>
 <!-- STEP 7 — SUB-SLIDE: DESIGN FOR ADDITIVE MANUFACTURING (DFAM) -->
 <div class="slide">
@@ -5265,7 +5466,7 @@
       <li>Total score maps to a recommendation: needs redesign, consider redesign, moderate likelihood, or higher likelihood of success.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 70</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 74</div></div>
 </div>
 <!-- STEP 7 — SUB-SLIDE: SOFTWARE DESIGN (DFX) -->
 <div class="slide">
@@ -5333,7 +5534,7 @@
       <li>Each principle pushes a specific quality attribute &mdash; reliability, maintainability, performance, or scalability.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 71</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 75</div></div>
 </div>
 
 <!-- STEP 7 — SUB-SLIDE: MANUFACTURING SYSTEM DESIGN (MSD) -->
@@ -5410,7 +5611,7 @@
       <li>Each FR drives a corresponding PS (physical solution) &mdash; the means by which the requirement is achieved.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 72</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 76</div></div>
 </div>
 
 <!-- STEP 7 — SUB-SLIDE: DESIGN FOR COST REDUCTION -->
@@ -5475,7 +5676,7 @@
       <li>If you don't add back &sim;10% of what you deleted in Step 2, you didn't delete enough.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 73</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 77</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -5648,7 +5849,7 @@
       <li>The Test Configuration enumerates <b>everything</b> needed to run the test: hardware, fixtures, software, and people.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 75</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 79</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -5884,7 +6085,7 @@
       <li>Standard Work is written from the customer's perspective: it must let a first-time user complete each Use Case without prior training.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 79</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 83</div></div>
 </div>
 <!-- STEP 11 — SUB-SLIDE 3 -->
 <div class="slide">
@@ -5897,7 +6098,7 @@
       <img src="Images/Step 11 - Part 3.png" alt="Step 11 Part 3" style="width:100%;height:100%;object-fit:contain;object-position:top;">
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 80</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 84</div></div>
 </div>
 <!-- STEP 11 — SUB-SLIDE 4: MECHANICAL ASSEMBLY EXAMPLE -->
 <div class="slide">
@@ -5910,7 +6111,7 @@
       <img src="Images/Step 11 - Standard Work Mechanical Example.png" alt="Step 11 Standard Work Mechanical Assembly Example" style="width:100%;height:100%;object-fit:contain;object-position:top;">
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 81</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 85</div></div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
@@ -6065,7 +6266,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 84</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 88</div></div>
 </div>
 
 <!-- Why FRs — Page 2: For the Design of Systems -->
@@ -6122,7 +6323,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 85</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 89</div></div>
 </div>
 
 <!-- Why FRs — Page 3: Suh's Three Domains -->
@@ -6216,7 +6417,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 86</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 90</div></div>
 </div>
 
 <!-- Why FRs — Page 3b: Suh's Two Design Axioms (NEW) -->
@@ -6380,7 +6581,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 88</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 92</div></div>
 </div>
 
 <!-- Why FRs — Page 5: Case Example — Salt Water PSs -->
@@ -6472,7 +6673,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 89</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 93</div></div>
 </div>
 
 <!-- Why FRs — Page 6: Case Example — Fresh Water PSs -->
@@ -6509,7 +6710,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 90</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 94</div></div>
 </div>
 
 <!-- Why FRs — Page 7: The Salt-Into-Fresh Trap -->
@@ -6562,7 +6763,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 91</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 95</div></div>
 </div>
 
 <!-- Why FRs — Page 8: The Message -->
@@ -6661,7 +6862,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 92</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 96</div></div>
 </div>
 
 <!-- Why FRs — New Page 9: Are there any new high-level functions? -->
@@ -6718,7 +6919,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 93</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 97</div></div>
 </div>
 
 <!-- Why FRs — Page 10: For Products / Evolving Designs -->
@@ -6810,7 +7011,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 94</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 98</div></div>
 </div>
 <!-- GLOSSARY 1 of 2 — CSD CORE TERMS (NEW) -->
 <div class="slide">
@@ -7035,7 +7236,7 @@
     <div class="np-child" data-slide="47" onclick="goToSlide(47)">3.3 Example</div>
     <div class="np-child" data-slide="48" onclick="goToSlide(48)">3.4 Concept Selection</div>
   </div>
-  <div class="np-item np-parent" data-slide="49" data-first="49" data-last="59" onclick="toggleStep(this, 49)">
+  <div class="np-item np-parent" data-slide="49" data-first="49" data-last="63" onclick="toggleStep(this, 49)">
     <span class="np-parent-label"><span class="snum">Step 4</span>Design Decomposition</span>
     <span class="np-arrow">&#9654;</span>
   </div>
@@ -7044,91 +7245,95 @@
     <div class="np-child" data-slide="50" onclick="goToSlide(50)">Types of Designs</div>
     <div class="np-child" data-slide="51" onclick="goToSlide(51)">Faucet Example</div>
     <div class="np-child" data-slide="52" onclick="goToSlide(52)">Barn Beam Example</div>
-    <div class="np-child" data-slide="53" onclick="goToSlide(53)">Procedural Errors</div>
-    <div class="np-child" data-slide="54" onclick="goToSlide(54)">Decomposition Issues</div>
-    <div class="np-child" data-slide="55" onclick="goToSlide(55)">Decomposition Fix</div>
-    <div class="np-child" data-slide="56" onclick="goToSlide(56)">Cooling System Example</div>
-    <div class="np-child" data-slide="57" onclick="goToSlide(57)">Decision Analysis</div>
-    <div class="np-child" data-slide="58" onclick="goToSlide(58)">Decision Analysis Scoring</div>
-    <div class="np-child" data-slide="59" onclick="goToSlide(59)">Decision Analysis Example</div>
+    <div class="np-child" data-slide="53" onclick="goToSlide(53)">Two Origins of Coupling</div>
+    <div class="np-child" data-slide="54" onclick="goToSlide(54)">Emergent Coupling — Aviation</div>
+    <div class="np-child" data-slide="55" onclick="goToSlide(55)">Emergent Coupling — Process &amp; Vehicle</div>
+    <div class="np-child" data-slide="56" onclick="goToSlide(56)">Three Moves to Decouple</div>
+    <div class="np-child" data-slide="57" onclick="goToSlide(57)">Procedural Errors</div>
+    <div class="np-child" data-slide="58" onclick="goToSlide(58)">Decomposition Issues</div>
+    <div class="np-child" data-slide="59" onclick="goToSlide(59)">Decomposition Fix</div>
+    <div class="np-child" data-slide="60" onclick="goToSlide(60)">Cooling System Example</div>
+    <div class="np-child" data-slide="61" onclick="goToSlide(61)">Decision Analysis</div>
+    <div class="np-child" data-slide="62" onclick="goToSlide(62)">Decision Analysis Scoring</div>
+    <div class="np-child" data-slide="63" onclick="goToSlide(63)">Decision Analysis Example</div>
   </div>
-  <div class="np-item np-parent" data-slide="60" data-first="60" data-last="63" onclick="toggleStep(this, 60)">
+  <div class="np-item np-parent" data-slide="64" data-first="64" data-last="67" onclick="toggleStep(this, 64)">
     <span class="np-parent-label"><span class="snum">Step 5</span>Design &amp; Process FMEA</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="60" onclick="goToSlide(60)">Overview</div>
-    <div class="np-child" data-slide="61" onclick="goToSlide(61)">5.1 Terminology</div>
-    <div class="np-child" data-slide="62" onclick="goToSlide(62)">5.2 RPN</div>
-    <div class="np-child" data-slide="63" onclick="goToSlide(63)">5.3 DFMEA &amp; PFMEA</div>
+    <div class="np-child" data-slide="64" onclick="goToSlide(64)">Overview</div>
+    <div class="np-child" data-slide="65" onclick="goToSlide(65)">5.1 Terminology</div>
+    <div class="np-child" data-slide="66" onclick="goToSlide(66)">5.2 RPN</div>
+    <div class="np-child" data-slide="67" onclick="goToSlide(67)">5.3 DFMEA &amp; PFMEA</div>
   </div>
-  <div class="np-item np-parent" data-slide="64" data-first="64" data-last="65" onclick="toggleStep(this, 64)">
+  <div class="np-item np-parent" data-slide="68" data-first="68" data-last="69" onclick="toggleStep(this, 68)">
     <span class="np-parent-label"><span class="snum">Step 6</span>Detailed Design</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="64" onclick="goToSlide(64)">6.1</div>
-    <div class="np-child" data-slide="65" onclick="goToSlide(65)">6.2</div>
+    <div class="np-child" data-slide="68" onclick="goToSlide(68)">6.1</div>
+    <div class="np-child" data-slide="69" onclick="goToSlide(69)">6.2</div>
   </div>
-  <div class="np-item np-parent" data-slide="66" data-first="66" data-last="72" onclick="toggleStep(this, 66)">
+  <div class="np-item np-parent" data-slide="70" data-first="70" data-last="76" onclick="toggleStep(this, 70)">
     <span class="np-parent-label"><span class="snum">Step 7</span>Design For X (DFX)</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="66" onclick="goToSlide(66)">Overview</div>
-    <div class="np-child" data-slide="67" onclick="goToSlide(67)">DFA</div>
-    <div class="np-child" data-slide="68" onclick="goToSlide(68)">DFM</div>
-    <div class="np-child" data-slide="69" onclick="goToSlide(69)">DFAM</div>
-    <div class="np-child" data-slide="70" onclick="goToSlide(70)">Software</div>
-    <div class="np-child" data-slide="71" onclick="goToSlide(71)">MSD</div>
-    <div class="np-child" data-slide="72" onclick="goToSlide(72)">Cost Reduction</div>
+    <div class="np-child" data-slide="70" onclick="goToSlide(70)">Overview</div>
+    <div class="np-child" data-slide="71" onclick="goToSlide(71)">DFA</div>
+    <div class="np-child" data-slide="72" onclick="goToSlide(72)">DFM</div>
+    <div class="np-child" data-slide="73" onclick="goToSlide(73)">DFAM</div>
+    <div class="np-child" data-slide="74" onclick="goToSlide(74)">Software</div>
+    <div class="np-child" data-slide="75" onclick="goToSlide(75)">MSD</div>
+    <div class="np-child" data-slide="76" onclick="goToSlide(76)">Cost Reduction</div>
   </div>
-  <div class="np-item np-parent" data-slide="73" data-first="73" data-last="74" onclick="toggleStep(this, 73)">
+  <div class="np-item np-parent" data-slide="77" data-first="77" data-last="78" onclick="toggleStep(this, 77)">
     <span class="np-parent-label"><span class="snum">Step 8</span>Verification Test Plan</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="73" onclick="goToSlide(73)">Overview</div>
-    <div class="np-child" data-slide="74" onclick="goToSlide(74)">Verification Example</div>
+    <div class="np-child" data-slide="77" onclick="goToSlide(77)">Overview</div>
+    <div class="np-child" data-slide="78" onclick="goToSlide(78)">Verification Example</div>
   </div>
-  <div class="np-item" data-slide="75" onclick="goToSlide(75)"><span class="snum">Step 9</span>Validation Test Plan</div>
-  <div class="np-item" data-slide="76" onclick="goToSlide(76)"><span class="snum">Step 10</span>Build a High-Quality Solution</div>
-  <div class="np-item np-parent" data-slide="77" data-first="77" data-last="80" onclick="toggleStep(this, 77)">
+  <div class="np-item" data-slide="79" onclick="goToSlide(79)"><span class="snum">Step 9</span>Validation Test Plan</div>
+  <div class="np-item" data-slide="80" onclick="goToSlide(80)"><span class="snum">Step 10</span>Build a High-Quality Solution</div>
+  <div class="np-item np-parent" data-slide="81" data-first="81" data-last="84" onclick="toggleStep(this, 81)">
     <span class="np-parent-label"><span class="snum">Step 11</span>Standard Work Instructions</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="77" onclick="goToSlide(77)">Overview</div>
-    <div class="np-child" data-slide="78" onclick="goToSlide(78)">Faucet Example</div>
-    <div class="np-child" data-slide="79" onclick="goToSlide(79)">Lego Simulation Example</div>
-    <div class="np-child" data-slide="80" onclick="goToSlide(80)">Mechanical Assembly Example</div>
+    <div class="np-child" data-slide="81" onclick="goToSlide(81)">Overview</div>
+    <div class="np-child" data-slide="82" onclick="goToSlide(82)">Faucet Example</div>
+    <div class="np-child" data-slide="83" onclick="goToSlide(83)">Lego Simulation Example</div>
+    <div class="np-child" data-slide="84" onclick="goToSlide(84)">Mechanical Assembly Example</div>
   </div>
-  <div class="np-item" data-slide="81" onclick="goToSlide(81)"><span class="snum">Step 12</span>Verification, Validation &amp; Final Cost</div>
-  <div class="np-item" data-slide="82" onclick="goToSlide(82)">12 Steps Complete &mdash; Reflection</div>
+  <div class="np-item" data-slide="85" onclick="goToSlide(85)"><span class="snum">Step 12</span>Verification, Validation &amp; Final Cost</div>
+  <div class="np-item" data-slide="86" onclick="goToSlide(86)">12 Steps Complete &mdash; Reflection</div>
 
   <div class="np-section">Why FRs?</div>
-  <div class="np-item np-parent" data-slide="83" data-first="83" data-last="93" onclick="toggleStep(this, 83)">
+  <div class="np-item np-parent" data-slide="87" data-first="87" data-last="97" onclick="toggleStep(this, 87)">
     <span class="np-parent-label">Why FRs?</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="83" onclick="goToSlide(83)">CSD Language Recap</div>
-    <div class="np-child" data-slide="84" onclick="goToSlide(84)">For the Design of Systems</div>
-    <div class="np-child" data-slide="85" onclick="goToSlide(85)">Suh's Three Domains</div>
-    <div class="np-child" data-slide="86" onclick="goToSlide(86)">Suh's Two Axioms</div>
-    <div class="np-child" data-slide="87" onclick="goToSlide(87)">The Approach</div>
-    <div class="np-child" data-slide="88" onclick="goToSlide(88)">Salt Water PSs</div>
-    <div class="np-child" data-slide="89" onclick="goToSlide(89)">Fresh Water PSs</div>
-    <div class="np-child" data-slide="90" onclick="goToSlide(90)">The Salt-Into-Fresh Trap</div>
-    <div class="np-child" data-slide="91" onclick="goToSlide(91)">The Message</div>
-    <div class="np-child" data-slide="92" onclick="goToSlide(92)">Are FRs Really New?</div>
-    <div class="np-child" data-slide="93" onclick="goToSlide(93)">For Products &mdash; Evolving Designs</div>
+    <div class="np-child" data-slide="87" onclick="goToSlide(87)">CSD Language Recap</div>
+    <div class="np-child" data-slide="88" onclick="goToSlide(88)">For the Design of Systems</div>
+    <div class="np-child" data-slide="89" onclick="goToSlide(89)">Suh's Three Domains</div>
+    <div class="np-child" data-slide="90" onclick="goToSlide(90)">Suh's Two Axioms</div>
+    <div class="np-child" data-slide="91" onclick="goToSlide(91)">The Approach</div>
+    <div class="np-child" data-slide="92" onclick="goToSlide(92)">Salt Water PSs</div>
+    <div class="np-child" data-slide="93" onclick="goToSlide(93)">Fresh Water PSs</div>
+    <div class="np-child" data-slide="94" onclick="goToSlide(94)">The Salt-Into-Fresh Trap</div>
+    <div class="np-child" data-slide="95" onclick="goToSlide(95)">The Message</div>
+    <div class="np-child" data-slide="96" onclick="goToSlide(96)">Are FRs Really New?</div>
+    <div class="np-child" data-slide="97" onclick="goToSlide(97)">For Products &mdash; Evolving Designs</div>
   </div>
 
   <div class="np-section">Reference</div>
-  <div class="np-item" data-slide="94" onclick="goToSlide(94)">Glossary &mdash; Core CSD Terms</div>
-  <div class="np-item" data-slide="95" onclick="goToSlide(95)">Glossary &mdash; Methodology &amp; Acronyms</div>
-  <div class="np-item" data-slide="96" onclick="goToSlide(96)">Thank You</div>
+  <div class="np-item" data-slide="98" onclick="goToSlide(98)">Glossary &mdash; Core CSD Terms</div>
+  <div class="np-item" data-slide="99" onclick="goToSlide(99)">Glossary &mdash; Methodology &amp; Acronyms</div>
+  <div class="np-item" data-slide="100" onclick="goToSlide(100)">Thank You</div>
 </div>
 
 </div><!-- end #main-layout -->

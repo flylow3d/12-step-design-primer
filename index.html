@@ -138,6 +138,21 @@
   }
   .toc-item:hover { background: #f5f0e8; }
 
+  /* Stable cross-reference links that jump to a concept-introducing slide
+     by name (data-concept) rather than slide number. */
+  .concept-link {
+    color: #5C4A21;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-underline-offset: 2px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  .concept-link:hover { color: #8a6e2f; background: #f5f0e8; }
+  @media print {
+    .concept-link { color: #5C4A21; text-decoration: none; font-weight: 700; }
+  }
+
   /* ── Standard two-column body ── */
   .slide-body {
     flex: 1;
@@ -721,7 +736,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE 1 — COVER
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-0">
+<div class="slide" id="slide-0" data-concept="building-blocks">
   <div class="slide-header">
     <div>
       <div class="slide-header header-title">12 Step Design Process Primer</div>
@@ -750,7 +765,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE 1 — TABLE OF CONTENTS
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-1">
+<div class="slide" id="slide-1" data-concept="axiomatic-design">
   <div class="slide-header">
     <div class="header-title">Table of Contents</div>
   </div>
@@ -798,7 +813,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE 2 — PURPOSE
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-2">
+<div class="slide" id="slide-2" data-concept="axiom-1">
   <div class="slide-header">
     <div class="header-title">Purpose</div>
   </div>
@@ -827,7 +842,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE 3 — FLAME MODEL OF A SYSTEM
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-3">
+<div class="slide" id="slide-3" data-concept="axiom-2">
   <div class="slide-header">
     <div class="header-title">Flame Model of a System</div>
   </div>
@@ -863,7 +878,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE — THE ENGINEER'S TONE
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-engineers-tone">
+<div class="slide" id="slide-engineers-tone" data-concept="process-capability">
   <div class="slide-header">
     <div class="header-title">The Engineer's Tone</div>
   </div>
@@ -901,7 +916,7 @@
   </div>
 </div>
 <!-- THE FOUNDATIONS OF CSD — BUILDING BLOCKS (NEW) -->
-<div class="slide">
+<div class="slide" data-concept="iso-42010">
   <div class="slide-header">
     <div><div class="header-title">The Foundations of CSD</div></div>
     <div class="step-badge">Building Blocks</div>
@@ -935,7 +950,7 @@
 
 
 <!-- AXIOMATIC DESIGN — What is Axiomatic Design? -->
-<div class="slide">
+<div class="slide" data-concept="info-architecture">
   <div class="slide-header">
     <div><div class="header-title">Axiomatic Design</div></div>
     <div class="step-badge">What is Axiomatic Design?</div>
@@ -1079,7 +1094,7 @@
 </div>
 
 <!-- AXIOMATIC DESIGN — Axiom 1 -->
-<div class="slide">
+<div class="slide" data-concept="info-model">
   <div class="slide-header">
     <div><div class="header-title">Axiomatic Design</div></div>
     <div class="step-badge">Axiom 1</div>
@@ -1137,7 +1152,7 @@
 </div>
 
 <!-- AXIOMATIC DESIGN — Axiom 2 -->
-<div class="slide">
+<div class="slide" data-concept="fr-frm-ps">
   <div class="slide-header">
     <div><div class="header-title">Axiomatic Design</div></div>
     <div class="step-badge">Axiom 2</div>
@@ -1202,7 +1217,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      THE FOUNDATIONS OF CSD — PROCESS CAPABILITY (placeholder)
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide">
+<div class="slide" data-concept="use-case">
   <div class="slide-header">
     <div><div class="header-title">The Foundations of CSD</div></div>
     <div class="step-badge">Process Capability</div>
@@ -1212,7 +1227,7 @@
       <div class="section-label">Process Capability &mdash; Choosing Among Design Alternatives</div>
 
       <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:5px 11px;margin-bottom:6px;font-size:10.5px;color:#222;line-height:1.4;">
-        <b style="color:#5C4A21;">Recall Axiom 2 (slide 14):</b> minimize information content. <b>How do we measure it?</b> &mdash; Process Capability.
+        <b style="color:#5C4A21;">Recall <span class="concept-link" onclick="goToConcept('axiom-2')">Axiom 2</span>:</b> minimize information content. <b>How do we measure it?</b> &mdash; Process Capability.
       </div>
 
       <p style="font-size:10.5px;line-height:1.45;color:#222;margin:0 0 7px 0;">
@@ -1286,7 +1301,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      THE FOUNDATIONS OF CSD — ISO/IEC/IEEE 42010
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide">
+<div class="slide" data-concept="failure-cause">
   <div class="slide-header">
     <div><div class="header-title">The Foundations of CSD</div></div>
     <div class="step-badge">ISO/IEC/IEEE 42010</div>
@@ -1323,7 +1338,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE — CSD LANGUAGE: INFORMATION ARCHITECTURE
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-csd-information-architecture">
+<div class="slide" id="slide-csd-information-architecture" data-concept="csd-algorithm">
   <div class="slide-header">
     <div>
       <div class="header-title">Collective System Design (CSD) Language</div>
@@ -1374,7 +1389,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE — CSD LANGUAGE: INFORMATION MODEL
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-csd-information-model">
+<div class="slide" id="slide-csd-information-model" data-concept="types-of-designs">
   <div class="slide-header">
     <div>
       <div class="header-title">Collective System Design (CSD) Language</div>
@@ -1396,7 +1411,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE — CSD LANGUAGE: FR — FRm — PS-ALT
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-csd-language-1">
+<div class="slide" id="slide-csd-language-1" data-concept="decision-analysis">
   <div class="slide-header">
     <div>
       <div class="header-title">Collective System Design (CSD) Language</div>
@@ -1453,7 +1468,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE — CSD LANGUAGE: USE CASE — USE CASE STEP — FR
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-csd-language-2">
+<div class="slide" id="slide-csd-language-2" data-concept="decision-analysis-scoring">
   <div class="slide-header">
     <div>
       <div class="header-title">Collective System Design (CSD) Language</div>
@@ -1509,7 +1524,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE — CSD LANGUAGE: PS-ALT — FAILURE MODE — CAUSE — MITIGATION
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-csd-language-3">
+<div class="slide" id="slide-csd-language-3" data-concept="fmea-overview">
   <div class="slide-header">
     <div>
       <div class="header-title">Collective System Design (CSD) Language</div>
@@ -1565,7 +1580,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE — FRs AND FRm's: HOW-TO STATE GOOD FRs
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-9">
+<div class="slide" id="slide-9" data-concept="fmea-terms">
   <div class="slide-header">
     <div class="header-title">FRs and FRm's</div>
   </div>
@@ -1622,7 +1637,7 @@
 </div>
 
 <!-- FRs and FRm's — Good or Bad Functional Requirements? (exercise) -->
-<div class="slide">
+<div class="slide" data-concept="rpn">
   <div class="slide-header">
     <div class="header-title">FRs and FRm's</div>
   </div>
@@ -1701,7 +1716,7 @@
 </div>
 
 <!-- FRs and FRm's — Good or Bad Functional Requirements? (answers) -->
-<div class="slide">
+<div class="slide" data-concept="dfmea-pfmea">
   <div class="slide-header">
     <div class="header-title">FRs and FRm's</div>
   </div>
@@ -1786,7 +1801,7 @@
 </div>
 
 <!-- FRs and FRm's — Functional Requirement Measures (FRm): How Well -->
-<div class="slide">
+<div class="slide" data-concept="dfx-overview">
   <div class="slide-header">
     <div class="header-title">FRs and FRm's</div>
   </div>
@@ -1868,7 +1883,7 @@
 </div>
 
 <!-- FRs and FRm's — KPIs and FRm's -->
-<div class="slide">
+<div class="slide" data-concept="dfa">
   <div class="slide-header">
     <div class="header-title">FRs and FRm's</div>
   </div>
@@ -1933,7 +1948,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE 11 — LIST OF QUESTIONS
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-questions">
+<div class="slide" id="slide-questions" data-concept="dfm">
   <div class="slide-header">
     <div class="header-title">List of Questions</div>
   </div>
@@ -2018,7 +2033,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE 12 — PARKING LOT
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-parking">
+<div class="slide" id="slide-parking" data-concept="msd">
   <div class="slide-header">
     <div class="header-title">Parking Lot</div>
   </div>
@@ -2038,7 +2053,7 @@
   </div>
 </div>
 <!-- LUCID OVERVIEW (NEW) — inserted before Tips & Tricks -->
-<div class="slide">
+<div class="slide" data-concept="three-domains">
   <div class="slide-header">
     <div class="header-title">Lucid Templates</div>
   </div>
@@ -2079,7 +2094,7 @@
 <!-- ══════════════════════════════════════════════════════════════
      SLIDE 8 — TIPS AND TRICKS
 ══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-8">
+<div class="slide" id="slide-8" data-concept="axioms-recall">
   <div class="slide-header">
     <div class="header-title">Tips and Tricks for Using the 12 Step Template in Lucid</div>
   </div>
@@ -6215,7 +6230,7 @@
       <div class="section-label">Recall &mdash; Suh's Two Design Axioms</div>
 
       <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:5px 12px;margin-bottom:8px;font-size:11px;color:#222;line-height:1.45;font-style:italic;">
-        <b style="color:#5C4A21;font-style:normal;">Recall:</b> we covered the two axioms earlier in the <b style="font-style:normal;">Foundations of CSD</b> section (slides 13 &amp; 14). This page is a quick reference before the case examples that follow.
+        <b style="color:#5C4A21;font-style:normal;">Recall:</b> we covered the two axioms earlier in the <b style="font-style:normal;">Foundations of CSD</b> section &mdash; <span class="concept-link" onclick="goToConcept('axiom-1')">Axiom 1</span> &amp; <span class="concept-link" onclick="goToConcept('axiom-2')">Axiom 2</span>. This page is a quick reference before the case examples that follow.
       </div>
 
       <!-- Two-axiom cards -->
@@ -6809,24 +6824,24 @@
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:10.5px;color:#222;line-height:1.4;margin-top:4px;">
         <div><b>Function</b> &mdash; what the system must <i>do</i>.</div>
-        <div><b>Functional Requirement (FR)</b> &mdash; a function the team has <b>agreed</b> the system must perform. Begins with a verb.</div>
-        <div><b>Functional Requirement Measure (FRm)</b> &mdash; a measurable performance target on an FR. Includes <b>units</b>, a direction (max / min), a <b>Threshold</b>, and a <b>Goal</b>.</div>
+        <div><b class="concept-link" onclick="goToConcept('fr-frm-ps')">Functional Requirement (FR)</b> &mdash; a function the team has <b>agreed</b> the system must perform. Begins with a verb.</div>
+        <div><b class="concept-link" onclick="goToConcept('fr-frm-ps')">Functional Requirement Measure (FRm)</b> &mdash; a measurable performance target on an FR. Includes <b>units</b>, a direction (max / min), a <b>Threshold</b>, and a <b>Goal</b>.</div>
         <div><b>Threshold</b> &mdash; the <b>acceptable</b> level of performance for an FRm. Below threshold = unacceptable.</div>
         <div><b>Goal</b> &mdash; the <b>desired ultimate</b> performance for an FRm. Meeting the goal = excellent.</div>
-        <div><b>Physical Solution (PS)</b> &mdash; the chosen physical thing that delivers an FR. Begins with a noun.</div>
-        <div><b>PS-ALT</b> &mdash; an alternative Physical Solution candidate evaluated alongside others before one is chosen.</div>
-        <div><b>Use Case</b> &mdash; a scenario in which the customer interacts with the system to achieve an outcome.</div>
-        <div><b>Use Case Step</b> &mdash; one action within a use case &mdash; what the user or system does next.</div>
+        <div><b class="concept-link" onclick="goToConcept('fr-frm-ps')">Physical Solution (PS)</b> &mdash; the chosen physical thing that delivers an FR. Begins with a noun.</div>
+        <div><b class="concept-link" onclick="goToConcept('failure-cause')">PS-ALT</b> &mdash; an alternative Physical Solution candidate evaluated alongside others before one is chosen.</div>
+        <div><b class="concept-link" onclick="goToConcept('use-case')">Use Case</b> &mdash; a scenario in which the customer interacts with the system to achieve an outcome.</div>
+        <div><b class="concept-link" onclick="goToConcept('use-case')">Use Case Step</b> &mdash; one action within a use case &mdash; what the user or system does next.</div>
         <div><b>System Boundary</b> &mdash; the line that defines what is <b>inside</b> the design and what stays outside (and crosses as inputs / outputs).</div>
         <div><b>Interface</b> &mdash; a crossing of the system boundary; a connection between the design and an external element.</div>
-        <div><b>Decomposition</b> &mdash; breaking a parent PS into its child FRs and child PSs across multiple levels.</div>
-        <div><b>Coupled Design</b> &mdash; one PS affects multiple FRs at once; design behavior is unpredictable.</div>
-        <div><b>Uncoupled Design</b> &mdash; each PS affects exactly one FR; behavior is predictable.</div>
-        <div><b>Path-Dependent Design</b> &mdash; PSs are independent only when adjusted in a specific sequence; acceptable but fragile.</div>
+        <div><b class="concept-link" onclick="goToConcept('csd-algorithm')">Decomposition</b> &mdash; breaking a parent PS into its child FRs and child PSs across multiple levels.</div>
+        <div><b class="concept-link" onclick="goToConcept('types-of-designs')">Coupled Design</b> &mdash; one PS affects multiple FRs at once; design behavior is unpredictable.</div>
+        <div><b class="concept-link" onclick="goToConcept('types-of-designs')">Uncoupled Design</b> &mdash; each PS affects exactly one FR; behavior is predictable.</div>
+        <div><b class="concept-link" onclick="goToConcept('types-of-designs')">Path-Dependent Design</b> &mdash; PSs are independent only when adjusted in a specific sequence; acceptable but fragile.</div>
         <div><b>Conceptual Design Alternative (CDA)</b> &mdash; a high-level approach to solving the problem (Step 3.2). One of several to evaluate.</div>
-        <div><b>Failure Mode</b> &mdash; a way the design or process could fail (e.g., "valve leaks").</div>
-        <div><b>Failure Cause</b> &mdash; the underlying reason for a failure mode.</div>
-        <div><b>Mitigation</b> &mdash; the design or process change that prevents the failure cause or detects the failure mode.</div>
+        <div><b class="concept-link" onclick="goToConcept('failure-cause')">Failure Mode</b> &mdash; a way the design or process could fail (e.g., "valve leaks").</div>
+        <div><b class="concept-link" onclick="goToConcept('failure-cause')">Failure Cause</b> &mdash; the underlying reason for a failure mode.</div>
+        <div><b class="concept-link" onclick="goToConcept('failure-cause')">Mitigation</b> &mdash; the design or process change that prevents the failure cause or detects the failure mode.</div>
         <div><b>Stakeholder</b> &mdash; any person with an interest in the system (customer, operator, maintainer, regulator, &hellip;).</div>
       </div>
     </div>
@@ -6848,25 +6863,25 @@
       <div class="section-label">Glossary &mdash; Methodology &amp; Acronyms</div>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:10.5px;color:#222;line-height:1.4;margin-top:4px;">
-        <div><b>FMEA</b> &mdash; Failure Mode and Effects Analysis. A predictive failure-prevention technique used in Step 5.</div>
-        <div><b>DFMEA</b> &mdash; <i>Design</i> FMEA &mdash; failures introduced by the chosen physical solution.</div>
-        <div><b>PFMEA</b> &mdash; <i>Process</i> FMEA &mdash; failures introduced by the manufacturing / assembly process.</div>
-        <div><b>RPN</b> &mdash; Risk Priority Number = <b>Severity &times; Likelihood &times; Detectability</b> (each scored 1&ndash;10).</div>
-        <div><b>Severity</b> &mdash; how bad the failure mode's consequences are (1&ndash;10).</div>
-        <div><b>Likelihood</b> &mdash; how often the failure is expected to occur (1&ndash;10).</div>
-        <div><b>Detectability</b> &mdash; how easy it is to detect the failure before it harms the customer (1&ndash;10).</div>
-        <div><b>Axiomatic Design</b> &mdash; Suh's design framework. Two axioms: <b>Independence</b> and <b>Information Content</b>.</div>
-        <div><b>Process Capability (C<sub>pk</sub>)</b> &mdash; statistical measure of a process's ability to stay within spec limits (USL / LSL).</div>
+        <div><b class="concept-link" onclick="goToConcept('fmea-overview')">FMEA</b> &mdash; Failure Mode and Effects Analysis. A predictive failure-prevention technique used in Step 5.</div>
+        <div><b class="concept-link" onclick="goToConcept('dfmea-pfmea')">DFMEA</b> &mdash; <i>Design</i> FMEA &mdash; failures introduced by the chosen physical solution.</div>
+        <div><b class="concept-link" onclick="goToConcept('dfmea-pfmea')">PFMEA</b> &mdash; <i>Process</i> FMEA &mdash; failures introduced by the manufacturing / assembly process.</div>
+        <div><b class="concept-link" onclick="goToConcept('rpn')">RPN</b> &mdash; Risk Priority Number = <b>Severity &times; Likelihood &times; Detectability</b> (each scored 1&ndash;10).</div>
+        <div><b class="concept-link" onclick="goToConcept('rpn')">Severity</b> &mdash; how bad the failure mode's consequences are (1&ndash;10).</div>
+        <div><b class="concept-link" onclick="goToConcept('rpn')">Likelihood</b> &mdash; how often the failure is expected to occur (1&ndash;10).</div>
+        <div><b class="concept-link" onclick="goToConcept('rpn')">Detectability</b> &mdash; how easy it is to detect the failure before it harms the customer (1&ndash;10).</div>
+        <div><b class="concept-link" onclick="goToConcept('axiomatic-design')">Axiomatic Design</b> &mdash; Suh's design framework. Two axioms: <b class="concept-link" onclick="goToConcept('axiom-1')">Independence</b> and <b class="concept-link" onclick="goToConcept('axiom-2')">Information Content</b>.</div>
+        <div><b class="concept-link" onclick="goToConcept('process-capability')">Process Capability (C<sub>pk</sub>)</b> &mdash; statistical measure of a process's ability to stay within spec limits (USL / LSL).</div>
         <div><b>USL / LSL</b> &mdash; Upper / Lower Specification Limits.</div>
-        <div><b>Information Content (I)</b> &mdash; <i>I = log<sub>2</sub>(System Range / Common Range)</i> &mdash; lower I means a more capable design.</div>
+        <div><b class="concept-link" onclick="goToConcept('axiom-2')">Information Content (I)</b> &mdash; <i>I = log<sub>2</sub>(System Range / Common Range)</i> &mdash; lower I means a more capable design.</div>
         <div><b>V &amp; V</b> &mdash; <b>Verification</b> ("did we build it right?") + <b>Validation</b> ("did we build the right thing?").</div>
-        <div><b>DFX</b> &mdash; Design For X (Step 7). X = Assembly (DFA), Manufacturing (DFM), Additive Manufacturing (DFAM), Manufacturing System Design (MSD), Software, Cost, etc.</div>
+        <div><b class="concept-link" onclick="goToConcept('dfx-overview')">DFX</b> &mdash; Design For X (Step 7). X = Assembly (<span class="concept-link" onclick="goToConcept('dfa')">DFA</span>), Manufacturing (<span class="concept-link" onclick="goToConcept('dfm')">DFM</span>), Additive Manufacturing (DFAM), Manufacturing System Design (<span class="concept-link" onclick="goToConcept('msd')">MSD</span>), Software, Cost, etc.</div>
         <div><b>Standard Work</b> &mdash; documented best-known method for a recurring task; defines content, sequence, and time (Step 11).</div>
         <div><b>Takt Time</b> &mdash; available production time &divide; customer demand &mdash; the rate at which work must flow.</div>
         <div><b>Cycle Time (CT)</b> &mdash; time taken for one repetition of the work; CT &le; Takt = balanced.</div>
         <div><b>BOM</b> &mdash; Bill of Materials; the complete parts list of a design (Step 6.1).</div>
         <div><b>KPI</b> &mdash; Key Performance Indicator; a measure of an organization's progress against a goal. KPIs should derive from FRms.</div>
-        <div><b>ISO/IEC/IEEE 42010</b> &mdash; the international standard establishing the multi-viewpoint principle for system architecture.</div>
+        <div><b class="concept-link" onclick="goToConcept('iso-42010')">ISO/IEC/IEEE 42010</b> &mdash; the international standard establishing the multi-viewpoint principle for system architecture.</div>
         <div><b>INCOSE</b> &mdash; International Council on Systems Engineering &mdash; publishes the SE Handbook referenced for performance-requirements language.</div>
         <div><b>TPS</b> &mdash; Toyota Production System &mdash; the lean-manufacturing tradition Standard Work / Takt are drawn from.</div>
         <div><b>SME</b> &mdash; Subject Matter Expert.</div>
@@ -7344,6 +7359,17 @@
     const total = document.querySelectorAll('.slide').length;
     const idx = Math.min(Math.max(n, 0), total - 1);
     showSlide(idx);
+  }
+
+  // Stable cross-references that survive renumbering. Each concept-introducing
+  // slide carries a data-concept="..." attribute; in-text "Recall X" links call
+  // goToConcept('x') instead of a hard-coded slide number.
+  function goToConcept(name) {
+    const slides = document.querySelectorAll('.slide');
+    for (let i = 0; i < slides.length; i++) {
+      if (slides[i].dataset.concept === name) { showSlide(i); return; }
+    }
+    console.warn('goToConcept: no slide with data-concept="' + name + '"');
   }
 
   function fitNavPane() {

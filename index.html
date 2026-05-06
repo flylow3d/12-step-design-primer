@@ -3966,17 +3966,17 @@
   </div>
   <div class="slide-body">
     <div class="col-full">
-      <div class="section-label">Two Aviation Systems Where Roll, Yaw, and Heading Coupled in Surprising Ways</div>
+      <div class="section-label">Two Aviation Systems Made Predictable by a Sequenced Compensating PS</div>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
 
         <!-- AILERONS -->
-        <div style="border:1.5px solid #c62828;border-radius:3px;overflow:hidden;display:flex;flex-direction:column;">
-          <div style="background:#c62828;color:#fff;padding:4px 10px;font-weight:bold;font-size:11.5px;letter-spacing:0.4px;">&#10007; EMERGENT &mdash; Aircraft Ailerons &amp; Adverse Yaw</div>
+        <div style="border:1.5px solid #2e7d32;border-radius:3px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="background:#2e7d32;color:#fff;padding:4px 10px;font-weight:bold;font-size:11.5px;letter-spacing:0.4px;">&#10003; PATH-DEPENDENT &mdash; Aircraft Ailerons &amp; Adverse Yaw</div>
           <div style="padding:7px 10px;font-size:10px;line-height:1.4;color:#222;">
             <div><b>FR<sub>1</sub>:</b> Roll (bank angle) &nbsp;&bull;&nbsp; <b>FR<sub>2</sub>:</b> Yaw (heading)</div>
             <div style="margin-top:2px;"><b>PS<sub>1</sub>:</b> Aileron deflection &nbsp;&bull;&nbsp; <b>PS<sub>2</sub>:</b> Rudder deflection</div>
-            <div style="margin-top:4px;color:#c62828;font-style:italic;font-size:9.5px;">Down-going aileron's drag yaws the nose <b>opposite</b> the intended turn &mdash; wrong-sign cross-talk.</div>
+            <div style="margin-top:4px;color:#1f5128;font-style:italic;font-size:9.5px;">Down-going aileron's drag also yaws the nose. Sequence the inputs &mdash; aileron first, then coordinated rudder &mdash; and the design becomes predictable.</div>
           </div>
           <div style="padding:0 10px 8px 10px;display:flex;justify-content:center;align-items:center;gap:10px;">
             <div style="font-family:'Cambria Math','Times New Roman',serif;font-size:12px;color:#222;display:flex;align-items:center;gap:3px;">
@@ -3985,10 +3985,10 @@
               </span>
               <span>=</span>
               <div style="display:inline-grid;grid-template-columns:repeat(2,22px);grid-template-rows:repeat(2,22px);gap:1px;background:#bbb;padding:1px;border-radius:2px;">
-                <div style="background:#c62828;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
+                <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
                 <div style="background:#f3f3f3;color:#bbb;display:flex;align-items:center;justify-content:center;font-size:10px;">O</div>
-                <div style="background:#c62828;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
-                <div style="background:#c62828;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
+                <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
+                <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
               </div>
               <span style="display:inline-flex;flex-direction:column;font-size:10px;line-height:1.2;border-left:1.5px solid #444;border-right:1.5px solid #444;padding:1px 4px;">
                 <span>Ail</span><span>Rud</span>
@@ -3996,7 +3996,6 @@
             </div>
             <svg width="64" height="56" viewBox="0 0 68 56">
               <defs>
-                <marker id="m-ail-r" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><polygon points="0,0 5,2.5 0,5" fill="#c62828"/></marker>
                 <marker id="m-ail-g" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><polygon points="0,0 5,2.5 0,5" fill="#2e7d32"/></marker>
               </defs>
               <rect x="3" y="2" width="24" height="11" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.7"/>
@@ -4008,14 +4007,14 @@
               <rect x="41" y="42" width="24" height="11" rx="2" fill="#fff3e0" stroke="#bf6d00" stroke-width="0.7"/>
               <text x="53" y="50" text-anchor="middle" font-size="7.5" fill="#bf6d00" font-weight="700">PS2</text>
               <line x1="13" y1="42" x2="13" y2="15" stroke="#2e7d32" stroke-width="1.2" marker-end="url(#m-ail-g)"/>
-              <line x1="17" y1="42" x2="49" y2="15" stroke="#c62828" stroke-width="1.1" marker-end="url(#m-ail-r)" stroke-dasharray="3,2"/>
+              <line x1="17" y1="42" x2="49" y2="15" stroke="#2e7d32" stroke-width="1.2" marker-end="url(#m-ail-g)"/>
               <line x1="55" y1="42" x2="55" y2="15" stroke="#2e7d32" stroke-width="1.2" marker-end="url(#m-ail-g)"/>
             </svg>
           </div>
           <div style="padding:0 10px 8px 10px;font-size:9.5px;color:#222;line-height:1.35;">
             <b>Designers' fixes:</b>
             <ul style="margin:2px 0 0 14px;padding:0;">
-              <li><b>Coordinated rudder</b> (decoupled / triangular)</li>
+              <li><b>Coordinated rudder</b> &mdash; the canonical sequenced PS</li>
               <li><b>Differential</b> or <b>Frise</b> ailerons (mechanism redesign)</li>
               <li><b>Spoilerons</b> &mdash; kill lift instead of adding it</li>
               <li><b>Fly-by-wire mixing</b> (managed by software)</li>
@@ -4024,12 +4023,12 @@
         </div>
 
         <!-- HELICOPTER -->
-        <div style="border:1.5px solid #c62828;border-radius:3px;overflow:hidden;display:flex;flex-direction:column;">
-          <div style="background:#c62828;color:#fff;padding:4px 10px;font-weight:bold;font-size:11.5px;letter-spacing:0.4px;">&#10007; EMERGENT &mdash; Helicopter Collective &amp; Anti-Torque</div>
+        <div style="border:1.5px solid #2e7d32;border-radius:3px;overflow:hidden;display:flex;flex-direction:column;">
+          <div style="background:#2e7d32;color:#fff;padding:4px 10px;font-weight:bold;font-size:11.5px;letter-spacing:0.4px;">&#10003; PATH-DEPENDENT &mdash; Helicopter Collective &amp; Anti-Torque</div>
           <div style="padding:7px 10px;font-size:10px;line-height:1.4;color:#222;">
             <div><b>FR<sub>1</sub>:</b> Vertical lift (climb / descend) &nbsp;&bull;&nbsp; <b>FR<sub>2</sub>:</b> Heading (yaw)</div>
             <div style="margin-top:2px;"><b>PS<sub>1</sub>:</b> Collective pitch &nbsp;&bull;&nbsp; <b>PS<sub>2</sub>:</b> Tail rotor pitch (pedals)</div>
-            <div style="margin-top:4px;color:#c62828;font-style:italic;font-size:9.5px;">Newton's third law: more rotor torque pushes the fuselage to spin opposite &mdash; climb command yaws the nose.</div>
+            <div style="margin-top:4px;color:#1f5128;font-style:italic;font-size:9.5px;">Newton's third law: more rotor torque tries to spin the fuselage opposite. Set collective first, then add tail-rotor pitch in sequence to cancel the reaction torque.</div>
           </div>
           <div style="padding:0 10px 8px 10px;display:flex;justify-content:center;align-items:center;gap:10px;">
             <div style="font-family:'Cambria Math','Times New Roman',serif;font-size:12px;color:#222;display:flex;align-items:center;gap:3px;">
@@ -4038,10 +4037,10 @@
               </span>
               <span>=</span>
               <div style="display:inline-grid;grid-template-columns:repeat(2,22px);grid-template-rows:repeat(2,22px);gap:1px;background:#bbb;padding:1px;border-radius:2px;">
-                <div style="background:#c62828;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
+                <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
                 <div style="background:#f3f3f3;color:#bbb;display:flex;align-items:center;justify-content:center;font-size:10px;">O</div>
-                <div style="background:#c62828;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
-                <div style="background:#c62828;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
+                <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
+                <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">X</div>
               </div>
               <span style="display:inline-flex;flex-direction:column;font-size:10px;line-height:1.2;border-left:1.5px solid #444;border-right:1.5px solid #444;padding:1px 4px;">
                 <span>Col</span><span>Tail</span>
@@ -4049,7 +4048,6 @@
             </div>
             <svg width="64" height="56" viewBox="0 0 68 56">
               <defs>
-                <marker id="m-heli-r" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><polygon points="0,0 5,2.5 0,5" fill="#c62828"/></marker>
                 <marker id="m-heli-g" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto"><polygon points="0,0 5,2.5 0,5" fill="#2e7d32"/></marker>
               </defs>
               <rect x="3" y="2" width="24" height="11" rx="2" fill="#e8f5e9" stroke="#2e7d32" stroke-width="0.7"/>
@@ -4061,7 +4059,7 @@
               <rect x="41" y="42" width="24" height="11" rx="2" fill="#fff3e0" stroke="#bf6d00" stroke-width="0.7"/>
               <text x="53" y="50" text-anchor="middle" font-size="7.5" fill="#bf6d00" font-weight="700">PS2</text>
               <line x1="13" y1="42" x2="13" y2="15" stroke="#2e7d32" stroke-width="1.2" marker-end="url(#m-heli-g)"/>
-              <line x1="17" y1="42" x2="49" y2="15" stroke="#c62828" stroke-width="1.1" marker-end="url(#m-heli-r)" stroke-dasharray="3,2"/>
+              <line x1="17" y1="42" x2="49" y2="15" stroke="#2e7d32" stroke-width="1.2" marker-end="url(#m-heli-g)"/>
               <line x1="55" y1="42" x2="55" y2="15" stroke="#2e7d32" stroke-width="1.2" marker-end="url(#m-heli-g)"/>
             </svg>
           </div>
@@ -4079,7 +4077,7 @@
       </div>
 
       <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:5px 12px;margin-top:8px;font-size:11px;color:#222;line-height:1.4;">
-        <b style="color:#5C4A21;">Lesson:</b> In both cases the designer believed the PSs were independent. The off-diagonals appeared not because the PSs were secretly the same &mdash; they appeared because the <b>physical implementation</b> introduced cross-talk the abstract design didn't anticipate.
+        <b style="color:#5C4A21;">Lesson:</b> Both systems would be coupled if the primary PS acted alone. The fix in each case is a <b>sequenced compensating PS</b> (rudder, tail rotor) that turns the design <b>path-dependent</b> &mdash; predictable when the inputs are applied in order.
       </div>
     </div>
   </div>

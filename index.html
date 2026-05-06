@@ -185,10 +185,14 @@
   }
 
   /* Direct-child images auto-shrink to fit available column height
-     (prevents bottom-cropping in standard/widescreen present modes). */
+     (prevents bottom-cropping in standard/widescreen present modes).
+     object-fit:contain preserves natural aspect ratio even when the flex
+     container squashes the box vertically — without this, width:100% stays
+     fixed while height shrinks and the image looks stretched. */
   .col-left > img, .col-right > img, .col-full > img {
     flex: 0 1 auto;
     min-height: 0;
+    object-fit: contain;
   }
 
   /* ── Content within columns ── */

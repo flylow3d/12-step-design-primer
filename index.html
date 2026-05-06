@@ -1420,6 +1420,10 @@
     <div class="col-left">
       <div class="section-label">Process Capability &mdash; Choosing Among Design Alternatives</div>
 
+      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:5px 11px;margin-bottom:6px;font-size:10.5px;color:#222;line-height:1.4;">
+        <b style="color:#5C4A21;">Recall Axiom 2 (slide 14):</b> minimize information content. <b>How do we measure it?</b> &mdash; Process Capability.
+      </div>
+
       <p style="font-size:10.5px;line-height:1.45;color:#222;margin:0 0 7px 0;">
         <b>Process Capability</b> is a way to determine whether one alternative <b>PSs</b> (PS<sub>1a</sub>, PS<sub>1b</sub>, &hellip; PS<sub>1n</sub>) is the best solution to a given <b>FR</b>. The drawback: it requires building a detailed model (CFD, FEA, solid model). It can be applied to a single FR or the whole design.
       </p>
@@ -1755,7 +1759,7 @@
   </div>
   <div class="slide-body">
     <div class="col-full">
-      <div class="section-label"><span style="color:#1976d2;">Functional Requirement Measures (FRm)</span> &mdash; How Well</div>
+      <div class="section-label"><span style="color:#1976d2;">Functional Requirement Measures (FRm)</span> &mdash; Going Deeper</div>
 
       <!-- Definition + Expression -->
       <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:7px;font-size:11px;color:#222;line-height:1.45;">
@@ -1773,25 +1777,25 @@
         </ul>
       </div>
 
-      <!-- The formula -->
-      <div style="display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:nowrap;font-size:11px;color:#222;margin-bottom:8px;">
-        <div style="background:#e8f5e9;border:1.5px solid #2e7d32;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#2e7d32;line-height:1.2;">
+      <!-- The formula — all boxes equal height via align-items:stretch + inner flex centering -->
+      <div style="display:flex;align-items:stretch;justify-content:center;gap:6px;flex-wrap:nowrap;font-size:11px;color:#222;margin-bottom:8px;">
+        <div style="background:#e8f5e9;border:1.5px solid #2e7d32;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#2e7d32;line-height:1.2;display:flex;align-items:center;justify-content:center;">
           Start with<br>the FR
         </div>
-        <span style="font-weight:bold;font-size:14px;color:#444;">+</span>
-        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;">
+        <span style="font-weight:bold;font-size:14px;color:#444;align-self:center;">+</span>
+        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;display:flex;align-items:center;justify-content:center;">
           What we<br>are measuring<br>(with units)
         </div>
-        <span style="font-weight:bold;font-size:14px;color:#444;">+</span>
-        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;">
+        <span style="font-weight:bold;font-size:14px;color:#444;align-self:center;">+</span>
+        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;display:flex;align-items:center;justify-content:center;">
           Direction<br>of "Goodness"
         </div>
-        <span style="font-weight:bold;font-size:14px;color:#444;">+</span>
-        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;">
+        <span style="font-weight:bold;font-size:14px;color:#444;align-self:center;">+</span>
+        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;display:flex;align-items:center;justify-content:center;">
           Threshold
         </div>
-        <span style="font-weight:bold;font-size:14px;color:#444;">=</span>
-        <div style="background:#5b9bd5;color:#fff;border:1.5px solid #1976d2;border-radius:4px;padding:10px 14px;text-align:center;font-weight:bold;line-height:1.2;font-size:14px;">
+        <span style="font-weight:bold;font-size:14px;color:#444;align-self:center;">=</span>
+        <div style="background:#5b9bd5;color:#fff;border:1.5px solid #1976d2;border-radius:4px;padding:10px 14px;text-align:center;font-weight:bold;line-height:1.2;font-size:14px;display:flex;align-items:center;justify-content:center;">
           FRm
         </div>
       </div>
@@ -2229,6 +2233,71 @@
     <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 26</div>
   </div>
 </div>
+<!-- ══════════════════════════════════════════════════════════════
+     CSD LANGUAGE — quick refresher inserted before FRm: How Well
+     (separate slide from the "CSD Language Recap" in Why FRs)
+══════════════════════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="slide-header">
+    <div><div class="header-title">Collective System Design (CSD) Language</div></div>
+    <div class="step-badge">CSD Language</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+
+      <!-- Intro -->
+      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:12px;font-size:11px;color:#222;line-height:1.45;">
+        <b style="color:#5C4A21;">Why this refresher first?</b> <b>Step 1.4</b> (next slide) will ask you to label every given "requirement" by its <b>class of information</b> &mdash; <b>Need, FR, FRm, or PS-ALT</b>. Those are the same foundational classes defined by the <b>CSD Language</b>. Use the four terms below &mdash; <b>Function, FR, FRm, PS</b> &mdash; as the lens to correctly classify what the customer, SME, stakeholder, or advisor gives you.
+      </div>
+
+      <!-- Diagram -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0;margin-bottom:14px;">
+
+        <!-- FUNCTION box -->
+        <div style="background:#fff;border:1.5px solid #444;border-radius:4px;padding:6px 18px;font-weight:bold;font-size:12.5px;color:#222;">
+          FUNCTION
+          <span style="color:#666;font-weight:normal;font-size:10px;font-style:italic;">&mdash; what the system must do</span>
+        </div>
+
+        <!-- arrow + label -->
+        <div style="display:flex;flex-direction:column;align-items:center;font-size:10px;color:#5C4A21;font-style:italic;line-height:1.2;margin:2px 0;">
+          <div style="font-size:20px;line-height:1;color:#444;">&darr;</div>
+          <div>via collective agreement</div>
+        </div>
+
+        <!-- FRm — FR — PS row -->
+        <div style="display:flex;align-items:center;gap:10px;margin-top:6px;">
+          <div style="background:#5bc0de;color:#fff;border-radius:4px;padding:8px 14px;font-weight:bold;font-size:12px;text-align:center;min-width:110px;">
+            FRm
+            <div style="font-size:9.5px;font-weight:normal;font-style:italic;margin-top:2px;">how well</div>
+          </div>
+          <div style="font-size:22px;color:#444;font-weight:bold;">&harr;</div>
+          <div style="background:#5cb85c;color:#fff;border-radius:4px;padding:8px 14px;font-weight:bold;font-size:13px;text-align:center;min-width:130px;">
+            FR
+            <div style="font-size:9.5px;font-weight:normal;font-style:italic;margin-top:2px;">agreed-to function</div>
+          </div>
+          <div style="font-size:22px;color:#444;font-weight:bold;">&larr;</div>
+          <div style="background:#f0ad4e;color:#fff;border-radius:4px;padding:8px 14px;font-weight:bold;font-size:12px;text-align:center;min-width:110px;">
+            PS
+            <div style="font-size:9.5px;font-weight:normal;font-style:italic;margin-top:2px;">physical solution</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Definitions -->
+      <ul style="margin:0;padding-left:22px;font-size:11.5px;color:#222;line-height:1.55;">
+        <li><b>Function</b> &mdash; what the system must do.</li>
+        <li><b>Functional Requirement (FR)</b> &mdash; the function the team <b>agrees</b> to implement.</li>
+        <li><b>Functional Requirement Measure (FRm)</b> &mdash; <i>how well</i> the FR is achieved.</li>
+        <li><b>Physical Solution (PS)</b> &mdash; what <b>implements</b> the FR.</li>
+        <li>The <b>designer chooses</b> the PS to achieve the FR &mdash; it is a <b>decision</b>.</li>
+      </ul>
+
+    </div>
+  </div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 27</div></div>
+</div>
 <!-- STEP 1 — SUB-SLIDE 3: GIVEN "REQUIREMENTS" -->
 <div class="slide">
   <div class="slide-header">
@@ -2300,74 +2369,8 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 27</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 28</div>
   </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════════════════
-     CSD LANGUAGE — quick refresher inserted before FRm: How Well
-     (separate slide from the "CSD Language Recap" in Why FRs)
-══════════════════════════════════════════════════════════════ -->
-<div class="slide">
-  <div class="slide-header">
-    <div><div class="header-title">Collective System Design (CSD) Language</div></div>
-    <div class="step-badge">CSD Language</div>
-  </div>
-  <div class="slide-body">
-    <div class="col-full">
-
-      <!-- Intro -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:12px;font-size:11px;color:#222;line-height:1.45;">
-        <b style="color:#5C4A21;">Why this refresher?</b> <b>Step 1.4</b> asks you to label every given "requirement" by its <b>class of information</b> &mdash; <b>Need, FR, FRm, or PS-ALT</b>. Those are the same foundational classes defined by the <b>CSD Language</b>. Use the four terms below &mdash; <b>Function, FR, FRm, PS</b> &mdash; as the lens to correctly classify what the customer, SME, stakeholder, or advisor gives you.
-      </div>
-
-      <!-- Diagram -->
-      <div style="display:flex;flex-direction:column;align-items:center;gap:0;margin-bottom:14px;">
-
-        <!-- FUNCTION box -->
-        <div style="background:#fff;border:1.5px solid #444;border-radius:4px;padding:6px 18px;font-weight:bold;font-size:12.5px;color:#222;">
-          FUNCTION
-          <span style="color:#666;font-weight:normal;font-size:10px;font-style:italic;">&mdash; what the system must do</span>
-        </div>
-
-        <!-- arrow + label -->
-        <div style="display:flex;flex-direction:column;align-items:center;font-size:10px;color:#5C4A21;font-style:italic;line-height:1.2;margin:2px 0;">
-          <div style="font-size:20px;line-height:1;color:#444;">&darr;</div>
-          <div>via collective agreement</div>
-        </div>
-
-        <!-- FRm — FR — PS row -->
-        <div style="display:flex;align-items:center;gap:10px;margin-top:6px;">
-          <div style="background:#5bc0de;color:#fff;border-radius:4px;padding:8px 14px;font-weight:bold;font-size:12px;text-align:center;min-width:110px;">
-            FRm
-            <div style="font-size:9.5px;font-weight:normal;font-style:italic;margin-top:2px;">how well</div>
-          </div>
-          <div style="font-size:22px;color:#444;font-weight:bold;">&harr;</div>
-          <div style="background:#5cb85c;color:#fff;border-radius:4px;padding:8px 14px;font-weight:bold;font-size:13px;text-align:center;min-width:130px;">
-            FR
-            <div style="font-size:9.5px;font-weight:normal;font-style:italic;margin-top:2px;">agreed-to function</div>
-          </div>
-          <div style="font-size:22px;color:#444;font-weight:bold;">&larr;</div>
-          <div style="background:#f0ad4e;color:#fff;border-radius:4px;padding:8px 14px;font-weight:bold;font-size:12px;text-align:center;min-width:110px;">
-            PS
-            <div style="font-size:9.5px;font-weight:normal;font-style:italic;margin-top:2px;">physical solution</div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Definitions -->
-      <ul style="margin:0;padding-left:22px;font-size:11.5px;color:#222;line-height:1.55;">
-        <li><b>Function</b> &mdash; what the system must do.</li>
-        <li><b>Functional Requirement (FR)</b> &mdash; the function the team <b>agrees</b> to implement.</li>
-        <li><b>Functional Requirement Measure (FRm)</b> &mdash; <i>how well</i> the FR is achieved.</li>
-        <li><b>Physical Solution (PS)</b> &mdash; what <b>implements</b> the FR.</li>
-        <li>The <b>designer chooses</b> the PS to achieve the FR &mdash; it is a <b>decision</b>.</li>
-      </ul>
-
-    </div>
-  </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 28</div></div>
 </div>
 <!-- STEP 1 — SUB-SLIDE 4: COST CONSIDERATIONS - PART 1 -->
 <div class="slide">
@@ -2404,7 +2407,7 @@
           </tr>
         </tbody>
       </table>
-      <p style="font-size:10px;color:#666;font-style:italic;margin-top:4px;">Values shown are example answers.</p>
+      <p style="font-size:10px;color:#666;font-style:italic;margin-top:4px;">Values shown are example answers. <b style="color:#5C4A21;font-style:normal;">Part 2</b> (final-cost reconciliation) is completed in <b style="color:#5C4A21;font-style:normal;">Step 12</b>.</p>
     </div>
     <div class="col-right">
       <div class="section-label">How to Fill It In</div>
@@ -2590,7 +2593,7 @@
     <div>
       <div class="header-title">Step 2 - Problem Statement</div>
     </div>
-    <div class="step-badge">Step 2</div>
+    <div class="step-badge">Steps 2.0 / 2.1 / 2.2</div>
   </div>
   <div class="slide-body">
     <div class="col-left">
@@ -3252,6 +3255,11 @@
           </tr>
         </tbody>
       </table>
+
+      <!-- Synthesis: which concept comes out ahead -->
+      <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:5px 10px;margin-top:6px;font-size:10.5px;color:#222;line-height:1.4;">
+        <b style="color:#2e7d32;">Which concept emerges?</b> &nbsp;<b>Concept C &mdash; Halogen Drawer</b> scores ✓ on the highest-priority rows (FR0 Performance Fit and Closes Existing Gaps) and only Partial elsewhere. <b>Concept B</b> hits two hard ✗ on Hard Constraints and Use Case Fit &mdash; <i>auto-rejected</i>. <b>Concept A</b> is the cheapest but doesn't close the one-side-browning gap the project exists to fix. Full why-and-why-not is on Step 3.4 (next slide).
+      </div>
     </div>
   </div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 46</div></div>
@@ -3356,7 +3364,7 @@
       <!-- PHASE 3: REPEAT -->
       <div style="background:#f0f4f8;border-left:3px solid #1976d2;padding:4px 8px;margin-bottom:4px;">
         <div style="font-weight:bold;color:#1976d2;font-size:10px;text-transform:uppercase;letter-spacing:0.4px;">3 &mdash; Repeat 2 Decompose</div>
-        <p style="margin:2px 0 0 0;font-size:10px;line-height:1.35;">For each <b>child PS</b>, repeat <b>2 Decompose</b> to drop down another level. Stop when you reach concrete components or code &mdash; nothing further to decompose.</p>
+        <p style="margin:2px 0 0 0;font-size:10px;line-height:1.35;">For each <b>child PS</b>, repeat <b>2 Decompose</b> to drop down another level. <b>Stop when the PS is atomic</b> &mdash; you know enough to <b>buy</b> or <b>build</b> it.</p>
       </div>
 
       <!-- PHASE 4: EVIDENCE -->
@@ -4107,6 +4115,7 @@
       <!-- Lead-in callout -->
       <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;font-size:11px;color:#222;line-height:1.45;">
         To facilitate the designer's systemic thinking, we <b>quantify the derived FRs and PS-ALTs</b> into a decision analysis spreadsheet (below). The next slide walks through how the spreadsheet is read &mdash; <b>Threshold</b> (acceptable performance), <b>Goal</b> (desired ultimate performance), and a 0&ndash;5 score per FRm.
+        <div style="margin-top:3px;font-size:10px;color:#5C4A21;font-style:italic;">Fillable template available in the 12-Step <b style="font-style:normal;">Lucid</b> template.</div>
       </div>
 
       <!-- Decision Analysis Matrix -->
@@ -4627,6 +4636,7 @@
       <li>FMEA is <b>predictive</b> &mdash; it surfaces failure modes <i>before</i> they occur in the field.</li>
       <li>Each Failure Mode and its Mitigation may add new FRs and PSs to the design that must be included to manage the identified risk.</li>
       <li>DFMEA and PFMEA together cover both <b>design-introduced</b> and <b>process-introduced</b> failures.</li>
+      <li><b style="color:#c62828;">Loop-back trigger:</b> if FMEA surfaces a Mitigation that adds a new FR, <b>loop back to Step 4</b> and decompose it into the design.</li>
     </ul>
   </div>
   <div class="slide-footer">
@@ -4770,6 +4780,7 @@
       <li>Designs fail because the PS-ALT does not achieve the intended FR or exhibits undesirable behavior in the process.</li>
       <li>Risk identification and mitigation needs to be considered during the design approach.</li>
       <li>Risk mitigation can be employed for both the design (Design FMEA) and the process (Process FMEA) to manufacture the design.</li>
+      <li><b>Score by team consensus</b> &mdash; if any team member's score differs by <b>more than 2 points</b>, document each rationale in the FMEA <i>Notes</i> column before settling on a final score.</li>
     </ul>
   </div>
   <div class="slide-footer">
@@ -5214,7 +5225,50 @@
     <!-- 7 FRs image (largest) -->
     <div style="padding:4px 18px 4px;flex:1;min-height:0;display:flex;flex-direction:column;">
       <div class="section-label" style="margin-top:0;">7 FRs of Manufacturing System Design (Cochran)</div>
-      <img src="Images/Step 7 - MSD.png" alt="The 7 Functional Requirements of Manufacturing System Design" style="flex:1;min-height:0;width:100%;object-fit:contain;object-position:top;border-radius:3px;margin-top:3px;">
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:5px;flex:1;min-height:0;margin-top:3px;font-size:9px;line-height:1.2;color:#1a3a5c;">
+        <!-- FR.0 -->
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div style="background:#93c47d;border:1.2px solid #2e7d32;border-radius:3px;padding:5px 6px;flex:1;"><b>FR.0:</b> Continually Improve</div>
+          <div style="font-size:9px;text-align:center;color:#222;line-height:1;">&uarr;</div>
+          <div style="background:#ffd966;border:1.2px solid #b35c00;border-radius:3px;padding:5px 6px;flex:1;min-height:50px;"><b>PS.0:</b></div>
+        </div>
+        <!-- FR.1 -->
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div style="background:#93c47d;border:1.2px solid #2e7d32;border-radius:3px;padding:5px 6px;flex:1;"><b>FR.1:</b> Provide a Safe and Healthy Work Environment</div>
+          <div style="font-size:9px;text-align:center;color:#222;line-height:1;">&uarr;</div>
+          <div style="background:#ffd966;border:1.2px solid #b35c00;border-radius:3px;padding:5px 6px;flex:1;min-height:50px;"><b>PS.1:</b></div>
+        </div>
+        <!-- FR.2 -->
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div style="background:#93c47d;border:1.2px solid #2e7d32;border-radius:3px;padding:5px 6px;flex:1;"><b>FR.2:</b> Produce the customer-consumed quantity every shift</div>
+          <div style="font-size:9px;text-align:center;color:#222;line-height:1;">&uarr;</div>
+          <div style="background:#ffd966;border:1.2px solid #b35c00;border-radius:3px;padding:5px 6px;flex:1;min-height:50px;"><b>PS.2:</b></div>
+        </div>
+        <!-- FR.3 -->
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div style="background:#93c47d;border:1.2px solid #2e7d32;border-radius:3px;padding:5px 6px;flex:1;"><b>FR.3:</b> Produce the customer-consumed mix every shift</div>
+          <div style="font-size:9px;text-align:center;color:#222;line-height:1;">&uarr;</div>
+          <div style="background:#ffd966;border:1.2px solid #b35c00;border-radius:3px;padding:5px 6px;flex:1;min-height:50px;"><b>PS.3:</b></div>
+        </div>
+        <!-- FR.4 -->
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div style="background:#93c47d;border:1.2px solid #2e7d32;border-radius:3px;padding:5px 6px;flex:1;"><b>FR.4:</b> Do not advance a defect to the customer of your work</div>
+          <div style="font-size:9px;text-align:center;color:#222;line-height:1;">&uarr;</div>
+          <div style="background:#ffd966;border:1.2px solid #b35c00;border-radius:3px;padding:5px 6px;flex:1;min-height:50px;"><b>PS.4:</b></div>
+        </div>
+        <!-- FR.5 -->
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div style="background:#93c47d;border:1.2px solid #2e7d32;border-radius:3px;padding:5px 6px;flex:1;"><b>FR.5:</b> Immediately identify abnormal conditions and resolve them for the long term</div>
+          <div style="font-size:9px;text-align:center;color:#222;line-height:1;">&uarr;</div>
+          <div style="background:#ffd966;border:1.2px solid #b35c00;border-radius:3px;padding:5px 6px;flex:1;min-height:50px;"><b>PS.5:</b></div>
+        </div>
+        <!-- FR.6 -->
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <div style="background:#93c47d;border:1.2px solid #2e7d32;border-radius:3px;padding:5px 6px;flex:1;"><b>FR.6:</b> Achieve FR1 through FR5 in spite of variation</div>
+          <div style="font-size:9px;text-align:center;color:#222;line-height:1;">&uarr;</div>
+          <div style="background:#ffd966;border:1.2px solid #b35c00;border-radius:3px;padding:5px 6px;flex:1;min-height:50px;"><b>PS.6:</b></div>
+        </div>
+      </div>
     </div>
     <!-- Discussion Q's at the bottom, smaller -->
     <div style="padding:4px 18px 8px;border-top:1px solid #ddd;font-size:10px;line-height:1.35;">
@@ -5389,6 +5443,7 @@
       <li>Verification answers two questions: <b>Did we build it right?</b> and <b>Does it achieve the FRm's?</b></li>
       <li>Verification compares the system <b>as built</b> to its design specifications &mdash; not to user needs (that's Validation, Step 9).</li>
       <li>Each FRm gets a Verification Requirement, Event, Configuration, and Procedure.</li>
+      <li><b style="color:#c62828;">Loop-back trigger:</b> if a verification test fails, <b>loop back to Step 6 / 7</b> and revise the detailed design / DFX choices that produced the failing PS.</li>
     </ul>
   </div>
   <div class="slide-footer">
@@ -5532,6 +5587,7 @@
       <li>Validation answers <i>"Did we build the right thing?"</i> &mdash; Verification (Step 8) answered <i>"Did we build it right?"</i></li>
       <li>Validation is conducted <b>with the customer/user</b>, not by the engineering team alone.</li>
       <li>A "Yes" decision should be backed by a customer signature on the validation record.</li>
+      <li><b style="color:#c62828;">Loop-back trigger:</b> if Validation reveals the customer's needs were misunderstood, <b>loop back to Step 1</b> (and possibly Step 2 use cases) &mdash; refine the FRs/FRms and re-run the affected downstream steps.</li>
     </ul>
   </div>
   <div class="slide-footer">
@@ -5925,6 +5981,9 @@
       <!-- Intro -->
       <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:10px;font-size:11px;color:#222;line-height:1.45;">
         Nam P. Suh characterized design as the <b>interplay or relationships between three domains</b>. The translation from <b>fuzzy customer needs</b> into <b>functions</b> &mdash; and the choice of solutions to satisfy them &mdash; is what turns <i>"I know what I want when I see it"</i> into engineering language.
+        <div style="margin-top:4px;font-size:10.5px;font-style:italic;color:#5C4A21;">
+          <b style="font-style:normal;">Note:</b> these are <b style="font-style:normal;">Suh's original three domains</b>. <b style="font-style:normal;">CSD</b> splits the Functional Domain into two pieces &mdash; <b style="font-style:normal;color:#2e7d32;">FR</b> (the agreed function) and <b style="font-style:normal;color:#1976d2;">FRm</b> (the measure of how well) &mdash; producing the four boxes you saw on the "What is Axiomatic Design?" slide.
+        </div>
       </div>
 
       <!-- Three-domain diagram -->
@@ -6007,11 +6066,15 @@
 <div class="slide">
   <div class="slide-header">
     <div><div class="header-title">Why FRs?</div></div>
-    <div class="step-badge">Suh's Two Axioms</div>
+    <div class="step-badge">Suh's Two Axioms (Recall)</div>
   </div>
   <div class="slide-body">
     <div class="col-full">
-      <div class="section-label">Suh's Two Design Axioms</div>
+      <div class="section-label">Recall &mdash; Suh's Two Design Axioms</div>
+
+      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:5px 12px;margin-bottom:8px;font-size:11px;color:#222;line-height:1.45;font-style:italic;">
+        <b style="color:#5C4A21;font-style:normal;">Recall:</b> we covered the two axioms earlier in the <b style="font-style:normal;">Foundations of CSD</b> section (slides 13 &amp; 14). This page is a quick reference before the case examples that follow.
+      </div>
 
       <!-- Two-axiom cards -->
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:9px;">
@@ -6653,8 +6716,8 @@
   <div class="np-children">
     <div class="np-child" data-slide="24" onclick="goToSlide(24)">1.1 Team Members</div>
     <div class="np-child" data-slide="25" onclick="goToSlide(25)">1.2 &amp; 1.3 Description / Management</div>
-    <div class="np-child" data-slide="26" onclick="goToSlide(26)">1.4 Given Requirements</div>
-    <div class="np-child" data-slide="27" onclick="goToSlide(27)">CSD Language</div>
+    <div class="np-child" data-slide="26" onclick="goToSlide(26)">CSD Language</div>
+    <div class="np-child" data-slide="27" onclick="goToSlide(27)">1.4 Given Requirements</div>
     <div class="np-child" data-slide="28" onclick="goToSlide(28)">1.5 Cost Considerations</div>
     <div class="np-child" data-slide="29" onclick="goToSlide(29)">1.6 Standards</div>
     <div class="np-child" data-slide="30" onclick="goToSlide(30)">1.7 Safety</div>

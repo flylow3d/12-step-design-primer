@@ -1,0 +1,45 @@
+name: Build PDF
+
+# Re-render 12-step-design-primer.pdf whenever a source file changes on main.
+# The auto-commit only touches the PDF, and `paths-ignore` excludes the PDF
+# from the trigger — so the workflow does not loop on its own commit.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '12-step-design-primer.pdf'
+  workflow_dispatch:  # manual "Run workflow" button in the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to push the regenerated PDF back to the repo
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build PDF
+        run: npm run build-pdf
+
+      - name: Commit refreshed PDF (if changed)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add 12-step-design-primer.pdf
+          if git diff --staged --quiet; then
+            echo "PDF unchanged — nothing to commit."
+          else
+            git commit -m "Auto-build: refresh 12-step-design-primer.pdf"
+            git push
+          fi

@@ -1,0 +1,4 @@
+model: gemini-3-pro-image-preview
+refs: []
+prompt:
+Clean editorial illustration of a horizontal halogen-drawer toaster with a pull-out drawer slightly extended (drawer pulled out, showing two slices of toast inside on a wire rack). Visible halogen heating-element rods are positioned above and below the drawer cavity, glowing gently. Sitting on a neutral cream background with subtle blueprint-grid corners. Modern flat-vector style with thin black outlines, no shading or gradients, didactic engineering-textbook feel. No text, letters, or labels in the image. Square 1:1 composition.

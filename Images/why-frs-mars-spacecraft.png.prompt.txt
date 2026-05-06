@@ -1,0 +1,4 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+A clean editorial illustration of a stylized SpaceX-style rocket spacecraft approaching planet Mars in a cosmic background. The Mars planet dominates the right half of the frame, showing its reddish surface. The spacecraft is in the foreground-middle with a soft engine plume. Soft cosmic background with subtle stars. Style: clean modern flat-vector illustration with thin black outlines, neutral palette of warm earth tones, navy, and soft gold. Didactic engineering-textbook feel but with a sense of awe. Square 1:1 composition. Avoid any text, letters, numbers, or labels.

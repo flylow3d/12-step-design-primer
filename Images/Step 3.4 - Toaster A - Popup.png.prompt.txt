@@ -1,0 +1,4 @@
+model: gemini-3-pro-image-preview
+refs: []
+prompt:
+Clean editorial illustration of a vertical 4-slot pop-up toaster in three-quarter view with a single dial control on the front, two slices of bread visible at the top of the slots. Sitting on a neutral cream background with subtle blueprint-grid corners. Modern flat-vector style with thin black outlines, no shading or gradients, didactic engineering-textbook feel. No text, letters, or labels in the image. Square 1:1 composition.

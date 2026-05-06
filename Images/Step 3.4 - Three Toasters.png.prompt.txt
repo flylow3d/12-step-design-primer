@@ -1,0 +1,4 @@
+model: gemini-3-pro-image-preview
+refs: []
+prompt:
+Clean editorial illustration showing three toaster types side-by-side on a neutral cream background with subtle blueprint-grid corners. Left: a vertical 4-slot pop-up toaster with dial controls. Center: a horizontal conveyor toaster with a continuous belt mechanism (visible toast emerging from one end). Right: a halogen drawer toaster with a horizontal pull-out drawer and visible halogen heating elements above and below. Modern flat-vector illustration style with clean thin black outlines, consistent visual language across all three units, no shading or gradients, didactic engineering-textbook feel. No text labels in the image (labels will be added in HTML). Square 1:1 composition.

@@ -1,0 +1,12 @@
+{
+  "name": "12-step-design-primer",
+  "version": "1.0.0",
+  "description": "Local Puppeteer build that renders index.html → 12-step-design-primer.pdf with selectable text.",
+  "private": true,
+  "scripts": {
+    "build-pdf": "node build-pdf.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^22.0.0"
+  }
+}

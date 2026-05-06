@@ -1,0 +1,4 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+A clean editorial illustration of a single modern stainless-steel kitchen faucet in three-quarter profile, sitting on a neutral cream background with subtle blueprint-grid texture in the corners. Modern flat-vector style with clean thin black outlines, no shading or gradients, didactic engineering-textbook feel. Square 1:1 composition. Avoid any text, letters, numbers, or labels in the image.

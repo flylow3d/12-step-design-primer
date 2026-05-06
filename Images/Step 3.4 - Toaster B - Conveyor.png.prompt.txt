@@ -1,0 +1,4 @@
+model: gemini-3-pro-image-preview
+refs: []
+prompt:
+Clean editorial illustration of a horizontal commercial-style conveyor toaster shown in cutaway side view. A continuous belt mechanism carries slices of toast through a heated chamber, with visible heating elements above and below the belt; toasted bread emerges from the right side. Sitting on a neutral cream background with subtle blueprint-grid corners. Modern flat-vector style with thin black outlines, no shading or gradients, didactic engineering-textbook feel. No text, letters, or labels in the image. Square 1:1 composition.

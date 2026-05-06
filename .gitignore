@@ -9,6 +9,11 @@
 !/LICENSE
 !/Images/
 !/tools/
+!/package.json
+!/package-lock.json
+!/build-pdf.js
+!/12-step-design-primer.pdf
+!/.github/
 
 # Inside whitelisted directories, ignore typical OS/editor noise
 .DS_Store
@@ -31,3 +36,6 @@ Images/Joes Build Notes.md
 tools/__pycache__/
 tools/.venv/
 tools/*.pyc
+
+# Node / Puppeteer build artifacts (only the generated PDF is committed)
+node_modules/

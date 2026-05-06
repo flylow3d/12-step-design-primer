@@ -14,7 +14,12 @@ const path = require('path');
 const OUT = '12-step-design-primer.pdf';
 
 (async () => {
-  const browser = await puppeteer.launch({ headless: 'new' });
+  // GitHub Actions Ubuntu runner has no usable Chromium sandbox; --no-sandbox
+  // is safe here because we only render trusted local HTML.
+  const browser = await puppeteer.launch({
+    headless: 'new',
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
   try {
     const page = await browser.newPage();
 

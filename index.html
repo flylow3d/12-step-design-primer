@@ -4423,28 +4423,35 @@
     <div class="step-badge">4.9 Decomposition Issues</div>
   </div>
   <div class="slide-body">
-    <div class="col-left" style="border-right:none;padding-right:8px;">
-      <div class="section-label">Design Decomposition Issues</div>
-      <img src="Images/Step 4 Design Decomposition Issues.svg" alt="Annotated decomposition tree showing three common issues: an FRm written as an FR, missing measurement criteria, and a child PS repeated from the parent" style="width:100%;max-height:100%;height:auto;object-fit:contain;display:block;margin:4px auto 0 auto;">
-    </div>
-    <div class="col-right" style="padding-left:10px;justify-content:center;">
+    <div class="col-full" style="display:flex;flex-direction:column;min-height:0;gap:8px;">
+      <div class="section-label" style="margin-top:0;">Design Decomposition Issues</div>
 
-      <!-- Reading the example -->
-      <div style="background:#fff;border:1px solid #b89a5e;border-radius:3px;overflow:hidden;font-size:11px;color:#222;line-height:1.4;margin-bottom:10px;">
-        <div style="background:#e8d4a8;color:#5C4A21;padding:4px 10px;font-weight:bold;font-size:10.5px;letter-spacing:0.4px;">READING THE EXAMPLE</div>
-        <div style="padding:7px 11px;">
+      <!-- Top row: image on left, Key Point on right -->
+      <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:14px;flex:1;min-height:0;align-items:stretch;">
+
+        <!-- Image -->
+        <div style="display:flex;align-items:center;justify-content:center;min-height:0;">
+          <img src="Images/Step 4 Design Decomposition Issues.svg" alt="Annotated decomposition tree showing three common issues: an FRm written as an FR, missing measurement criteria, and a child PS repeated from the parent" style="width:100%;max-height:100%;height:auto;object-fit:contain;display:block;">
+        </div>
+
+        <!-- Key Point — vertically centered next to image -->
+        <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:10px 14px;font-size:12px;color:#222;line-height:1.5;align-self:center;">
+          <b style="color:#5C4A21;">Key Point:</b> A decomposition should represent a <b>real, buildable system</b>. If any of these errors are present, it cannot.
+        </div>
+
+      </div>
+
+      <!-- Bottom row: Reading the example, full width -->
+      <div style="background:#fff;border:1px solid #b89a5e;border-radius:3px;overflow:hidden;font-size:11px;color:#222;line-height:1.4;">
+        <div style="background:#e8d4a8;color:#5C4A21;padding:3px 10px;font-weight:bold;font-size:10.5px;letter-spacing:0.4px;">READING THE EXAMPLE</div>
+        <div style="padding:6px 12px;">
           Parent: <b>"Transmit data"</b> (FR) &rarr; <b>"Transmitter"</b> (PS). Three errors break the decomposition:
-          <ol style="margin:5px 0 0 18px;padding:0;">
-            <li style="margin-bottom:4px;"><b>"Ensure transmitter survives operating conditions"</b> reads like an FR but is actually an <b>FRm</b>.</li>
-            <li style="margin-bottom:4px;">The FRm below (<i>"Operating Condition Constraints"</i>) has <b>no measurable threshold</b> &mdash; a label, not a measurement.</li>
+          <ol style="margin:3px 0 0 18px;padding:0;">
+            <li style="margin-bottom:2px;"><b>"Ensure transmitter survives operating conditions"</b> reads like an FR but is actually an <b>FRm</b>.</li>
+            <li style="margin-bottom:2px;">The FRm below (<i>"Operating Condition Constraints"</i>) has <b>no measurable threshold</b> &mdash; a label, not a measurement.</li>
             <li>Child PSs (<i>Transmitter XYZ</i>, <i>Transmitter ABC</i>) just <b>rename the parent PS</b> &mdash; product selection, not decomposition.</li>
           </ol>
         </div>
-      </div>
-
-      <!-- Key Point -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:7px 13px;font-size:11px;color:#222;line-height:1.45;">
-        <b style="color:#5C4A21;">Key Point:</b> A decomposition should represent a <b>real, buildable system</b>. If any of these errors are present, it cannot.
       </div>
 
     </div>

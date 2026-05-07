@@ -5281,10 +5281,59 @@
     </div>
     <div class="step-badge">5.3 DFMEA &amp; PFMEA</div>
   </div>
-  <div class="slide-body" style="flex-direction:column; align-items:center; justify-content:flex-start; padding:8px 14px;">
-    <div class="section-label" style="margin-top:0;align-self:flex-start;">DFMEA and PFMEA for the Water Faucet Example</div>
-    <img src="Images/Step5 FMEA Example.png" alt="FMEA Example Table" style="max-width:100%; max-height:430px; object-fit:contain; margin-top:4px;">
-    <p style="font-size:10px; color:#555; margin-top:4px; text-align:center; font-style:italic;">Figure 1: Design and Process FMEA Example — Single-Handle Faucet (Design Failure) and Casting Process (Process Failure)</p>
+  <div class="slide-body" style="flex-direction:column;padding:8px 14px;">
+    <div class="section-label" style="margin-top:0;">DFMEA and PFMEA for the Single-Handle Faucet &mdash; <span style="text-transform:none;font-weight:normal;color:#222;letter-spacing:0;">same FR, same failure mode, same severity &mdash; the <b>cause</b>, <b>likelihood</b>, <b>detection</b>, and <b>mitigation</b> differ between design and process.</span></div>
+
+    <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:5px 12px;margin:4px 0 7px 0;font-size:11px;color:#222;line-height:1.4;">
+      <b style="color:#5C4A21;">FR:</b> Control water flow rate without leaking. &nbsp;<b style="color:#5C4A21;">Failure Mode:</b> Water leaks past the valve cartridge. &nbsp;<b style="color:#5C4A21;">Severity:</b> <b>7</b> (reduced primary function).
+    </div>
+
+    <table style="width:100%;border-collapse:collapse;font-size:11px;line-height:1.35;color:#222;">
+      <thead>
+        <tr style="background:#e8d4a8;color:#5C4A21;">
+          <th style="border:1px solid #999;padding:4px 6px;width:11%;">Type</th>
+          <th style="border:1px solid #999;padding:4px 6px;">Failure Cause</th>
+          <th style="border:1px solid #999;padding:4px 6px;text-align:center;width:7%;">Sev<br>(S)</th>
+          <th style="border:1px solid #999;padding:4px 6px;text-align:center;width:8%;">Likeli-<br>hood (L)</th>
+          <th style="border:1px solid #999;padding:4px 6px;text-align:center;width:8%;">Detect-<br>ability (D)</th>
+          <th style="border:1px solid #999;padding:4px 6px;text-align:center;width:9%;">RPN<br>(S&times;L&times;D)</th>
+          <th style="border:1px solid #999;padding:4px 6px;">Mitigation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- DFMEA row -->
+        <tr>
+          <td style="border:1px solid #999;padding:6px 8px;background:#deebf7;color:#1976d2;font-weight:bold;text-align:center;line-height:1.2;">DFMEA<br><span style="font-weight:normal;font-size:9.5px;font-style:italic;color:#5C4A21;">design fault</span></td>
+          <td style="border:1px solid #999;padding:6px 8px;">Cartridge seat geometry does not seal reliably under static line pressure (chosen <i>physical solution</i> is the source).</td>
+          <td style="border:1px solid #999;padding:6px 8px;text-align:center;font-weight:bold;">7</td>
+          <td style="border:1px solid #999;padding:6px 8px;text-align:center;">4</td>
+          <td style="border:1px solid #999;padding:6px 8px;text-align:center;">5</td>
+          <td style="border:1px solid #999;padding:6px 8px;text-align:center;font-weight:bold;background:#fef6c8;">140</td>
+          <td style="border:1px solid #999;padding:6px 8px;">Tighten seat-to-O-ring tolerance; redesign cartridge stop to maintain compression at full open and full closed.</td>
+        </tr>
+        <!-- PFMEA row -->
+        <tr>
+          <td style="border:1px solid #999;padding:6px 8px;background:#fdebd0;color:#bf6d00;font-weight:bold;text-align:center;line-height:1.2;">PFMEA<br><span style="font-weight:normal;font-size:9.5px;font-style:italic;color:#5C4A21;">process fault</span></td>
+          <td style="border:1px solid #999;padding:6px 8px;">Casting porosity in the valve body wall (gas pocket or shrinkage from the <i>casting process</i>) creates a leak path.</td>
+          <td style="border:1px solid #999;padding:6px 8px;text-align:center;font-weight:bold;">7</td>
+          <td style="border:1px solid #999;padding:6px 8px;text-align:center;">6</td>
+          <td style="border:1px solid #999;padding:6px 8px;text-align:center;">3</td>
+          <td style="border:1px solid #999;padding:6px 8px;text-align:center;font-weight:bold;background:#fef6c8;">126</td>
+          <td style="border:1px solid #999;padding:6px 8px;">Improve sand-mold venting and gating; add X-ray inspection on first article and SPC sampling thereafter.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <div style="border-left:4px solid #1976d2;background:#f0f6fc;padding:6px 11px;font-size:10.5px;color:#222;line-height:1.45;">
+        <b style="color:#1976d2;">DFMEA &mdash; Design Failure Mode &amp; Effects Analysis</b><br>
+        Targets failures introduced by the <b>chosen physical solution</b>. Mitigations change the <b>design</b> (geometry, tolerance, materials).
+      </div>
+      <div style="border-left:4px solid #bf6d00;background:#fdf6ec;padding:6px 11px;font-size:10.5px;color:#222;line-height:1.45;">
+        <b style="color:#bf6d00;">PFMEA &mdash; Process Failure Mode &amp; Effects Analysis</b><br>
+        Targets failures introduced by the <b>manufacturing process</b>. Mitigations change <b>process controls</b> (parameters, inspection, SPC).
+      </div>
+    </div>
   </div>
   <div class="key-points">
     <div class="kp-label">Key Points</div>

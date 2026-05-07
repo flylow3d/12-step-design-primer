@@ -782,15 +782,14 @@
       <div class="toc-item" onclick="goToSlide(5)">The Engineer's Tone</div>
       <div class="toc-item" onclick="goToSlide(6)">The Foundations of CSD</div>
       <div class="toc-item" onclick="goToSlide(12)">Collective System Design (CSD) Language</div>
-      <div class="toc-item" onclick="goToSlide(17)">Introduction to FRs and FRm's</div>
-      <div class="toc-item" onclick="goToSlide(22)">List of Questions</div>
-      <div class="toc-item" onclick="goToSlide(23)">Parking Lot</div>
-      <div class="toc-item" onclick="goToSlide(25)">Tips and Tricks for Using the 12 Step Template in Lucid</div>
+      <div class="toc-item" onclick="goToSlide(17)">List of Questions</div>
+      <div class="toc-item" onclick="goToSlide(18)">Parking Lot</div>
+      <div class="toc-item" onclick="goToSlide(20)">Tips and Tricks for Using the 12 Step Template in Lucid</div>
     </div>
     <div class="toc-section">
       <h3>The 12 Steps</h3>
-      <div class="toc-item" onclick="goToSlide(26)">Step 1 · Project Introduction and Background</div>
-      <div class="toc-item" onclick="goToSlide(34)">Step 2 · Problem Statement</div>
+      <div class="toc-item" onclick="goToSlide(21)">Step 1 · Project Introduction and Background</div>
+      <div class="toc-item" onclick="goToSlide(29)">Step 2 · Problem Statement</div>
       <div class="toc-item" onclick="goToSlide(43)">Step 3 · Conceptual Design Alternatives and Selection</div>
       <div class="toc-item" onclick="goToSlide(49)">Step 4 · Design Decomposition</div>
       <div class="toc-item" onclick="goToSlide(61)">Step 5 · Design and Process FMEA</div>
@@ -1582,381 +1581,6 @@
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════
-     SLIDE — FRs AND FRm's: HOW-TO STATE GOOD FRs
-══════════════════════════════════════════════════════════════ -->
-<div class="slide" id="slide-9" data-concept="fmea-terms">
-  <div class="slide-header">
-    <div class="header-title">FRs and FRm's</div>
-  </div>
-  <div class="slide-body">
-    <div class="col-full">
-      <div class="section-label">How-To State Good <span style="color:#2e7d32;">Functional Requirements (FRs)</span></div>
-
-      <!-- Top principles -->
-      <ul style="margin:6px 0 8px 18px;padding:0;font-size:12px;line-height:1.5;color:#222;">
-        <li style="margin-bottom:5px;"><b>ALWAYS</b> start an FR with a <b style="color:#5C4A21;">VERB</b>.</li>
-        <li>State the <b>name of the function</b> in <b>active verb &mdash; direct object (noun)</b> format, where the verb represents an explicit <b>transformation of inputs into outputs</b> &mdash; i.e., <i>WHAT</i> is to be done.</li>
-      </ul>
-
-      <!-- Correct / Incorrect example cards -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0 8px 0;">
-
-        <!-- Correct -->
-        <div style="text-align:center;">
-          <div style="font-weight:bold;color:#2e7d32;font-size:13px;margin-bottom:4px;">Correct</div>
-          <div style="display:inline-block;width:240px;background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:14px 18px;font-size:11.5px;color:#222;line-height:1.4;text-align:left;box-shadow:2px 2px 4px rgba(0,0,0,0.15);box-sizing:border-box;">
-            <b>FR:</b> Adjust temperature of water
-          </div>
-        </div>
-
-        <!-- Incorrect -->
-        <div style="text-align:center;">
-          <div style="font-weight:bold;color:#c62828;font-size:13px;margin-bottom:4px;">Incorrect</div>
-          <div style="display:inline-block;width:240px;background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:14px 18px;font-size:11.5px;color:#222;line-height:1.4;text-align:left;box-shadow:2px 2px 4px rgba(0,0,0,0.15);box-sizing:border-box;">
-            <b>FR:</b> <u>Turn knob</u> to adjust temperature
-          </div>
-          <div style="font-size:11px;color:#c62828;font-style:italic;line-height:1.35;margin-top:5px;">Solution embedded in FR statement</div>
-        </div>
-
-      </div>
-
-      <!-- Do NOT section -->
-      <div style="background:#fef0f0;border-left:4px solid #c62828;border-radius:3px;padding:8px 14px;margin-top:10px;font-size:11.5px;line-height:1.5;color:#222;">
-        <div style="font-weight:bold;color:#c62828;font-size:13px;margin-bottom:4px;">Do NOT:</div>
-        <ul style="margin:0;padding-left:18px;color:#c62828;">
-          <li style="margin-bottom:3px;"><span style="color:#222;">Include <b>measures of performance</b> (i.e., do not describe <i>"how well"</i> the FR needs to be performed).</span></li>
-          <li style="margin-bottom:3px;"><span style="color:#222;"><b>Embed</b> or state <b>solutions</b> in the FR statement.</span></li>
-          <li><span style="color:#222;">Use the word <b>AND</b>. If you want to say "and" in an FR statement, you are probably describing <b>two separate FRs</b>.</span></li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-  <div class="slide-footer">
-    <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 18</div>
-  </div>
-</div>
-
-<!-- FRs and FRm's — Good or Bad Functional Requirements? (exercise) -->
-<div class="slide" data-concept="rpn">
-  <div class="slide-header">
-    <div class="header-title">FRs and FRm's</div>
-  </div>
-  <div class="slide-body">
-    <div class="col-full">
-      <div class="section-label">Good or Bad Functional Requirements? Why?</div>
-      <table style="width:100%;border-collapse:collapse;font-size:11px;margin-top:4px;">
-        <thead>
-          <tr>
-            <th colspan="4" style="background:#90c47d;color:#222;padding:5px 8px;text-align:center;font-size:13px;border:1px solid #2e7d32;">Example FRs</th>
-          </tr>
-          <tr>
-            <th style="background:#d9d9d9;border:1px solid #999;padding:5px 8px;text-align:center;width:22%;">FR</th>
-            <th style="background:#d9d9d9;border:1px solid #999;padding:5px 8px;text-align:center;width:13%;">Good or Bad?</th>
-            <th style="background:#d9d9d9;border:1px solid #999;padding:5px 8px;text-align:center;width:32%;">Rationale</th>
-            <th style="background:#d9d9d9;border:1px solid #999;padding:5px 8px;text-align:center;">Refined FR or FRm</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Use Titanium</td>
-            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Maximize acceleration of car</td>
-            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Decelerate car</td>
-            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Ensure material is recyclable</td>
-            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Accelerate car with maximum efficiency</td>
-            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Hold device securely</td>
-            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Identify and report error conditions</td>
-            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Hit nail with hammer</td>
-            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="key-points">
-    <div class="kp-label">Key Points &mdash; What Makes a Good FR</div>
-    <ul>
-      <li>FRs <b>start with a verb</b> + direct object (e.g., <i>Adjust temperature</i>).</li>
-      <li>Don't embed a <b>solution</b> (e.g., <i>Use Titanium</i>, <i>Turn knob</i>).</li>
-      <li>Don't include a <b>measure of performance</b> ("how well") &mdash; that belongs in the FRm.</li>
-      <li>Don't use <b>"AND"</b> &mdash; usually a sign of two separate FRs.</li>
-    </ul>
-  </div>
-  <div class="slide-footer">
-    <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 19</div>
-  </div>
-</div>
-
-<!-- FRs and FRm's — Good or Bad Functional Requirements? (answers) -->
-<div class="slide" data-concept="dfmea-pfmea">
-  <div class="slide-header">
-    <div class="header-title">FRs and FRm's</div>
-  </div>
-  <div class="slide-body">
-    <div class="col-full">
-      <div class="section-label">Good or Bad Functional Requirements? &mdash; Answers</div>
-      <table style="width:100%;border-collapse:collapse;font-size:9.5px;margin-top:4px;line-height:1.35;">
-        <thead>
-          <tr>
-            <th colspan="4" style="background:#90c47d;color:#222;padding:4px 8px;text-align:center;font-size:12px;border:1px solid #2e7d32;">Example FRs</th>
-          </tr>
-          <tr>
-            <th style="background:#d9d9d9;border:1px solid #999;padding:4px 6px;text-align:center;width:18%;">FR</th>
-            <th style="background:#d9d9d9;border:1px solid #999;padding:4px 6px;text-align:center;width:11%;">Good or Bad?</th>
-            <th style="background:#d9d9d9;border:1px solid #999;padding:4px 6px;text-align:center;width:36%;">Rationale</th>
-            <th style="background:#d9d9d9;border:1px solid #999;padding:4px 6px;text-align:center;">Refined FR or FRm</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Use Titanium</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
-            <td style="border:1px solid #999;padding:5px 7px;">PS is embedded in the FR. Does not represent a function that must be performed.</td>
-            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Support structure under load<br><b>FRm:</b> Minimize weight<br><b>Threshold:</b> &lt;10 kg</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Maximize acceleration of car</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
-            <td style="border:1px solid #999;padding:5px 7px;"><i>Maximize</i> is describing the function and should be included in the <b>FRm</b> instead.</td>
-            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Accelerate car</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Decelerate car</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#2e7d32;font-weight:600;">Good</td>
-            <td style="border:1px solid #999;padding:5px 7px;">A clear function of a car with no metrics of "how well."</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#888;">&mdash;</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Ensure material is recyclable</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
-            <td style="border:1px solid #999;padding:5px 7px;"><i>"Recyclable"</i> describes a choice of material which is better stated as an FRm: <i>Maximize use of recyclable material</i>.</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#888;">&mdash;</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Accelerate car with maximum efficiency</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
-            <td style="border:1px solid #999;padding:5px 7px;"><i>Maximum efficiency</i> describes "how well."</td>
-            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Accelerate car</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Hold device securely</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
-            <td style="border:1px solid #999;padding:5px 7px;"><i>Securely</i> describes "how well."</td>
-            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Hold device</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Identify and report error conditions</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
-            <td style="border:1px solid #999;padding:5px 7px;">Two functions are stated as one. Avoid the use of <b>AND</b>.</td>
-            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Identify error conditions<br><b>FR:</b> Report error conditions</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Hit nail with hammer</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
-            <td style="border:1px solid #999;padding:5px 7px;">Starts with a verb, BUT a hammer and nail are <b>solutions</b>.</td>
-            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Install fastener &nbsp;OR&nbsp; <b>FR:</b> Fasten structural components together</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Maintain water level</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#2e7d32;font-weight:600;">Good</td>
-            <td style="border:1px solid #999;padding:5px 7px;">Starts with a verb and explains what the system must do.</td>
-            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#888;">&mdash;</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="slide-footer">
-    <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 20</div>
-  </div>
-</div>
-
-<!-- FRs and FRm's — Functional Requirement Measures (FRm): How Well -->
-<div class="slide" data-concept="dfx-overview">
-  <div class="slide-header">
-    <div class="header-title">FRs and FRm's</div>
-  </div>
-  <div class="slide-body">
-    <div class="col-full">
-      <div class="section-label"><span style="color:#1976d2;">Functional Requirement Measures (FRm)</span> &mdash; Going Deeper</div>
-
-      <!-- Definition + Expression -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:7px;font-size:11px;color:#222;line-height:1.45;">
-        <b style="color:#5C4A21;">Definition:</b> An FRm is a <b>performance measure that defines how well the system must perform the FR</b>.
-        <div style="margin-top:3px;"><b style="color:#5C4A21;">Expression:</b> Measurable characteristic stated as a <b>vector including units</b> (e.g., <i>Minimize temperature in &deg;C</i>) above the <b>threshold</b>. <span style="color:#5C4A21;font-style:italic;">(1:m relationship &mdash; one FR may have many FRms.)</span></div>
-      </div>
-
-      <!-- Key points -->
-      <div style="font-size:10.5px;color:#222;line-height:1.45;margin-bottom:8px;">
-        <b style="color:#5C4A21;">Key Points:</b>
-        <ul style="margin:3px 0 0 18px;padding:0;">
-          <li>An FRm provides a measure to <b>quantify the performance</b> required to successfully deliver a function (achieve the FR).</li>
-          <li>A <b>vector</b> that expresses, in measurable terms, how well an FR must be performed &mdash; including <b>threshold, maximize, minimize</b>, or a target range / level of desired performance (goal).</li>
-          <li>FRms enable a designer to <b>determine which alternative solution best satisfies the FR</b>.</li>
-        </ul>
-      </div>
-
-      <!-- The formula — all boxes equal height via align-items:stretch + inner flex centering -->
-      <div style="display:flex;align-items:stretch;justify-content:center;gap:6px;flex-wrap:nowrap;font-size:13px;color:#222;margin-bottom:8px;">
-        <div style="background:#93c47d;border:1.2px solid #2e7d32;border-radius:3px;padding:6px 10px;text-align:center;font-weight:bold;color:#222;line-height:1.2;display:flex;align-items:center;justify-content:center;">
-          Start with<br>the FR
-        </div>
-        <span style="font-weight:bold;font-size:16px;color:#444;align-self:center;">+</span>
-        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;display:flex;align-items:center;justify-content:center;">
-          What we<br>are measuring<br>(with units)
-        </div>
-        <span style="font-weight:bold;font-size:16px;color:#444;align-self:center;">+</span>
-        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;display:flex;align-items:center;justify-content:center;">
-          Direction<br>of "Goodness"
-        </div>
-        <span style="font-weight:bold;font-size:16px;color:#444;align-self:center;">+</span>
-        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;display:flex;align-items:center;justify-content:center;">
-          Threshold
-        </div>
-        <span style="font-weight:bold;font-size:16px;color:#444;align-self:center;">=</span>
-        <div style="background:#5b9bd5;color:#fff;border:1.5px solid #1976d2;border-radius:4px;padding:10px 14px;text-align:center;font-weight:bold;line-height:1.2;font-size:16px;display:flex;align-items:center;justify-content:center;">
-          FRm
-        </div>
-      </div>
-
-      <!-- Examples table -->
-      <table style="width:100%;border-collapse:collapse;font-size:10.5px;">
-        <thead>
-          <tr style="background:#deebf7;">
-            <th style="border:1px solid #5b9bd5;padding:5px 8px;text-align:center;color:#1976d2;width:18%;">Functional Requirement</th>
-            <th style="border:1px solid #5b9bd5;padding:5px 8px;text-align:center;color:#1976d2;">FRm: What are we measuring? <span style="font-weight:normal;">(include units)</span></th>
-            <th style="border:1px solid #5b9bd5;padding:5px 8px;text-align:center;color:#1976d2;">FRm: <span style="font-weight:normal;">Maximize or Minimize? <i>(Direction of Vector)</i></span></th>
-            <th style="border:1px solid #5b9bd5;padding:5px 8px;text-align:center;color:#1976d2;">FRm Threshold &mdash; <span style="font-weight:normal;">What is considered acceptable?</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="border:1px solid #5b9bd5;padding:6px 9px;font-weight:bold;color:#222;">Accelerate car</td>
-            <td style="border:1px solid #5b9bd5;padding:6px 9px;">Acceleration (m/s<sup>2</sup>)</td>
-            <td style="border:1px solid #5b9bd5;padding:6px 9px;">Maximize</td>
-            <td style="border:1px solid #5b9bd5;padding:6px 9px;">0 to 100 km/h &lt; 3.1 sec &nbsp;(&gt; 7.94 m/s<sup>2</sup>)</td>
-          </tr>
-          <tr>
-            <td style="border:1px solid #5b9bd5;padding:6px 9px;font-weight:bold;color:#222;">Stop car</td>
-            <td style="border:1px solid #5b9bd5;padding:6px 9px;">Stopping distance (m)</td>
-            <td style="border:1px solid #5b9bd5;padding:6px 9px;">Minimize</td>
-            <td style="border:1px solid #5b9bd5;padding:6px 9px;">100 to 0 km/h &lt; 50 m</td>
-          </tr>
-        </tbody>
-      </table>
-
-    </div>
-  </div>
-  <div class="slide-footer">
-    <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 21</div>
-  </div>
-</div>
-
-<!-- FRs and FRm's — KPIs and FRm's -->
-<div class="slide" data-concept="dfa">
-  <div class="slide-header">
-    <div class="header-title">FRs and FRm's</div>
-  </div>
-  <div class="slide-body">
-    <div class="col-full">
-      <div class="section-label">Key Performance Indicators (KPIs) and <span style="color:#1976d2;">FRm's</span></div>
-
-      <!-- Q&A line -->
-      <div style="font-size:11.5px;color:#222;margin:6px 0 5px 0;font-weight:600;">
-        Are KPIs also FRm's? &nbsp;<span style="color:#5C4A21;font-weight:700;">No, not necessarily.</span>
-      </div>
-
-      <!-- Body paragraphs -->
-      <div style="font-size:10.5px;color:#222;line-height:1.45;margin-bottom:6px;">
-        KPIs are measures to assess if a <b>predefined goal</b> is achieved. A goal <i>could</i> be an FR, but in many cases the relationship between a goal and an FR of the system is <b>not well understood</b>.
-      </div>
-      <div style="font-size:10.5px;color:#222;line-height:1.45;margin-bottom:6px;">
-        If we cannot relate the KPI and its goal to an <b>FR of the system</b>, improvement is often ineffective &mdash; <i>we don't know what to fix because we don't know what the system isn't <b style="font-style:normal;">doing (FR)</b> well.</i>
-      </div>
-      <div style="font-size:10.5px;color:#222;line-height:1.45;margin-bottom:8px;">
-        Remember: an <b>FRm</b> specifies <i>"how well"</i> the system must perform an FR, and an <b>FR</b> states <b>what a system MUST DO</b> to deliver value to the customer.
-      </div>
-
-      <!-- FRm -> FR diagram -->
-      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin:0 0 8px 0;">
-        <div style="background:#9fc5e8;border:1.5px solid #1976d2;border-radius:5px;padding:8px 14px;text-align:center;font-weight:bold;font-size:11px;color:#1a3a5c;line-height:1.2;">
-          Functional<br>Requirement Measure<br>(FRm)
-        </div>
-        <div style="display:flex;flex-direction:column;align-items:center;font-size:10px;color:#5C4A21;font-style:italic;line-height:1.2;">
-          <div>specifies "how well"</div>
-          <div style="font-size:18px;color:#444;line-height:1;font-style:normal;">&rarr;</div>
-        </div>
-        <div style="background:#93c47d;border:1.5px solid #2e7d32;border-radius:5px;padding:8px 14px;text-align:center;font-weight:bold;font-size:11px;color:#1a3a5c;line-height:1.2;">
-          Functional<br>Requirement<br>(FR)
-        </div>
-      </div>
-
-      <!-- Connecting paragraph -->
-      <div style="font-size:10.5px;color:#222;line-height:1.45;margin-bottom:8px;">
-        For any given <b>KPI</b>, the <b>FR</b> of the system should be understood. Therefore, <b>KPIs should be derived from FRs of the system</b> and would represent FRm's.
-      </div>
-
-      <!-- Example callout -->
-      <div style="border:1.5px solid #5C4A21;border-radius:4px;overflow:hidden;">
-        <div style="background:#5C4A21;color:#fff;padding:3px 12px;font-weight:bold;font-size:11px;letter-spacing:0.4px;display:inline-block;">EXAMPLE</div>
-        <div style="padding:7px 12px;font-size:10.5px;color:#222;line-height:1.5;">
-          <div><b style="color:#5C4A21;">Example KPI &mdash;</b> <b>Abandon rate of calls</b> for customer service <span style="color:#666;font-style:italic;">(how many customers drop the call before reaching an operator)</span></div>
-          <div style="margin-top:4px;"><b style="color:#5C4A21;">What is the FR?</b> &nbsp;&nbsp; <b>FR:</b> Answer customer calls</div>
-          <div style="margin-top:4px;"><b style="color:#5C4A21;">How would we measure success?</b></div>
-          <div style="margin-top:2px;"><b>FRm:</b> Minimize wait time for customer to reach operator &mdash; <b>Threshold:</b> &lt; 30 seconds</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div class="slide-footer">
-    <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 22</div>
-  </div>
-</div>
-
-<!-- ══════════════════════════════════════════════════════════════
      SLIDE 11 — LIST OF QUESTIONS
 ══════════════════════════════════════════════════════════════ -->
 <div class="slide" id="slide-questions" data-concept="dfm">
@@ -2037,7 +1661,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 23</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 18</div>
   </div>
 </div>
 
@@ -2060,7 +1684,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 24</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 19</div>
   </div>
 </div>
 <!-- LUCID OVERVIEW (NEW) — inserted before Tips & Tricks -->
@@ -2097,7 +1721,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 25</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 20</div>
   </div>
 </div>
 
@@ -2211,7 +1835,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 26</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 21</div>
   </div>
 </div>
 
@@ -2280,7 +1904,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 27</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 22</div>
   </div>
 </div>
 
@@ -2327,7 +1951,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 28</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 23</div>
   </div>
 </div>
 <!-- ══════════════════════════════════════════════════════════════
@@ -2393,7 +2017,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 29</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 24</div></div>
 </div>
 <!-- STEP 1 — SUB-SLIDE 3: GIVEN "REQUIREMENTS" -->
 <div class="slide">
@@ -2466,7 +2090,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 30</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 25</div>
   </div>
 </div>
 <!-- STEP 1 — SUB-SLIDE 4: COST CONSIDERATIONS - PART 1 -->
@@ -2525,7 +2149,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 31</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 26</div>
   </div>
 </div>
 <!-- STEP 1 — SUB-SLIDE 5: STANDARDS -->
@@ -2579,7 +2203,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 32</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 27</div>
   </div>
 </div>
 <!-- STEP 1 — SUB-SLIDE 6: SAFETY CONCERNS AND RESPONSIBILITIES -->
@@ -2632,7 +2256,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 33</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 28</div>
   </div>
 </div>
 <!-- STEP 1 — SUB-SLIDE 7: THE "-ILITIES" -->
@@ -2678,7 +2302,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 34</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 29</div>
   </div>
 </div>
 
@@ -2732,7 +2356,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 35</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 30</div>
   </div>
 </div>
 
@@ -2781,8 +2405,383 @@
       <li>Plan for <b>unintended</b> Use Cases too &mdash; they create new safety considerations and may add or revise FRs.</li>
     </ul>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 36</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 31</div></div>
 </div>
+<!-- ══════════════════════════════════════════════════════════════
+     SLIDE — FRs AND FRm's: HOW-TO STATE GOOD FRs
+══════════════════════════════════════════════════════════════ -->
+<div class="slide" id="slide-9" data-concept="fmea-terms">
+  <div class="slide-header">
+    <div class="header-title">FRs and FRm's</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">How-To State Good <span style="color:#2e7d32;">Functional Requirements (FRs)</span></div>
+
+      <!-- Top principles -->
+      <ul style="margin:6px 0 8px 18px;padding:0;font-size:12px;line-height:1.5;color:#222;">
+        <li style="margin-bottom:5px;"><b>ALWAYS</b> start an FR with a <b style="color:#5C4A21;">VERB</b>.</li>
+        <li>State the <b>name of the function</b> in <b>active verb &mdash; direct object (noun)</b> format, where the verb represents an explicit <b>transformation of inputs into outputs</b> &mdash; i.e., <i>WHAT</i> is to be done.</li>
+      </ul>
+
+      <!-- Correct / Incorrect example cards -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0 8px 0;">
+
+        <!-- Correct -->
+        <div style="text-align:center;">
+          <div style="font-weight:bold;color:#2e7d32;font-size:13px;margin-bottom:4px;">Correct</div>
+          <div style="display:inline-block;width:240px;background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:14px 18px;font-size:11.5px;color:#222;line-height:1.4;text-align:left;box-shadow:2px 2px 4px rgba(0,0,0,0.15);box-sizing:border-box;">
+            <b>FR:</b> Adjust temperature of water
+          </div>
+        </div>
+
+        <!-- Incorrect -->
+        <div style="text-align:center;">
+          <div style="font-weight:bold;color:#c62828;font-size:13px;margin-bottom:4px;">Incorrect</div>
+          <div style="display:inline-block;width:240px;background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:14px 18px;font-size:11.5px;color:#222;line-height:1.4;text-align:left;box-shadow:2px 2px 4px rgba(0,0,0,0.15);box-sizing:border-box;">
+            <b>FR:</b> <u>Turn knob</u> to adjust temperature
+          </div>
+          <div style="font-size:11px;color:#c62828;font-style:italic;line-height:1.35;margin-top:5px;">Solution embedded in FR statement</div>
+        </div>
+
+      </div>
+
+      <!-- Do NOT section -->
+      <div style="background:#fef0f0;border-left:4px solid #c62828;border-radius:3px;padding:8px 14px;margin-top:10px;font-size:11.5px;line-height:1.5;color:#222;">
+        <div style="font-weight:bold;color:#c62828;font-size:13px;margin-bottom:4px;">Do NOT:</div>
+        <ul style="margin:0;padding-left:18px;color:#c62828;">
+          <li style="margin-bottom:3px;"><span style="color:#222;">Include <b>measures of performance</b> (i.e., do not describe <i>"how well"</i> the FR needs to be performed).</span></li>
+          <li style="margin-bottom:3px;"><span style="color:#222;"><b>Embed</b> or state <b>solutions</b> in the FR statement.</span></li>
+          <li><span style="color:#222;">Use the word <b>AND</b>. If you want to say "and" in an FR statement, you are probably describing <b>two separate FRs</b>.</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="slide-footer">
+    <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 32</div>
+  </div>
+</div>
+
+<!-- FRs and FRm's — Good or Bad Functional Requirements? (exercise) -->
+<div class="slide" data-concept="rpn">
+  <div class="slide-header">
+    <div class="header-title">FRs and FRm's</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">Good or Bad Functional Requirements? Why?</div>
+      <table style="width:100%;border-collapse:collapse;font-size:11px;margin-top:4px;">
+        <thead>
+          <tr>
+            <th colspan="4" style="background:#90c47d;color:#222;padding:5px 8px;text-align:center;font-size:13px;border:1px solid #2e7d32;">Example FRs</th>
+          </tr>
+          <tr>
+            <th style="background:#d9d9d9;border:1px solid #999;padding:5px 8px;text-align:center;width:22%;">FR</th>
+            <th style="background:#d9d9d9;border:1px solid #999;padding:5px 8px;text-align:center;width:13%;">Good or Bad?</th>
+            <th style="background:#d9d9d9;border:1px solid #999;padding:5px 8px;text-align:center;width:32%;">Rationale</th>
+            <th style="background:#d9d9d9;border:1px solid #999;padding:5px 8px;text-align:center;">Refined FR or FRm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Use Titanium</td>
+            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Maximize acceleration of car</td>
+            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Decelerate car</td>
+            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Ensure material is recyclable</td>
+            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Accelerate car with maximum efficiency</td>
+            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Hold device securely</td>
+            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Identify and report error conditions</td>
+            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:6px 9px;text-align:center;">Hit nail with hammer</td>
+            <td style="border:1px dashed #b89a5e;background:#fff;height:30px;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+            <td style="border:1px dashed #b89a5e;background:#fff;"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="key-points">
+    <div class="kp-label">Key Points &mdash; What Makes a Good FR</div>
+    <ul>
+      <li>FRs <b>start with a verb</b> + direct object (e.g., <i>Adjust temperature</i>).</li>
+      <li>Don't embed a <b>solution</b> (e.g., <i>Use Titanium</i>, <i>Turn knob</i>).</li>
+      <li>Don't include a <b>measure of performance</b> ("how well") &mdash; that belongs in the FRm.</li>
+      <li>Don't use <b>"AND"</b> &mdash; usually a sign of two separate FRs.</li>
+    </ul>
+  </div>
+  <div class="slide-footer">
+    <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 33</div>
+  </div>
+</div>
+
+<!-- FRs and FRm's — Good or Bad Functional Requirements? (answers) -->
+<div class="slide" data-concept="dfmea-pfmea">
+  <div class="slide-header">
+    <div class="header-title">FRs and FRm's</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">Good or Bad Functional Requirements? &mdash; Answers</div>
+      <table style="width:100%;border-collapse:collapse;font-size:9.5px;margin-top:4px;line-height:1.35;">
+        <thead>
+          <tr>
+            <th colspan="4" style="background:#90c47d;color:#222;padding:4px 8px;text-align:center;font-size:12px;border:1px solid #2e7d32;">Example FRs</th>
+          </tr>
+          <tr>
+            <th style="background:#d9d9d9;border:1px solid #999;padding:4px 6px;text-align:center;width:18%;">FR</th>
+            <th style="background:#d9d9d9;border:1px solid #999;padding:4px 6px;text-align:center;width:11%;">Good or Bad?</th>
+            <th style="background:#d9d9d9;border:1px solid #999;padding:4px 6px;text-align:center;width:36%;">Rationale</th>
+            <th style="background:#d9d9d9;border:1px solid #999;padding:4px 6px;text-align:center;">Refined FR or FRm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Use Titanium</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
+            <td style="border:1px solid #999;padding:5px 7px;">PS is embedded in the FR. Does not represent a function that must be performed.</td>
+            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Support structure under load<br><b>FRm:</b> Minimize weight<br><b>Threshold:</b> &lt;10 kg</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Maximize acceleration of car</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
+            <td style="border:1px solid #999;padding:5px 7px;"><i>Maximize</i> is describing the function and should be included in the <b>FRm</b> instead.</td>
+            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Accelerate car</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Decelerate car</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#2e7d32;font-weight:600;">Good</td>
+            <td style="border:1px solid #999;padding:5px 7px;">A clear function of a car with no metrics of "how well."</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#888;">&mdash;</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Ensure material is recyclable</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
+            <td style="border:1px solid #999;padding:5px 7px;"><i>"Recyclable"</i> describes a choice of material which is better stated as an FRm: <i>Maximize use of recyclable material</i>.</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#888;">&mdash;</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Accelerate car with maximum efficiency</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
+            <td style="border:1px solid #999;padding:5px 7px;"><i>Maximum efficiency</i> describes "how well."</td>
+            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Accelerate car</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Hold device securely</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
+            <td style="border:1px solid #999;padding:5px 7px;"><i>Securely</i> describes "how well."</td>
+            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Hold device</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Identify and report error conditions</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
+            <td style="border:1px solid #999;padding:5px 7px;">Two functions are stated as one. Avoid the use of <b>AND</b>.</td>
+            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Identify error conditions<br><b>FR:</b> Report error conditions</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Hit nail with hammer</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#c62828;font-weight:600;">Bad</td>
+            <td style="border:1px solid #999;padding:5px 7px;">Starts with a verb, BUT a hammer and nail are <b>solutions</b>.</td>
+            <td style="border:1px solid #999;padding:5px 7px;"><b>FR:</b> Install fastener &nbsp;OR&nbsp; <b>FR:</b> Fasten structural components together</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;font-weight:600;">Maintain water level</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#2e7d32;font-weight:600;">Good</td>
+            <td style="border:1px solid #999;padding:5px 7px;">Starts with a verb and explains what the system must do.</td>
+            <td style="border:1px solid #999;padding:5px 7px;text-align:center;color:#888;">&mdash;</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="slide-footer">
+    <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 34</div>
+  </div>
+</div>
+
+<!-- FRs and FRm's — Functional Requirement Measures (FRm): How Well -->
+<div class="slide" data-concept="dfx-overview">
+  <div class="slide-header">
+    <div class="header-title">FRs and FRm's</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label"><span style="color:#1976d2;">Functional Requirement Measures (FRm)</span> &mdash; Going Deeper</div>
+
+      <!-- Definition + Expression -->
+      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:7px;font-size:11px;color:#222;line-height:1.45;">
+        <b style="color:#5C4A21;">Definition:</b> An FRm is a <b>performance measure that defines how well the system must perform the FR</b>.
+        <div style="margin-top:3px;"><b style="color:#5C4A21;">Expression:</b> Measurable characteristic stated as a <b>vector including units</b> (e.g., <i>Minimize temperature in &deg;C</i>) above the <b>threshold</b>. <span style="color:#5C4A21;font-style:italic;">(1:m relationship &mdash; one FR may have many FRms.)</span></div>
+      </div>
+
+      <!-- Key points -->
+      <div style="font-size:10.5px;color:#222;line-height:1.45;margin-bottom:8px;">
+        <b style="color:#5C4A21;">Key Points:</b>
+        <ul style="margin:3px 0 0 18px;padding:0;">
+          <li>An FRm provides a measure to <b>quantify the performance</b> required to successfully deliver a function (achieve the FR).</li>
+          <li>A <b>vector</b> that expresses, in measurable terms, how well an FR must be performed &mdash; including <b>threshold, maximize, minimize</b>, or a target range / level of desired performance (goal).</li>
+          <li>FRms enable a designer to <b>determine which alternative solution best satisfies the FR</b>.</li>
+        </ul>
+      </div>
+
+      <!-- The formula — all boxes equal height via align-items:stretch + inner flex centering -->
+      <div style="display:flex;align-items:stretch;justify-content:center;gap:6px;flex-wrap:nowrap;font-size:13px;color:#222;margin-bottom:8px;">
+        <div style="background:#93c47d;border:1.2px solid #2e7d32;border-radius:3px;padding:6px 10px;text-align:center;font-weight:bold;color:#222;line-height:1.2;display:flex;align-items:center;justify-content:center;">
+          Start with<br>the FR
+        </div>
+        <span style="font-weight:bold;font-size:16px;color:#444;align-self:center;">+</span>
+        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;display:flex;align-items:center;justify-content:center;">
+          What we<br>are measuring<br>(with units)
+        </div>
+        <span style="font-weight:bold;font-size:16px;color:#444;align-self:center;">+</span>
+        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;display:flex;align-items:center;justify-content:center;">
+          Direction<br>of "Goodness"
+        </div>
+        <span style="font-weight:bold;font-size:16px;color:#444;align-self:center;">+</span>
+        <div style="background:#deebf7;border:1.5px solid #1976d2;border-radius:4px;padding:6px 10px;text-align:center;font-weight:bold;color:#1976d2;line-height:1.2;display:flex;align-items:center;justify-content:center;">
+          Threshold
+        </div>
+        <span style="font-weight:bold;font-size:16px;color:#444;align-self:center;">=</span>
+        <div style="background:#5b9bd5;color:#fff;border:1.5px solid #1976d2;border-radius:4px;padding:10px 14px;text-align:center;font-weight:bold;line-height:1.2;font-size:16px;display:flex;align-items:center;justify-content:center;">
+          FRm
+        </div>
+      </div>
+
+      <!-- Examples table -->
+      <table style="width:100%;border-collapse:collapse;font-size:10.5px;">
+        <thead>
+          <tr style="background:#deebf7;">
+            <th style="border:1px solid #5b9bd5;padding:5px 8px;text-align:center;color:#1976d2;width:18%;">Functional Requirement</th>
+            <th style="border:1px solid #5b9bd5;padding:5px 8px;text-align:center;color:#1976d2;">FRm: What are we measuring? <span style="font-weight:normal;">(include units)</span></th>
+            <th style="border:1px solid #5b9bd5;padding:5px 8px;text-align:center;color:#1976d2;">FRm: <span style="font-weight:normal;">Maximize or Minimize? <i>(Direction of Vector)</i></span></th>
+            <th style="border:1px solid #5b9bd5;padding:5px 8px;text-align:center;color:#1976d2;">FRm Threshold &mdash; <span style="font-weight:normal;">What is considered acceptable?</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border:1px solid #5b9bd5;padding:6px 9px;font-weight:bold;color:#222;">Accelerate car</td>
+            <td style="border:1px solid #5b9bd5;padding:6px 9px;">Acceleration (m/s<sup>2</sup>)</td>
+            <td style="border:1px solid #5b9bd5;padding:6px 9px;">Maximize</td>
+            <td style="border:1px solid #5b9bd5;padding:6px 9px;">0 to 100 km/h &lt; 3.1 sec &nbsp;(&gt; 7.94 m/s<sup>2</sup>)</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #5b9bd5;padding:6px 9px;font-weight:bold;color:#222;">Stop car</td>
+            <td style="border:1px solid #5b9bd5;padding:6px 9px;">Stopping distance (m)</td>
+            <td style="border:1px solid #5b9bd5;padding:6px 9px;">Minimize</td>
+            <td style="border:1px solid #5b9bd5;padding:6px 9px;">100 to 0 km/h &lt; 50 m</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+  <div class="slide-footer">
+    <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 35</div>
+  </div>
+</div>
+
+<!-- FRs and FRm's — KPIs and FRm's -->
+<div class="slide" data-concept="dfa">
+  <div class="slide-header">
+    <div class="header-title">FRs and FRm's</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">Key Performance Indicators (KPIs) and <span style="color:#1976d2;">FRm's</span></div>
+
+      <!-- Q&A line -->
+      <div style="font-size:11.5px;color:#222;margin:6px 0 5px 0;font-weight:600;">
+        Are KPIs also FRm's? &nbsp;<span style="color:#5C4A21;font-weight:700;">No, not necessarily.</span>
+      </div>
+
+      <!-- Body paragraphs -->
+      <div style="font-size:10.5px;color:#222;line-height:1.45;margin-bottom:6px;">
+        KPIs are measures to assess if a <b>predefined goal</b> is achieved. A goal <i>could</i> be an FR, but in many cases the relationship between a goal and an FR of the system is <b>not well understood</b>.
+      </div>
+      <div style="font-size:10.5px;color:#222;line-height:1.45;margin-bottom:6px;">
+        If we cannot relate the KPI and its goal to an <b>FR of the system</b>, improvement is often ineffective &mdash; <i>we don't know what to fix because we don't know what the system isn't <b style="font-style:normal;">doing (FR)</b> well.</i>
+      </div>
+      <div style="font-size:10.5px;color:#222;line-height:1.45;margin-bottom:8px;">
+        Remember: an <b>FRm</b> specifies <i>"how well"</i> the system must perform an FR, and an <b>FR</b> states <b>what a system MUST DO</b> to deliver value to the customer.
+      </div>
+
+      <!-- FRm -> FR diagram -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin:0 0 8px 0;">
+        <div style="background:#9fc5e8;border:1.5px solid #1976d2;border-radius:5px;padding:8px 14px;text-align:center;font-weight:bold;font-size:11px;color:#1a3a5c;line-height:1.2;">
+          Functional<br>Requirement Measure<br>(FRm)
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;font-size:10px;color:#5C4A21;font-style:italic;line-height:1.2;">
+          <div>specifies "how well"</div>
+          <div style="font-size:18px;color:#444;line-height:1;font-style:normal;">&rarr;</div>
+        </div>
+        <div style="background:#93c47d;border:1.5px solid #2e7d32;border-radius:5px;padding:8px 14px;text-align:center;font-weight:bold;font-size:11px;color:#1a3a5c;line-height:1.2;">
+          Functional<br>Requirement<br>(FR)
+        </div>
+      </div>
+
+      <!-- Connecting paragraph -->
+      <div style="font-size:10.5px;color:#222;line-height:1.45;margin-bottom:8px;">
+        For any given <b>KPI</b>, the <b>FR</b> of the system should be understood. Therefore, <b>KPIs should be derived from FRs of the system</b> and would represent FRm's.
+      </div>
+
+      <!-- Example callout -->
+      <div style="border:1.5px solid #5C4A21;border-radius:4px;overflow:hidden;">
+        <div style="background:#5C4A21;color:#fff;padding:3px 12px;font-weight:bold;font-size:11px;letter-spacing:0.4px;display:inline-block;">EXAMPLE</div>
+        <div style="padding:7px 12px;font-size:10.5px;color:#222;line-height:1.5;">
+          <div><b style="color:#5C4A21;">Example KPI &mdash;</b> <b>Abandon rate of calls</b> for customer service <span style="color:#666;font-style:italic;">(how many customers drop the call before reaching an operator)</span></div>
+          <div style="margin-top:4px;"><b style="color:#5C4A21;">What is the FR?</b> &nbsp;&nbsp; <b>FR:</b> Answer customer calls</div>
+          <div style="margin-top:4px;"><b style="color:#5C4A21;">How would we measure success?</b></div>
+          <div style="margin-top:2px;"><b>FRm:</b> Minimize wait time for customer to reach operator &mdash; <b>Threshold:</b> &lt; 30 seconds</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="slide-footer">
+    <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 36</div>
+  </div>
+</div>
+
 <!-- STEP 2 — SUB-SLIDE 3: VALUE PROPOSITION -->
 <div class="slide">
   <div class="slide-header">
@@ -7339,44 +7338,38 @@
     <div class="np-child" data-slide="15" onclick="goToSlide(15)">Use Case &mdash; Use Case Step &mdash; FR</div>
     <div class="np-child" data-slide="16" onclick="goToSlide(16)">PS-ALT &mdash; Failure &mdash; Cause &mdash; Mitigation</div>
   </div>
-  <div class="np-item np-parent" data-slide="17" data-first="17" data-last="21" onclick="toggleStep(this, 17)">
-    <span class="np-parent-label">FRs and FRm's</span>
-    <span class="np-arrow">&#9654;</span>
-  </div>
-  <div class="np-children">
-    <div class="np-child" data-slide="17" onclick="goToSlide(17)">How-To State Good FRs</div>
-    <div class="np-child" data-slide="18" onclick="goToSlide(18)">Good or Bad FRs? (Exercise)</div>
-    <div class="np-child" data-slide="19" onclick="goToSlide(19)">Good or Bad FRs? (Answers)</div>
-    <div class="np-child" data-slide="20" onclick="goToSlide(20)">FRm &mdash; How Well</div>
-    <div class="np-child" data-slide="21" onclick="goToSlide(21)">KPIs and FRm's</div>
-  </div>
-  <div class="np-item" data-slide="22" onclick="goToSlide(22)">List of Questions</div>
-  <div class="np-item" data-slide="23" onclick="goToSlide(23)">Parking Lot</div>
-  <div class="np-item" data-slide="24" onclick="goToSlide(24)">Lucid Templates</div>
-  <div class="np-item" data-slide="25" onclick="goToSlide(25)">Tips &amp; Tricks in Lucid</div>
+  <div class="np-item" data-slide="17" onclick="goToSlide(17)">List of Questions</div>
+  <div class="np-item" data-slide="18" onclick="goToSlide(18)">Parking Lot</div>
+  <div class="np-item" data-slide="19" onclick="goToSlide(19)">Lucid Templates</div>
+  <div class="np-item" data-slide="20" onclick="goToSlide(20)">Tips &amp; Tricks in Lucid</div>
 
   <div class="np-section">The 12 Steps</div>
-  <div class="np-item np-parent" data-slide="26" data-first="26" data-last="33" onclick="toggleStep(this, 26)">
+  <div class="np-item np-parent" data-slide="21" data-first="21" data-last="28" onclick="toggleStep(this, 21)">
     <span class="np-parent-label"><span class="snum">Step 1</span>Project Introduction &amp; Background</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="26" onclick="goToSlide(26)">1.1 Team Members</div>
-    <div class="np-child" data-slide="27" onclick="goToSlide(27)">1.2 &amp; 1.3 Description / Management</div>
-    <div class="np-child" data-slide="28" onclick="goToSlide(28)">CSD Language</div>
-    <div class="np-child" data-slide="29" onclick="goToSlide(29)">1.4 Given Requirements</div>
-    <div class="np-child" data-slide="30" onclick="goToSlide(30)">1.5 Cost Considerations</div>
-    <div class="np-child" data-slide="31" onclick="goToSlide(31)">1.6 Standards</div>
-    <div class="np-child" data-slide="32" onclick="goToSlide(32)">1.7 Safety</div>
-    <div class="np-child" data-slide="33" onclick="goToSlide(33)">1.8 The "-ilities"</div>
+    <div class="np-child" data-slide="21" onclick="goToSlide(21)">1.1 Team Members</div>
+    <div class="np-child" data-slide="22" onclick="goToSlide(22)">1.2 &amp; 1.3 Description / Management</div>
+    <div class="np-child" data-slide="23" onclick="goToSlide(23)">CSD Language</div>
+    <div class="np-child" data-slide="24" onclick="goToSlide(24)">1.4 Given Requirements</div>
+    <div class="np-child" data-slide="25" onclick="goToSlide(25)">1.5 Cost Considerations</div>
+    <div class="np-child" data-slide="26" onclick="goToSlide(26)">1.6 Standards</div>
+    <div class="np-child" data-slide="27" onclick="goToSlide(27)">1.7 Safety</div>
+    <div class="np-child" data-slide="28" onclick="goToSlide(28)">1.8 The "-ilities"</div>
   </div>
-  <div class="np-item np-parent" data-slide="34" data-first="34" data-last="41" onclick="toggleStep(this, 34)">
+  <div class="np-item np-parent" data-slide="29" data-first="29" data-last="41" onclick="toggleStep(this, 29)">
     <span class="np-parent-label"><span class="snum">Step 2</span>Problem Statement</span>
     <span class="np-arrow">&#9654;</span>
   </div>
   <div class="np-children">
-    <div class="np-child" data-slide="34" onclick="goToSlide(34)">2.0 Problem Statement</div>
-    <div class="np-child" data-slide="35" onclick="goToSlide(35)">2.3 Use Cases</div>
+    <div class="np-child" data-slide="29" onclick="goToSlide(29)">2.0 Problem Statement</div>
+    <div class="np-child" data-slide="30" onclick="goToSlide(30)">2.3 Use Cases</div>
+    <div class="np-child" data-slide="31" onclick="goToSlide(31)">How-To State Good FRs</div>
+    <div class="np-child" data-slide="32" onclick="goToSlide(32)">Good or Bad FRs? (Exercise)</div>
+    <div class="np-child" data-slide="33" onclick="goToSlide(33)">Good or Bad FRs? (Answers)</div>
+    <div class="np-child" data-slide="34" onclick="goToSlide(34)">FRm &mdash; How Well</div>
+    <div class="np-child" data-slide="35" onclick="goToSlide(35)">KPIs and FRm's</div>
     <div class="np-child" data-slide="36" onclick="goToSlide(36)">2.4 Value Proposition</div>
     <div class="np-child" data-slide="37" onclick="goToSlide(37)">2.5 Use Case Flow</div>
     <div class="np-child" data-slide="38" onclick="goToSlide(38)">2.5 Example</div>

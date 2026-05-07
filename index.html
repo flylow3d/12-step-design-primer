@@ -3926,24 +3926,24 @@
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
         <div style="border:2px solid #d6a960;background:#fdfaf4;border-radius:6px;padding:7px 11px;">
-          <div style="font-weight:bold;color:#5C4A21;font-size:11.5px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">Trivial Coupling</div>
-          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0 0 5px 0;">Two PSs <i>look</i> distinct on paper because they sit at different boundary conditions, but they apply the <b>same mechanism</b> twice. The matrix fills up because the design has effectively doubled one knob.</p>
-          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0;"><b>Recall the <span class="concept-link" onclick="goToConcept('faucet-example')">faucet (4.2)</span>:</b> hot and cold valves are both &ldquo;restriction on a flow path.&rdquo; The uniqueness lives in what is piped behind them &mdash; not in the parameter itself.</p>
-          <img src="Images/Step 4 - Coupled Faucet.png" alt="Two-handle faucet — separate hot and cold valves both apply the same mechanism" style="display:block;margin:6px auto 0 auto;max-width:100%;max-height:100px;height:auto;width:auto;object-fit:contain;">
+          <div style="font-weight:bold;color:#5C4A21;font-size:11.5px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">Inherent Coupling</div>
+          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0 0 5px 0;">The PSs <b>cannot, by the nature of the chosen mechanism</b>, target a single FR. The coupling is <b>visible from the design spec itself</b> &mdash; no implementation needed to see it.</p>
+          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0;"><b>Recall the <span class="concept-link" onclick="goToConcept('faucet-example')">faucet (4.2)</span>:</b> each valve is a &ldquo;restriction on a flow path.&rdquo; By construction, turning either valve changes both flow rate <i>and</i> mix temperature &mdash; the spec already shows two FRs running through one knob.</p>
+          <img src="Images/Step 4 - Coupled Faucet.png" alt="Two-handle faucet — each valve simultaneously affects flow rate and mix temperature" style="display:block;margin:6px auto 0 auto;max-width:100%;max-height:100px;height:auto;width:auto;object-fit:contain;">
         </div>
         <div style="border:2px solid #3a7d44;background:#f3faf5;border-radius:6px;padding:7px 11px;">
           <div style="font-weight:bold;color:#1f5128;font-size:11.5px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;">Emergent Coupling</div>
-          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0 0 5px 0;">Two PSs are <i>designed</i> to be independent &mdash; the abstract decomposition says they should be &mdash; but the <b>physical implementation</b> drags an unintended FR along whenever one PS is actuated. Cross-talk emerges from the physics, not from the diagram.</p>
-          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0;"><b>Recall the <span class="concept-link" onclick="goToConcept('barn-beam')">barn beam (4.3)</span>:</b> welding two beams together turns two independent stiffness FRs into one shared structural response. The implementation choice introduced the coupling.</p>
-          <img src="Images/Step 4 - 2 types of coupling - beam.png" alt="Welded vs un-welded barn beams — implementation introduces the coupling" style="display:block;margin:6px auto 0 auto;max-width:100%;max-height:100px;height:auto;width:auto;object-fit:contain;">
+          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0 0 5px 0;">The PSs are <b>intended as single-FR controls</b>, but <b>implementation physics</b> introduces unintended cross-effects that <i>only appear once the system is built or analyzed</i>.</p>
+          <p style="font-size:10.5px;line-height:1.4;color:#222;margin:0;"><b>Recall the <span class="concept-link" onclick="goToConcept('barn-beam')">barn beam (4.3)</span>:</b> two beams designed to carry two independent loads &mdash; until the <b>welded</b> implementation creates a shared structural response. The coupling appears only after the build choice.</p>
+          <img src="Images/Step 4 - 2 types of coupling - beam.png" alt="Welded vs un-welded barn beams — implementation physics introduces the coupling" style="display:block;margin:6px auto 0 auto;max-width:100%;max-height:100px;height:auto;width:auto;object-fit:contain;">
         </div>
       </div>
 
       <div class="key-points" style="margin-top:8px;">
         <b>Why the distinction matters:</b>
         <ul>
-          <li><b>Trivial coupling</b> usually signals the decomposition is too coarse &mdash; consider whether the redundant PSs should be collapsed or whether the FRs need to be re-stated more precisely.</li>
-          <li><b>Emergent coupling</b> is what the design matrix is genuinely built to discover &mdash; physics or geometry has introduced an off-diagonal that the abstract decomposition didn&rsquo;t anticipate.</li>
+          <li><b>Inherent coupling</b> can be <b>caught at the spec stage</b> &mdash; the design matrix flags it before any prototype. Fix by re-choosing the mechanism or re-stating the FRs.</li>
+          <li><b>Emergent coupling</b> is what the design matrix is genuinely built to <b>discover</b> &mdash; physics or geometry introduces an off-diagonal that the abstract decomposition didn&rsquo;t anticipate.</li>
           <li>The next two slides show emergent coupling in real-world systems where the cross-talk surprised the original designers &mdash; and what they did about it.</li>
         </ul>
       </div>

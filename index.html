@@ -184,12 +184,14 @@
     min-height: 0;
   }
 
-  /* Direct-child images auto-shrink to fit available column height
-     (prevents bottom-cropping in standard/widescreen present modes).
-     object-fit:contain preserves natural aspect ratio even when the flex
-     container squashes the box vertically — without this, width:100% stays
-     fixed while height shrinks and the image looks stretched. */
-  .col-left > img, .col-right > img, .col-full > img {
+  /* Images inside any column auto-shrink to fit available column height
+     (prevents bottom-cropping in standard / widescreen present modes).
+     Descendant selector — not just direct children — so images wrapped in
+     centering / flex divs also shrink properly. object-fit:contain
+     preserves natural aspect ratio when the flex container squashes the
+     box vertically; without it, width:100% stays fixed while height
+     shrinks and the image looks stretched. */
+  .col-left img, .col-right img, .col-full img {
     flex: 0 1 auto;
     min-height: 0;
     object-fit: contain;
@@ -4593,17 +4595,17 @@
         </colgroup>
 
         <!-- Top header: Title | FR | PS-ALT slots -->
-        <tr style="height:32px;">
+        <tr style="height:26px;">
           <td colspan="3" rowspan="2" style="background:#cfe2f3;border:1px solid #777;padding:5px;font-weight:bold;font-size:11px;line-height:1.2;text-align:center;vertical-align:middle;">Decision Analysis</td>
-          <td rowspan="2" style="background:#6aa84f;color:#fff;border:1px solid #777;padding:3px;font-weight:bold;text-align:center;line-height:1.15;font-size:8.5px;">FUNCTIONAL<br>REQUIREMENT<br>(FR):</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;color:#999;font-style:italic;vertical-align:middle;">State FR here</td>
+          <td rowspan="2" style="background:#6aa84f;color:#fff;border:1px solid #777;padding:2px 3px;font-weight:bold;text-align:center;line-height:1.15;font-size:8.5px;">FUNCTIONAL<br>REQUIREMENT<br>(FR):</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;color:#999;font-style:italic;vertical-align:middle;">State FR here</td>
           <td colspan="3" style="background:#ffd966;border:1px solid #777;padding:3px 6px;font-weight:bold;text-align:left;font-size:9px;">PS-ALT:</td>
           <td colspan="3" style="background:#ffd966;border:1px solid #777;padding:3px 6px;font-weight:bold;text-align:left;font-size:9px;">PS-ALT:</td>
           <td colspan="3" style="background:#ffd966;border:1px solid #777;padding:3px 6px;font-weight:bold;text-align:left;font-size:9px;">PS-ALT:</td>
         </tr>
 
         <!-- Second header row: PS-ALT Description -->
-        <tr style="height:24px;">
+        <tr style="height:20px;">
           <td colspan="3" style="background:#9fc5e8;border:1px solid #777;padding:3px 6px;font-weight:bold;text-align:left;font-size:8.5px;">PS-ALT<br>Description:</td>
           <td colspan="3" style="background:#9fc5e8;border:1px solid #777;padding:3px 6px;font-weight:bold;text-align:left;font-size:8.5px;">PS-ALT<br>Description:</td>
           <td colspan="3" style="background:#9fc5e8;border:1px solid #777;padding:3px 6px;font-weight:bold;text-align:left;font-size:8.5px;">PS-ALT<br>Description:</td>
@@ -4611,132 +4613,132 @@
 
         <!-- Criteria | PERFORMANCE bands -->
         <tr>
-          <td colspan="5" style="background:#cfe2f3;border:1px solid #777;padding:3px;font-weight:bold;text-align:center;font-size:10px;letter-spacing:0.4px;color:#222;">Criteria</td>
-          <td colspan="9" style="background:#6aa84f;color:#fff;border:1px solid #777;padding:3px;font-weight:bold;text-align:center;font-size:10px;letter-spacing:0.4px;">PERFORMANCE</td>
+          <td colspan="5" style="background:#cfe2f3;border:1px solid #777;padding:2px 3px;font-weight:bold;text-align:center;font-size:10px;letter-spacing:0.4px;color:#222;">Criteria</td>
+          <td colspan="9" style="background:#6aa84f;color:#fff;border:1px solid #777;padding:2px 3px;font-weight:bold;text-align:center;font-size:10px;letter-spacing:0.4px;">PERFORMANCE</td>
         </tr>
 
         <!-- Sub-header row -->
         <tr style="background:#cccccc;">
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8.5px;">Weight</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8.5px;">Source</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm<br>Number</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm Description</td>
-          <td style="background:#9fc5e8;border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm<br>THRESHOLD<br>GOAL</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8.5px;">Weight</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8.5px;">Source</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm<br>Number</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm Description</td>
+          <td style="background:#9fc5e8;border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm<br>THRESHOLD<br>GOAL</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
         </tr>
 
         <!-- FRm rows: 4 rows × 2 sub-rows (Threshold/Goal) -->
         <!-- FRm Row 1 - Threshold -->
-        <tr style="height:22px;">
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#444;">Threshold</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Estimate here</td>
+        <tr style="height:18px;">
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#444;">Threshold</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Estimate here</td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Estimate here</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Estimate here</td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Estimate here</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Estimate here</td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
         </tr>
         <!-- FRm Row 1 - Goal -->
-        <tr style="height:22px;">
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#444;">Goal</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Basis of estimate here</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Basis of estimate here</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Basis of estimate here</td>
+        <tr style="height:18px;">
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#444;">Goal</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Basis of estimate here</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Basis of estimate here</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Basis of estimate here</td>
         </tr>
 
         <!-- FRm Row 2 -->
-        <tr style="height:22px;">
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#444;">Threshold</td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+        <tr style="height:18px;">
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#444;">Threshold</td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
         </tr>
-        <tr style="height:22px;">
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#444;">Goal</td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+        <tr style="height:18px;">
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#444;">Goal</td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
         </tr>
 
         <!-- FRm Row 3 -->
-        <tr style="height:22px;">
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#444;">Threshold</td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+        <tr style="height:18px;">
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#444;">Threshold</td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
         </tr>
-        <tr style="height:22px;">
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#444;">Goal</td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+        <tr style="height:18px;">
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#444;">Goal</td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
         </tr>
 
         <!-- FRm Row 4 -->
-        <tr style="height:22px;">
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#444;">Threshold</td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+        <tr style="height:18px;">
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#444;">Threshold</td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
           <td rowspan="2" style="border:1px solid #777;background:#fff;"></td>
         </tr>
-        <tr style="height:22px;">
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#444;">Goal</td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
-          <td style="border:1px solid #777;padding:3px;background:#fff;"></td>
+        <tr style="height:18px;">
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#444;">Goal</td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
+          <td style="border:1px solid #777;padding:2px 3px;background:#fff;"></td>
         </tr>
 
         <!-- Total Score row (Legend nested in left rowspan cell) -->
-        <tr style="height:22px;">
+        <tr style="height:18px;">
           <td colspan="5" rowspan="5" style="border:1px solid #777;background:#fff;vertical-align:top;padding:6px;">
             <table style="border-collapse:collapse;font-size:9px;color:#222;font-family:Arial,sans-serif;width:100%;">
               <tr>
-                <td colspan="2" style="background:#ffe599;border:1px solid #777;padding:3px;font-weight:bold;text-align:center;">Legend</td>
+                <td colspan="2" style="background:#ffe599;border:1px solid #777;padding:2px 3px;font-weight:bold;text-align:center;">Legend</td>
               </tr>
               <tr>
                 <td style="border:1px solid #777;padding:2px 6px;">Weight</td>
@@ -4888,9 +4890,9 @@
         </colgroup>
 
         <!-- Top header: Title | FR | PS-ALT slots -->
-        <tr style="height:32px;">
+        <tr style="height:26px;">
           <td colspan="3" rowspan="2" style="background:#cfe2f3;border:1px solid #777;padding:5px;font-weight:bold;font-size:11px;line-height:1.2;text-align:center;vertical-align:middle;">Example</td>
-          <td rowspan="2" style="background:#6aa84f;color:#fff;border:1px solid #777;padding:3px;font-weight:bold;text-align:center;line-height:1.15;font-size:8.5px;">FR:</td>
+          <td rowspan="2" style="background:#6aa84f;color:#fff;border:1px solid #777;padding:2px 3px;font-weight:bold;text-align:center;line-height:1.15;font-size:8.5px;">FR:</td>
           <td rowspan="2" style="border:1px solid #777;padding:4px 6px;text-align:center;vertical-align:middle;font-size:8.5px;line-height:1.25;">Transport humans and belongings from point A to point B</td>
           <td colspan="3" style="background:#ffd966;border:1px solid #777;padding:3px 6px;font-weight:bold;text-align:left;font-size:9px;">PS-ALT: <span style="font-weight:normal;">PS0a: Tesla Model S Plaid</span></td>
           <td colspan="3" style="background:#ffd966;border:1px solid #777;padding:3px 6px;font-weight:bold;text-align:left;font-size:9px;">PS-ALT: <span style="font-weight:normal;">PS0b: BMW M3</span></td>
@@ -4898,7 +4900,7 @@
         </tr>
 
         <!-- Second header row: PS-ALT Description -->
-        <tr style="height:30px;">
+        <tr style="height:24px;">
           <td colspan="3" style="background:#9fc5e8;border:1px solid #777;padding:3px 6px;text-align:left;font-size:8.5px;line-height:1.25;"><b>PS-ALT Description:</b><br>Fully electric vehicle designed for high performance</td>
           <td colspan="3" style="background:#9fc5e8;border:1px solid #777;padding:3px 6px;text-align:left;font-size:8.5px;line-height:1.25;"><b>PS-ALT Description:</b><br>Internal combustion engine sports car designed for high performance</td>
           <td colspan="3" style="background:#9fc5e8;border:1px solid #777;padding:3px 6px;text-align:left;font-size:8.5px;line-height:1.25;"><b>PS-ALT Description:</b><br>Compact car with internal combustion engine designed for fuel efficiency and reliability</td>
@@ -4906,109 +4908,109 @@
 
         <!-- Criteria | PERFORMANCE bands -->
         <tr>
-          <td colspan="5" style="background:#cfe2f3;border:1px solid #777;padding:3px;font-weight:bold;text-align:center;font-size:10px;letter-spacing:0.4px;color:#222;">Criteria</td>
-          <td colspan="9" style="background:#6aa84f;color:#fff;border:1px solid #777;padding:3px;font-weight:bold;text-align:center;font-size:10px;letter-spacing:0.4px;">PERFORMANCE</td>
+          <td colspan="5" style="background:#cfe2f3;border:1px solid #777;padding:2px 3px;font-weight:bold;text-align:center;font-size:10px;letter-spacing:0.4px;color:#222;">Criteria</td>
+          <td colspan="9" style="background:#6aa84f;color:#fff;border:1px solid #777;padding:2px 3px;font-weight:bold;text-align:center;font-size:10px;letter-spacing:0.4px;">PERFORMANCE</td>
         </tr>
 
         <!-- Sub-header row -->
         <tr style="background:#cccccc;">
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8.5px;">Weight</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8.5px;">Source</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm<br>Number</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm Description</td>
-          <td style="background:#9fc5e8;border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm<br>THRESHOLD<br>GOAL</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8.5px;">Weight</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8.5px;">Source</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm<br>Number</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm Description</td>
+          <td style="background:#9fc5e8;border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8.5px;">FRm<br>THRESHOLD<br>GOAL</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">ESTIMATED<br>PERFORMANCE<br>BASIS OF ESTIMATE</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;">Score</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-weight:bold;font-size:8px;line-height:1.15;">Weighted<br>Score</td>
         </tr>
 
         <!-- FRm 1 - Threshold (Maximize acceleration) -->
-        <tr style="height:34px;">
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:9px;font-weight:600;">3</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Owner /<br>Driver</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">FRm0a:</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Maximize<br>acceleration</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#222;line-height:1.25;">0 to 100kmh<br>&lt; 3.5 sec<br>(&gt;7.94 m/s&sup2;)<br>THLD</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;line-height:1.25;">2.3 sec<br>(12.08 m/s&sup2;)</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">5</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">15</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;line-height:1.25;">3.4 sec<br>(8.17 m/s&sup2;)</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">3</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">9</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;line-height:1.25;">7.3 sec<br>(3.81 m/s&sup2;)</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">0</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">0</td>
+        <tr style="height:26px;">
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:9px;font-weight:600;">3</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Owner /<br>Driver</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">FRm0a:</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Maximize<br>acceleration</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#222;line-height:1.25;">0 to 100kmh<br>&lt; 3.5 sec<br>(&gt;7.94 m/s&sup2;)<br>THLD</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;line-height:1.25;">2.3 sec<br>(12.08 m/s&sup2;)</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">5</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">15</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;line-height:1.25;">3.4 sec<br>(8.17 m/s&sup2;)</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">3</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">9</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;line-height:1.25;">7.3 sec<br>(3.81 m/s&sup2;)</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">0</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">0</td>
         </tr>
         <!-- FRm 1 - Goal -->
-        <tr style="height:30px;">
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#222;line-height:1.25;">0 to 100kmh<br>(&gt;8.96 m/s&sup2;)<br>GOAL</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
+        <tr style="height:24px;">
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#222;line-height:1.25;">0 to 100kmh<br>(&gt;8.96 m/s&sup2;)<br>GOAL</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
         </tr>
 
         <!-- FRm 2 - Threshold (Minimize refueling / recharge time) -->
-        <tr style="height:30px;">
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:9px;font-weight:600;">4</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Owner /<br>Driver</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">FRm0b:</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Minimize<br>refueling /<br>recharge time</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;">&lt; 35 min<br>THLD</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;line-height:1.25;">~30 min<br>(DC fast charge)</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">1</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">4</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;line-height:1.25;">~5 min<br>(gas pump)</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">5</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">20</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">&mdash;</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#f5f5f5;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#f5f5f5;"></td>
+        <tr style="height:24px;">
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:9px;font-weight:600;">4</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Owner /<br>Driver</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">FRm0b:</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Minimize<br>refueling /<br>recharge time</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;">&lt; 35 min<br>THLD</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;line-height:1.25;">~30 min<br>(DC fast charge)</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">1</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">4</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;line-height:1.25;">~5 min<br>(gas pump)</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">5</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">20</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">&mdash;</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#f5f5f5;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#f5f5f5;"></td>
         </tr>
         <!-- FRm 2 - Goal -->
-        <tr style="height:24px;">
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;">&lt; 10 min<br>GOAL</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;background:#f5f5f5;">&mdash;</td>
+        <tr style="height:20px;">
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;">&lt; 10 min<br>GOAL</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;background:#f5f5f5;">&mdash;</td>
         </tr>
 
         <!-- FRm 3 - Threshold (Minimize stopping distance) -->
-        <tr style="height:30px;">
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:9px;font-weight:600;">5</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Family</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">FRm0c:</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Minimize<br>stopping<br>distance</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;">Threshold</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;font-weight:600;">45m</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">3</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">15</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;font-weight:600;">45m</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">3</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">15</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#f5f5f5;"></td>
-          <td rowspan="2" style="border:1px solid #777;padding:3px;background:#f5f5f5;"></td>
+        <tr style="height:24px;">
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:9px;font-weight:600;">5</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Family</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">FRm0c:</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#fff;text-align:center;vertical-align:middle;font-size:8.5px;">Minimize<br>stopping<br>distance</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;">Threshold</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;font-weight:600;">45m</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">3</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">15</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;font-weight:600;">45m</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">3</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;text-align:center;vertical-align:middle;font-size:11px;font-weight:bold;">15</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#f5f5f5;"></td>
+          <td rowspan="2" style="border:1px solid #777;padding:2px 3px;background:#f5f5f5;"></td>
         </tr>
         <!-- FRm 2 - Goal -->
-        <tr style="height:24px;">
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;">Goal</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
-          <td style="border:1px solid #777;padding:3px;text-align:center;font-size:8.5px;background:#f5f5f5;"></td>
+        <tr style="height:20px;">
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;">Goal</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;color:#888;font-style:italic;">Stated Goal</td>
+          <td style="border:1px solid #777;padding:2px 3px;text-align:center;font-size:8.5px;background:#f5f5f5;"></td>
         </tr>
 
         <!-- Total Score row (Legend nested in left rowspan cell) -->
-        <tr style="height:22px;">
+        <tr style="height:18px;">
           <td colspan="5" rowspan="5" style="border:1px solid #777;background:#fff;vertical-align:top;padding:6px;">
             <table style="border-collapse:collapse;font-size:9px;color:#222;font-family:Arial,sans-serif;width:100%;">
               <tr>
-                <td colspan="2" style="background:#ffe599;border:1px solid #777;padding:3px;font-weight:bold;text-align:center;">Legend</td>
+                <td colspan="2" style="background:#ffe599;border:1px solid #777;padding:2px 3px;font-weight:bold;text-align:center;">Legend</td>
               </tr>
               <tr>
                 <td style="border:1px solid #777;padding:2px 6px;">Weight</td>

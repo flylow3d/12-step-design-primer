@@ -1,0 +1,14 @@
+model: gemini-3-pro-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration showing a three-stage left-to-right transformation, suitable for a systems-engineering university lecture slide.
+
+LEFT stage: a thoughtful engineer at a small drafting desk with a glowing yellow lightbulb floating above their head; behind them a chalkboard with rough hand-drawn question marks and scribbled diagram sketches. Caption beneath: 'IDEA / PROBLEM'.
+
+MIDDLE stage: a tall vertical ladder of 12 numbered horizontal rungs (each rung clearly labeled 1 through 12), with curved arrows flowing through the ladder representing iteration; suggests a structured methodology pipeline. Caption beneath: '12-STEP DESIGN PROCESS'.
+
+RIGHT stage: a completed mechanical / electronic device sitting on a workbench, with a green checkmark badge floating above it and a clipboard alongside showing pass marks. Caption beneath: 'BUILT, VERIFIED, VALIDATED SYSTEM'.
+
+Connect the three stages with thin horizontal dashed arrows (left to right).
+
+Style: hand-drafted technical-diagram feel, thin dark-brown ink strokes on a soft cream background, with selective gold accents for the lightbulb and ladder, and a single green accent on the checkmark. NO heavy shading, NO photorealism, NO 3D rendering — clean line art with minimal flat color fills. Sans-serif engineering font for the captions. Composition is balanced, calm, didactic.

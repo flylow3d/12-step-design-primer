@@ -4473,32 +4473,34 @@
         <!-- CASE A — Cart Before the Horse -->
         <div style="border:1.5px solid #c62828;border-radius:4px;overflow:hidden;display:flex;flex-direction:column;">
           <div style="background:#c62828;color:#fff;padding:4px 10px;font-weight:bold;font-size:11.5px;letter-spacing:0.3px;">CASE A &mdash; Cart Before the Horse</div>
-          <div style="padding:6px 9px;flex:1;">
+          <div style="padding:7px 9px;flex:1;">
 
-            <!-- Parent FR0 / PS0 -->
-            <div style="text-align:center;margin-bottom:4px;">
-              <div style="display:inline-block;background:#fdfaf4;border:1.5px solid #5C4A21;border-radius:5px;padding:4px 10px;font-size:10px;color:#222;line-height:1.3;">
-                <b style="color:#2e7d32;">FR0:</b> Cool the CPU<br>
-                <b style="color:#b35c00;">PS0:</b> Brand-X 92 mm PWM Fan, Model SF-9200
-              </div>
+            <!-- Parent FR0 + PS0 — green/yellow stacked, centered -->
+            <div style="display:flex;flex-direction:column;align-items:center;gap:2px;margin-bottom:4px;">
+              <div style="background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:4px 10px;font-size:10px;color:#1a3a5c;text-align:center;min-width:60%;"><b>FR0:</b> Cool the CPU</div>
+              <div style="font-size:11px;color:#222;line-height:1;">&uarr;</div>
+              <div style="background:#ffd966;border:1px solid #b35c00;border-radius:3px;padding:4px 10px;font-size:10px;color:#1a3a5c;text-align:center;min-width:60%;"><b>PS0:</b> Brand-X 92 mm PWM Fan (SF-9200)</div>
             </div>
-            <div style="text-align:center;font-size:9.5px;color:#5C4A21;font-style:italic;line-height:1;margin:1px 0;">&darr; decompose</div>
+            <div style="text-align:center;font-size:9.5px;color:#5C4A21;font-style:italic;line-height:1;margin:4px 0 3px;">&darr; decompose</div>
 
-            <!-- Level-1 children (constrained by the chosen specific PS) -->
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
-              <div style="background:#ffebee;border:1px solid #c62828;border-radius:3px;padding:3px 4px;font-size:8.5px;line-height:1.25;text-align:center;color:#222;">
-                <b style="color:#2e7d32;">FR1</b><br>Spin @ 2000 RPM<br><b style="color:#b35c00;">PS1:</b> SF-9200 motor
-              </div>
-              <div style="background:#ffebee;border:1px solid #c62828;border-radius:3px;padding:3px 4px;font-size:8.5px;line-height:1.25;text-align:center;color:#222;">
-                <b style="color:#2e7d32;">FR2</b><br>Fit 92&times;25 mm bracket<br><b style="color:#b35c00;">PS2:</b> SF-9200 frame
-              </div>
-              <div style="background:#ffebee;border:1px solid #c62828;border-radius:3px;padding:3px 4px;font-size:8.5px;line-height:1.25;text-align:center;color:#222;">
-                <b style="color:#2e7d32;">FR3</b><br>Accept PWM @ 25 kHz<br><b style="color:#b35c00;">PS3:</b> SF-9200 driver
-              </div>
+            <!-- Level-1 children — FR (green) above, PS (yellow) below; 3 across -->
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px 4px;">
+              <!-- FR row -->
+              <div style="background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>FR1:</b> Spin @ 2000 RPM</div>
+              <div style="background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>FR2:</b> Fit 92&times;25 mm bracket</div>
+              <div style="background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>FR3:</b> Accept PWM @ 25 kHz</div>
+              <!-- arrows row -->
+              <div style="text-align:center;font-size:10px;color:#222;line-height:1;">&uarr;</div>
+              <div style="text-align:center;font-size:10px;color:#222;line-height:1;">&uarr;</div>
+              <div style="text-align:center;font-size:10px;color:#222;line-height:1;">&uarr;</div>
+              <!-- PS row -->
+              <div style="background:#ffd966;border:1px solid #b35c00;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>PS1:</b> SF-9200 motor</div>
+              <div style="background:#ffd966;border:1px solid #b35c00;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>PS2:</b> SF-9200 frame</div>
+              <div style="background:#ffd966;border:1px solid #b35c00;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>PS3:</b> SF-9200 driver</div>
             </div>
 
-            <div style="background:#ffebee;border-left:3px solid #c62828;padding:4px 8px;margin-top:6px;font-size:9.5px;line-height:1.4;color:#222;">
-              <b style="color:#c62828;">What's wrong:</b> the parent PS0 is a <b>specific commercial product</b>. The "FRs" you derive aren't real system functions &mdash; they're <b>constraints inherited from that specific product</b>. The team is locked in: no alternative PS can be considered.
+            <div style="background:#ffebee;border-left:3px solid #c62828;padding:4px 8px;margin-top:7px;font-size:9.5px;line-height:1.4;color:#222;">
+              <b style="color:#c62828;">What's wrong:</b> PS0 is a <b>specific commercial product</b>. The "FRs" derived aren't real system functions &mdash; they're <b>constraints inherited from that product</b>. The team is locked in.
             </div>
           </div>
         </div>
@@ -4506,32 +4508,34 @@
         <!-- CASE B — System Designer -->
         <div style="border:1.5px solid #2e7d32;border-radius:4px;overflow:hidden;display:flex;flex-direction:column;">
           <div style="background:#2e7d32;color:#fff;padding:4px 10px;font-weight:bold;font-size:11.5px;letter-spacing:0.3px;">CASE B &mdash; System Designer</div>
-          <div style="padding:6px 9px;flex:1;">
+          <div style="padding:7px 9px;flex:1;">
 
-            <!-- Parent FR0 / PS0 -->
-            <div style="text-align:center;margin-bottom:4px;">
-              <div style="display:inline-block;background:#fdfaf4;border:1.5px solid #5C4A21;border-radius:5px;padding:4px 10px;font-size:10px;color:#222;line-height:1.3;">
-                <b style="color:#2e7d32;">FR0:</b> Cool the CPU<br>
-                <b style="color:#b35c00;">PS0:</b> Cooling System <i>(function-bearing assembly)</i>
-              </div>
+            <!-- Parent FR0 + PS0 — green/yellow stacked, centered -->
+            <div style="display:flex;flex-direction:column;align-items:center;gap:2px;margin-bottom:4px;">
+              <div style="background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:4px 10px;font-size:10px;color:#1a3a5c;text-align:center;min-width:60%;"><b>FR0:</b> Cool the CPU</div>
+              <div style="font-size:11px;color:#222;line-height:1;">&uarr;</div>
+              <div style="background:#ffd966;border:1px solid #b35c00;border-radius:3px;padding:4px 10px;font-size:10px;color:#1a3a5c;text-align:center;min-width:60%;"><b>PS0:</b> Cooling System <i>(function-bearing assembly)</i></div>
             </div>
-            <div style="text-align:center;font-size:9.5px;color:#5C4A21;font-style:italic;line-height:1;margin:1px 0;">&darr; decompose</div>
+            <div style="text-align:center;font-size:9.5px;color:#5C4A21;font-style:italic;line-height:1;margin:4px 0 3px;">&darr; decompose</div>
 
-            <!-- Level-1 children (real system functions) -->
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
-              <div style="background:#e8f5e9;border:1px solid #2e7d32;border-radius:3px;padding:3px 4px;font-size:8.5px;line-height:1.25;text-align:center;color:#222;">
-                <b style="color:#2e7d32;">FR1</b><br>Move air across heat sink<br><b style="color:#b35c00;">PS1:</b> Fan / pump / liquid loop&hellip;
-              </div>
-              <div style="background:#e8f5e9;border:1px solid #2e7d32;border-radius:3px;padding:3px 4px;font-size:8.5px;line-height:1.25;text-align:center;color:#222;">
-                <b style="color:#2e7d32;">FR2</b><br>Conduct heat from CPU<br><b style="color:#b35c00;">PS2:</b> Heat sink / vapor chamber&hellip;
-              </div>
-              <div style="background:#e8f5e9;border:1px solid #2e7d32;border-radius:3px;padding:3px 4px;font-size:8.5px;line-height:1.25;text-align:center;color:#222;">
-                <b style="color:#2e7d32;">FR3</b><br>Mount to chassis<br><b style="color:#b35c00;">PS3:</b> Bracket / clip / screws&hellip;
-              </div>
+            <!-- Level-1 children — FR (green) above, PS (yellow) below; 3 across -->
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px 4px;">
+              <!-- FR row -->
+              <div style="background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>FR1:</b> Move air across heat sink</div>
+              <div style="background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>FR2:</b> Conduct heat from CPU</div>
+              <div style="background:#93c47d;border:1px solid #2e7d32;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>FR3:</b> Mount to chassis</div>
+              <!-- arrows row -->
+              <div style="text-align:center;font-size:10px;color:#222;line-height:1;">&uarr;</div>
+              <div style="text-align:center;font-size:10px;color:#222;line-height:1;">&uarr;</div>
+              <div style="text-align:center;font-size:10px;color:#222;line-height:1;">&uarr;</div>
+              <!-- PS row -->
+              <div style="background:#ffd966;border:1px solid #b35c00;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>PS1:</b> Fan / pump / liquid loop&hellip;</div>
+              <div style="background:#ffd966;border:1px solid #b35c00;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>PS2:</b> Heat sink / vapor chamber&hellip;</div>
+              <div style="background:#ffd966;border:1px solid #b35c00;border-radius:3px;padding:3px 5px;font-size:9px;line-height:1.2;color:#1a3a5c;text-align:center;"><b>PS3:</b> Bracket / clip / screws&hellip;</div>
             </div>
 
-            <div style="background:#e8f5e9;border-left:3px solid #2e7d32;padding:4px 8px;margin-top:6px;font-size:9.5px;line-height:1.4;color:#222;">
-              <b style="color:#2e7d32;">Why this works:</b> the parent PS0 is named for <b>what it does</b>, not <b>what it is</b>. Each child FR is a real system function &mdash; <b>multiple candidate PSs</b> can be evaluated for each.
+            <div style="background:#e8f5e9;border-left:3px solid #2e7d32;padding:4px 8px;margin-top:7px;font-size:9.5px;line-height:1.4;color:#222;">
+              <b style="color:#2e7d32;">Why this works:</b> PS0 is named for <b>what it does</b>, not <b>what it is</b>. Each child FR is a real system function &mdash; <b>multiple candidate PSs</b> can be evaluated.
             </div>
           </div>
         </div>

@@ -2009,9 +2009,9 @@
       <!-- Definitions -->
       <ul style="margin:0;padding-left:22px;font-size:11.5px;color:#222;line-height:1.55;">
         <li><b>Function</b> &mdash; what the system must do.</li>
-        <li><b>Functional Requirement (FR)</b> &mdash; the function the team <b>agrees</b> to implement.</li>
-        <li><b>Functional Requirement Measure (FRm)</b> &mdash; <i>how well</i> the FR is achieved.</li>
-        <li><b>Physical Solution (PS)</b> &mdash; what <b>implements</b> the FR.</li>
+        <li><b>Functional Requirement (FR)</b> &mdash; the function the team <b>agrees MUST</b> be implemented for the design to be successful.</li>
+        <li><b>Functional Requirement Measure (FRm)</b> &mdash; <i>how well</i> the FR is achieved <i>(can be more than one FRm per FR)</i>.</li>
+        <li><b>Physical Solution (PS)</b> &mdash; what <b>thing</b> implements the FR.</li>
         <li>The <b>designer chooses</b> the PS to achieve the FR &mdash; it is a <b>decision</b>.</li>
       </ul>
 
@@ -5852,14 +5852,14 @@
   <div class="slide-body">
     <div class="col-left">
       <div class="section-label">Verification — Did we build it right?</div>
-      <p style="margin-bottom:6px;">Two key questions:</p>
+      <p style="margin-bottom:6px;">Verification is a set of activities that determines whether a system <b>as built</b> achieves the required characteristics and design specifications.</p>
+      <p style="margin-bottom:6px;"><b>Two key questions:</b></p>
       <ul>
-        <li>Did we build the product/system <b>correctly</b> &mdash; to the design specifications?</li>
-        <li>Does the design function according to the specification (<b>FRm</b>)?</li>
+        <li>Did we build the product / system <b>correctly</b> &mdash; to the design specifications?</li>
+        <li>Does the design <b>meet specifications (FRms)</b>?</li>
       </ul>
-      <p style="margin-bottom:6px;">Verification is a set of activities that compares a system <b>as built</b> against the required characteristics and design specifications (specified requirements, design description, and the system itself).</p>
       <div class="section-label" style="margin-top:10px;">Glossary</div>
-      <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Verification Requirement</b> &mdash; what characteristic of the system requires verification, tied to an FRm.</p>
+      <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Verification Requirement</b> &mdash; defines the characteristic of the system to be verified.</p>
       <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Verification Event</b> &mdash; the specific event (test) that satisfies the requirement.</p>
       <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Test Configuration</b> &mdash; the items, devices, software, and people required to run the test.</p>
       <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Test Procedure</b> &mdash; the step-by-step process to conduct the verification event.</p>
@@ -5929,7 +5929,7 @@
       <li>Verification answers two questions: <b>Did we build it right?</b> and <b>Does it achieve the FRm's?</b></li>
       <li>Verification compares the system <b>as built</b> to its design specifications &mdash; not to user needs (that's Validation, Step 9).</li>
       <li>Each FRm gets a Verification Requirement, Event, Configuration, and Procedure.</li>
-      <li><b style="color:#c62828;">Loop-back trigger:</b> if a verification test fails, <b>loop back to Step 6 / 7</b> and revise the detailed design / DFX choices that produced the failing PS.</li>
+      <li><b style="color:#c62828;">Loop-back trigger:</b> if a verification test fails, <b>loop back to Step 6 / 7</b> &mdash; and may also include <b>Steps 2&ndash;5</b> &mdash; to revise the design choices that produced the failing PS.</li>
     </ul>
   </div>
   <div class="slide-footer">
@@ -6070,7 +6070,7 @@
   <div class="key-points">
     <div class="kp-label">Key Points</div>
     <ul>
-      <li>Validation answers <i>"Did we build the right thing?"</i> &mdash; Verification (Step 8) answered <i>"Did we build it right?"</i></li>
+      <li><b>Validation (Step 9)</b> answers <i>"Did we build the right thing?"</i> &mdash; <b>Verification (Step 8)</b> answered <i>"Did we build it right?"</i></li>
       <li>Validation is conducted <b>with the customer/user</b>, not by the engineering team alone.</li>
       <li>A "Yes" decision should be backed by a customer signature on the validation record.</li>
       <li><b style="color:#c62828;">Loop-back trigger:</b> if Validation reveals the customer's needs were misunderstood, <b>loop back to Step 1</b> (and possibly Step 2 use cases) &mdash; refine the FRs/FRms and re-run the affected downstream steps.</li>
@@ -6094,14 +6094,14 @@
   </div>
   <div class="slide-body">
     <div class="col-full">
-      <div class="section-label">Are You Prepared to Build the Solution?</div>
+      <div class="section-label">To Confirm Whether You Are Ready to Build the High-Quality Solution</div>
       <p style="margin-bottom:8px;color:#444;">Use these planning questions to confirm you are ready to build &mdash; and to surface gaps in skills, tools, and help <i>before</i> the build starts.</p>
       <ol style="font-size:13px;color:#333;line-height:1.55;list-style:none;padding:0;margin:0;flex:1;min-height:0;">
         <li style="margin-bottom:7px;"><b style="color:#5C4A21;">Step 10.1</b> &mdash; What do you not know regarding how to build your design?</li>
         <li style="margin-bottom:7px;"><b style="color:#5C4A21;">Step 10.2</b> &mdash; Do you have the necessary skills? What else will you require?</li>
         <li style="margin-bottom:7px;"><b style="color:#5C4A21;">Step 10.3</b> &mdash; Do you have the necessary tools? What else will you require?</li>
         <li style="margin-bottom:7px;"><b style="color:#5C4A21;">Step 10.4</b> &mdash; What parts of the build will require additional help or skill? Who will you need help from, and what is the required timing for that help?</li>
-        <li style="margin-bottom:7px;"><b style="color:#5C4A21;">Step 10.5</b> &mdash; Put together a timeline to build and test your high-quality solution. Include who is responsible for each task and by when. Allow ample time to troubleshoot and revise the design and prototype.</li>
+        <li style="margin-bottom:7px;"><b style="color:#5C4A21;">Step 10.5</b> &mdash; Put together a timeline to build and test your high-quality solution. Include who is responsible for each task and by when. <u>Allow ample time</u> to troubleshoot and revise the design and prototype &mdash; estimate how long the build will take, then <b>multiply by 3</b>.</li>
         <li style="margin-bottom:7px;"><b style="color:#5C4A21;">Step 10.6</b> &mdash; Follow the timeline and build the high-quality solution.</li>
         <li style="margin-bottom:0;"><b style="color:#5C4A21;">Step 10.7</b> &mdash; Notify project advisors and/or course instructor when you are not meeting the timeline.</li>
       </ol>
@@ -6111,8 +6111,8 @@
     <div class="kp-label">Key Points</div>
     <ul>
       <li>Build planning starts with what you <b>don't</b> know &mdash; the goal is to surface gaps in skills, tools, and help <i>before</i> the build begins.</li>
-      <li>A realistic timeline budgets time for troubleshooting and revision, not just for the build itself.</li>
-      <li>Communicate early when the timeline is slipping &mdash; advisors and instructors can help recover, but only if they know.</li>
+      <li>A realistic timeline budgets time for troubleshooting and revision, not just for the build itself &mdash; <b>because stuff happens</b>.</li>
+      <li>Communicate early when the timeline is slipping &mdash; <b>advisors, instructors, and clients</b> can help recover, but only if they know.</li>
     </ul>
   </div>
   <div class="slide-footer">
@@ -6203,35 +6203,37 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px;align-items:start;">
         <table style="font-size:10px;">
           <thead>
-            <tr><th colspan="3" style="text-align:center;background:#e8d4a8;color:#5C4A21;padding:3px 6px;">Standard Work for: Installation</th></tr>
+            <tr><th colspan="4" style="text-align:center;background:#e8d4a8;color:#5C4A21;padding:3px 6px;">Standard Work for: Installation</th></tr>
             <tr>
-              <th style="width:12%;text-align:center;padding:3px 6px;line-height:1.4;">Step #</th>
+              <th style="width:10%;text-align:center;padding:3px 6px;line-height:1.4;">Step #</th>
               <th style="padding:3px 6px;line-height:1.4;">Work Element</th>
               <th style="padding:3px 6px;line-height:1.4;">Key Point</th>
+              <th style="width:13%;text-align:center;padding:3px 6px;line-height:1.4;">Time (sec)</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">1</td><td style="padding:3px 6px;line-height:1.4;">Turn off hot and cold supply lines.</td><td style="padding:3px 6px;line-height:1.4;">Turn knobs counter-clockwise.</td></tr>
-            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">2</td><td style="padding:3px 6px;line-height:1.4;">Remove old faucet if required.</td><td style="padding:3px 6px;line-height:1.4;">Supply lines may still have water that will leak.</td></tr>
-            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">3</td><td style="padding:3px 6px;line-height:1.4;">Remove new faucet from packaging.</td><td style="padding:3px 6px;line-height:1.4;">Be careful not to lose the gaskets or mounting screws.</td></tr>
-            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">4</td><td style="padding:3px 6px;line-height:1.4;">Mount new faucet to counter top with supplied fasteners.</td><td style="padding:3px 6px;line-height:1.4;">Pass supply lines through the counter-top holes one at a time if clearance is tight.</td></tr>
-            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">5</td><td style="padding:3px 6px;line-height:1.4;">Connect supply lines to Hot and Cold valves.</td><td style="padding:3px 6px;line-height:1.4;">Do not over-tighten. Snug the connections and check for leaks.</td></tr>
+            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">1</td><td style="padding:3px 6px;line-height:1.4;">Turn off hot and cold supply lines.</td><td style="padding:3px 6px;line-height:1.4;">Turn knobs counter-clockwise.</td><td style="border:1px dashed #b89a5e;background:#fff;"></td></tr>
+            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">2</td><td style="padding:3px 6px;line-height:1.4;">Remove old faucet if required.</td><td style="padding:3px 6px;line-height:1.4;">Supply lines may still have water that will leak.</td><td style="border:1px dashed #b89a5e;background:#fff;"></td></tr>
+            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">3</td><td style="padding:3px 6px;line-height:1.4;">Remove new faucet from packaging.</td><td style="padding:3px 6px;line-height:1.4;">Be careful not to lose the gaskets or mounting screws.</td><td style="border:1px dashed #b89a5e;background:#fff;"></td></tr>
+            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">4</td><td style="padding:3px 6px;line-height:1.4;">Mount new faucet to counter top with supplied fasteners.</td><td style="padding:3px 6px;line-height:1.4;">Pass supply lines through the counter-top holes one at a time if clearance is tight.</td><td style="border:1px dashed #b89a5e;background:#fff;"></td></tr>
+            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">5</td><td style="padding:3px 6px;line-height:1.4;">Connect supply lines to Hot and Cold valves.</td><td style="padding:3px 6px;line-height:1.4;">Do not over-tighten. Snug the connections and check for leaks.</td><td style="border:1px dashed #b89a5e;background:#fff;"></td></tr>
           </tbody>
         </table>
         <table style="font-size:10px;">
           <thead>
-            <tr><th colspan="3" style="text-align:center;background:#e8d4a8;color:#5C4A21;padding:3px 6px;">Standard Work for: Operation</th></tr>
+            <tr><th colspan="4" style="text-align:center;background:#e8d4a8;color:#5C4A21;padding:3px 6px;">Standard Work for: Operation</th></tr>
             <tr>
-              <th style="width:12%;text-align:center;padding:3px 6px;line-height:1.4;">Step #</th>
+              <th style="width:10%;text-align:center;padding:3px 6px;line-height:1.4;">Step #</th>
               <th style="padding:3px 6px;line-height:1.4;">Work Element</th>
               <th style="padding:3px 6px;line-height:1.4;">Key Point</th>
+              <th style="width:13%;text-align:center;padding:3px 6px;line-height:1.4;">Time (sec)</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">1</td><td style="padding:3px 6px;line-height:1.4;">Turn on Hot and Cold valves as desired.</td><td style="padding:3px 6px;line-height:1.4;">Hot water may initially be cold due to the location of the water heater.</td></tr>
-            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">2</td><td style="padding:3px 6px;line-height:1.4;">Adjust temperature and flow with the valves.</td><td style="padding:3px 6px;line-height:1.4;">To increase temperature, decrease cold flow or increase hot flow.</td></tr>
-            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">3</td><td style="padding:3px 6px;line-height:1.4;">Proceed with planned activity with water.</td><td style="padding:3px 6px;line-height:1.4;">&mdash;</td></tr>
-            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">4</td><td style="padding:3px 6px;line-height:1.4;">Turn off hot and cold valves.</td><td style="padding:3px 6px;line-height:1.4;">Make sure valves come to a physical stop so the faucet does not drip.</td></tr>
+            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">1</td><td style="padding:3px 6px;line-height:1.4;">Turn on Hot and Cold valves as desired.</td><td style="padding:3px 6px;line-height:1.4;">Hot water may initially be cold due to the location of the water heater.</td><td style="text-align:center;padding:3px 6px;line-height:1.4;">2</td></tr>
+            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">2</td><td style="padding:3px 6px;line-height:1.4;">Adjust temperature and flow with the valves.</td><td style="padding:3px 6px;line-height:1.4;">To increase temperature, decrease cold flow or increase hot flow.</td><td style="text-align:center;padding:3px 6px;line-height:1.4;">5</td></tr>
+            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">3</td><td style="padding:3px 6px;line-height:1.4;">Proceed with planned activity with water.</td><td style="padding:3px 6px;line-height:1.4;">&mdash;</td><td style="text-align:center;padding:3px 6px;line-height:1.4;font-style:italic;color:#666;">varies</td></tr>
+            <tr><td style="text-align:center;padding:3px 6px;line-height:1.4;">4</td><td style="padding:3px 6px;line-height:1.4;">Turn off hot and cold valves.</td><td style="padding:3px 6px;line-height:1.4;">Make sure valves come to a physical stop so the faucet does not drip.</td><td style="text-align:center;padding:3px 6px;line-height:1.4;">2</td></tr>
           </tbody>
         </table>
       </div>
@@ -6291,26 +6293,28 @@
         <li style="margin-bottom:7px;"><b style="color:#5C4A21;">Step 12.1</b> &mdash; Conduct your verification tests as outlined in your Verification Test Plan, on schedule.</li>
         <li style="margin-bottom:7px;"><b style="color:#5C4A21;">Step 12.2</b> &mdash; Conduct your validation tests as outlined in your Validation Test Plan, on schedule.</li>
         <li style="margin-bottom:7px;"><b style="color:#5C4A21;">Step 12.3</b> &mdash; List all improvements you would like to make to the design going forward. Are there additional Use Cases that must be included?</li>
-        <li style="margin-bottom:0;"><b style="color:#5C4A21;">Step 12.4</b> &mdash; Complete the Final Cost Considerations Table.</li>
+        <li style="margin-bottom:7px;"><b style="color:#5C4A21;">Step 12.4</b> &mdash; Write down <b>Lessons Learned</b> during the design / build / test process. Capture the <b>best practices and Standard Work</b> to follow on the next project.</li>
+        <li style="margin-bottom:0;"><b style="color:#5C4A21;">Step 12.5</b> &mdash; Complete the Final Cost Considerations Table.</li>
       </ol>
     </div>
     <div class="col-right">
       <div class="section-label">Final Cost Considerations</div>
       <table style="font-size:10px;margin-top:4px;">
         <colgroup>
-          <col style="width:62%">
+          <col style="width:7%">
+          <col style="width:55%">
           <col style="width:38%">
         </colgroup>
         <tbody>
-          <tr><td style="padding:3px 6px;line-height:1.35;">Price the market will support</td><td style="padding:3px 6px;font-style:italic;color:#666;">From Step 1.6</td></tr>
-          <tr><td style="padding:3px 6px;line-height:1.35;">Desired profit $/unit</td><td style="padding:3px 6px;font-style:italic;color:#666;">From Step 1.6</td></tr>
-          <tr><td style="padding:3px 6px;line-height:1.35;">Required manufacturing cost the market will support</td><td style="background:#fff;border:1px dashed #b89a5e;height:20px;"></td></tr>
-          <tr><td style="padding:3px 6px;line-height:1.35;">Estimated cost to manufacture one unit</td><td style="padding:3px 6px;font-style:italic;color:#666;">Your estimate</td></tr>
-          <tr><td style="padding:3px 6px;line-height:1.35;">How much must you reduce manufacturing cost to meet market price and desired profit?</td><td style="padding:3px 6px;font-style:italic;color:#666;">A negative number is a surplus &mdash; good.</td></tr>
-          <tr><td colspan="2" style="text-align:center;background:#e8d4a8;color:#5C4A21;font-weight:bold;font-size:9px;letter-spacing:0.8px;padding:2px 6px;">— OR —</td></tr>
-          <tr><td style="padding:3px 6px;line-height:1.35;">How much is the client willing to pay for the solution? (project budget)</td><td style="background:#fff;border:1px dashed #b89a5e;height:20px;"></td></tr>
-          <tr><td style="padding:3px 6px;line-height:1.35;">What was the total cost to produce the High-Quality Solution?</td><td style="background:#fff;border:1px dashed #b89a5e;height:20px;"></td></tr>
-          <tr><td style="padding:3px 6px;line-height:1.35;">What methods will you use to reduce manufacturing cost and be environmentally sustainable?</td><td style="background:#fff;border:1px dashed #b89a5e;height:30px;"></td></tr>
+          <tr><td style="text-align:center;padding:3px 6px;font-weight:bold;color:#5C4A21;">1</td><td style="padding:3px 6px;line-height:1.35;">Price the market will support</td><td style="padding:3px 6px;font-style:italic;color:#666;">From Step 1.6</td></tr>
+          <tr><td style="text-align:center;padding:3px 6px;font-weight:bold;color:#5C4A21;">2</td><td style="padding:3px 6px;line-height:1.35;">Desired profit $/unit</td><td style="padding:3px 6px;font-style:italic;color:#666;">From Step 1.6</td></tr>
+          <tr><td style="text-align:center;padding:3px 6px;font-weight:bold;color:#5C4A21;">3</td><td style="padding:3px 6px;line-height:1.35;">Required manufacturing cost the market will support</td><td style="background:#fff;border:1px dashed #b89a5e;height:20px;"></td></tr>
+          <tr><td style="text-align:center;padding:3px 6px;font-weight:bold;color:#5C4A21;">4</td><td style="padding:3px 6px;line-height:1.35;">Estimated cost to manufacture one unit</td><td style="padding:3px 6px;font-style:italic;color:#666;">Your estimate</td></tr>
+          <tr><td style="text-align:center;padding:3px 6px;font-weight:bold;color:#5C4A21;">5</td><td style="padding:3px 6px;line-height:1.35;">How much must you reduce manufacturing cost to meet market price and desired profit?</td><td style="padding:3px 6px;font-style:italic;color:#666;">A negative number is a surplus &mdash; good.</td></tr>
+          <tr><td colspan="3" style="text-align:center;background:#e8d4a8;color:#5C4A21;font-weight:bold;font-size:9px;letter-spacing:0.8px;padding:2px 6px;">— OR —</td></tr>
+          <tr><td style="text-align:center;padding:3px 6px;font-weight:bold;color:#5C4A21;">6</td><td style="padding:3px 6px;line-height:1.35;">How much is the client willing to pay for the solution? (project budget)</td><td style="background:#fff;border:1px dashed #b89a5e;height:20px;"></td></tr>
+          <tr><td style="text-align:center;padding:3px 6px;font-weight:bold;color:#5C4A21;">7</td><td style="padding:3px 6px;line-height:1.35;">What was the total cost to produce the High-Quality Solution?</td><td style="background:#fff;border:1px dashed #b89a5e;height:20px;"></td></tr>
+          <tr><td style="text-align:center;padding:3px 6px;font-weight:bold;color:#5C4A21;">8</td><td style="padding:3px 6px;line-height:1.35;">What methods will you use to reduce manufacturing cost and be environmentally sustainable?</td><td style="background:#fff;border:1px dashed #b89a5e;height:30px;"></td></tr>
         </tbody>
       </table>
     </div>
@@ -6377,7 +6381,7 @@
 
       <!-- Intro -->
       <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:12px;font-size:11px;color:#222;line-height:1.45;">
-        <b style="color:#5C4A21;">Quick recap before "Why FRs?":</b> the CSD Language gives every member of the team the same words and the same relationships. The four terms below &mdash; <b>Function, FR, FRm, PS</b> &mdash; are the foundation.
+        <b style="color:#5C4A21;">Quick Recap: The CSD Language...</b> gives every member of the team the same words and the same relationships. The four terms below &mdash; <b>Function, FR, FRm, PS</b> &mdash; are the foundation.
       </div>
 
       <!-- Diagram -->
@@ -6418,9 +6422,9 @@
       <!-- Definitions -->
       <ul style="margin:0;padding-left:22px;font-size:11.5px;color:#222;line-height:1.55;">
         <li><b>Function</b> &mdash; what the system must do.</li>
-        <li><b>Functional Requirement (FR)</b> &mdash; the function the team <b>agrees</b> to implement.</li>
-        <li><b>Functional Requirement Measure (FRm)</b> &mdash; <i>how well</i> the FR is achieved.</li>
-        <li><b>Physical Solution (PS)</b> &mdash; what <b>implements</b> the FR.</li>
+        <li><b>Functional Requirement (FR)</b> &mdash; the function the team <b>agrees MUST</b> be implemented for the design to be successful.</li>
+        <li><b>Functional Requirement Measure (FRm)</b> &mdash; <i>how well</i> the FR is achieved <i>(can be more than one FRm per FR)</i>.</li>
+        <li><b>Physical Solution (PS)</b> &mdash; what <b>thing</b> implements the FR.</li>
         <li>The <b>designer chooses</b> the PS to achieve the FR &mdash; it is a <b>decision</b>.</li>
       </ul>
 
@@ -6441,7 +6445,8 @@
 
       <!-- Top intro callout: where FRs come from + enterprise vs product framing -->
       <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:7px;font-size:11px;color:#222;line-height:1.45;">
-        <b style="color:#5C4A21;">Where do FRs come from?</b> FRs are derived from <b>Use Cases</b>, <b>customer needs</b>, <b>risk mitigation</b>, and <b>constraints</b> (the non-FRs). <b>Enterprise Systems</b> and <b>Product Design</b> have similarities &mdash; both translate FRs into PSs &mdash; but they diverge in how those PSs are implemented.
+        <b style="color:#5C4A21;">Where do FRs come from?</b> FRs are derived from <b>Use Cases</b>, <b>Customer Needs</b>, <b>Risk Mitigation</b>, and <b>Constraints</b> (the non-FRs). <b>Enterprise Systems</b> and <b>Product Design</b> have similarities &mdash; both translate FRs into PSs &mdash; but they diverge in how those PSs are implemented.
+        <div style="margin-top:3px;font-size:10px;color:#888;font-style:italic;">(Reminds me of Art Linkletter &mdash; <i>"Where do babies come from?"</i>)</div>
       </div>
 
       <!-- ENTERPRISE SYSTEMS -->
@@ -6500,7 +6505,7 @@
       <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:10px;font-size:11px;color:#222;line-height:1.45;">
         Nam P. Suh characterized design as the <b>interplay or relationships between three domains</b>. The translation from <b>fuzzy customer needs</b> into <b>functions</b> &mdash; and the choice of solutions to satisfy them &mdash; is what turns <i>"I know what I want when I see it"</i> into engineering language.
         <div style="margin-top:4px;font-size:10.5px;font-style:italic;color:#5C4A21;">
-          <b style="font-style:normal;">Note:</b> these are <b style="font-style:normal;">Suh's original three domains</b>. <b style="font-style:normal;">CSD</b> splits the Functional Domain into two pieces &mdash; <b style="font-style:normal;color:#2e7d32;">FR</b> (the agreed function) and <b style="font-style:normal;color:#1976d2;">FRm</b> (the measure of how well) &mdash; producing the four boxes you saw on the "What is Axiomatic Design?" slide.
+          <b style="font-style:normal;">Note:</b> these are <b style="font-style:normal;">Suh's original three domains</b>. <b style="font-style:normal;">CSD</b> splits the Functional Domain into two pieces &mdash; <b style="font-style:normal;color:#2e7d32;">FR</b> (the agreed function) and <b style="font-style:normal;color:#1976d2;">FRm</b> (the measure of how well). Suh's later book <b style="font-style:normal;">Principles of Design</b> adds a fourth &mdash; the <b style="font-style:normal;">Process Domain</b>.
         </div>
       </div>
 
@@ -6563,7 +6568,7 @@
           <div style="font-family:'Cambria Math','Times New Roman',serif;font-size:18px;color:#222;">
             FR<sub>i</sub> &nbsp;=&nbsp; [ A<sub>ij</sub> ] &nbsp;&middot;&nbsp; PS<sub>j</sub>
           </div>
-          <div style="font-size:9.5px;color:#666;margin-top:4px;font-style:italic;">A<sub>ij</sub> &mdash; the design matrix linking each PS to each FR</div>
+          <div style="font-size:9.5px;color:#666;margin-top:4px;font-style:italic;">A<sub>ij</sub> &mdash; links each PS design decision to each FR</div>
         </div>
 
         <!-- From fuzzy to language -->
@@ -6653,9 +6658,9 @@
 
       </div>
 
-      <!-- ENGT 583 hook -->
+      <!-- Process capability hook -->
       <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;font-size:11px;color:#222;line-height:1.45;">
-        <b style="color:#5C4A21;">Why this matters:</b> minimizing information content means the System Range fits more tightly inside the Design Range &mdash; in other words, the <b>process capability improves</b>. <i>That is why we are doing <b style="font-style:normal;">ENGT 583</b>.</i>
+        <b style="color:#5C4A21;">Why this matters:</b> minimizing information content means the System Range fits tightly inside the Design Range &mdash; the <b>process capability (C<sub>pk</sub>) improves</b>.
       </div>
 
     </div>
@@ -6765,9 +6770,9 @@
           <div style="font-family:'Cambria Math','Times New Roman',serif;font-size:14px;color:#222;text-align:center;">
             <span style="display:inline-block;text-align:center;">
               <span style="display:block;border-bottom:1.5px solid #444;padding:0 4px 1px;">Cost</span>
-              <span style="display:block;padding:1px 4px 0;">Unit (op)</span>
+              <span style="display:block;padding:1px 4px 0;">Unit</span>
             </span>
-            &nbsp;=&nbsp;
+            &nbsp;<span style="font-style:italic;">(op)</span>&nbsp;=&nbsp;
             <span style="display:inline-block;text-align:center;">
               <span style="display:block;border-bottom:1.5px solid #444;padding:0 6px 1px;">MTL + LABOR + OVHD</span>
               <span style="display:block;padding:1px 6px 0;font-style:italic;">n</span>
@@ -6808,7 +6813,7 @@
             <div><b style="color:#5C4A21;">FRm:</b> Direct-Labor Time per Operation, &nbsp; <span style="font-family:'Cambria Math',serif;">DL_Time(op<sub>i</sub>) &rarr; 0</span></div>
             <div><b style="color:#5C4A21;">PSs:</b> Automation</div>
             <div style="font-size:9.5px;color:#5C4A21;font-style:italic;margin-top:3px;border-top:1px dashed #d3c294;padding-top:3px;">
-              &larr; coupled to OVHD absorption: as DL_Time(op<sub>i</sub>) drops, OVHD per op gets <b>pushed onto the remaining ops</b>.
+              &larr; tied to OVHD absorption: as DL_Time(op<sub>i</sub>) drops, OVHD per op gets <b>pushed onto the remaining ops</b>.
             </div>
           </div>
 
@@ -6816,7 +6821,7 @@
 
         <!-- Cup line image, larger -->
         <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;">
-          <img src="Images/Why FRs - Cup Line.png" alt="Cup glazing production line" style="width:100%;max-height:200px;height:auto;object-fit:contain;display:block;">
+          <img src="Images/Why FRs - Cup Line.png" alt="Cup glazing production line" style="width:100%;max-height:240px;height:auto;object-fit:contain;display:block;">
           <div style="font-size:10px;color:#666;font-style:italic;margin-top:3px;text-align:center;">Cup Line &mdash; parts produced fast</div>
         </div>
 
@@ -6828,40 +6833,106 @@
           <img src="Images/Why-FRs-Warehouse 1.png" alt="Warehouse view 1" style="width:100%;max-height:140px;height:auto;object-fit:contain;display:block;">
           <img src="Images/Why-FRs-Warehouse 2.png" alt="Warehouse view 2" style="width:100%;max-height:140px;height:auto;object-fit:contain;display:block;">
         </div>
-        <div style="font-size:10px;color:#666;font-style:italic;text-align:center;margin-top:3px;">Warehouse &mdash; <b>Two Inventory turns / year</b></div>
+        <!-- TODO USER: replace with seminar image showing forming / grinding / glazing departments -->
+        <div style="border:2px dashed #b89a5e;border-radius:3px;background:#fdfaf4;padding:4px 8px;margin-top:6px;text-align:center;font-size:9.5px;color:#5C4A21;font-style:italic;line-height:1.35;">
+          <div style="font-weight:bold;text-transform:uppercase;letter-spacing:0.5px;font-size:9px;">[ Seminar image &mdash; user to provide ]</div>
+          <div style="margin-top:2px;color:#666;">Forming / Grinding / Glazing departments &mdash; the dept-by-dept layout that the Unit Cost Equation drives toward.</div>
+        </div>
       </div>
 
     </div>
   </div>
+  <div class="key-points">
+    <div class="kp-label">Key Point</div>
+    <ul>
+      <li>Reducing the unit cost of <b>one operation</b> compromises <b>delivery time, quality, inventory, and the ability to improve</b> &mdash; the system pays for the local optimization.</li>
+    </ul>
+  </div>
   <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 93</div></div>
 </div>
 
-<!-- Why FRs — Page 6: Case Example — Fresh Water PSs -->
+<!-- Why FRs — Fresh Water concept (NEW) -->
 <div class="slide">
   <div class="slide-header">
     <div><div class="header-title">Why FRs?</div></div>
-    <div class="step-badge">Case Example &mdash; Fresh Water PSs</div>
+    <div class="step-badge">Fresh Water &mdash; The Concept</div>
   </div>
   <div class="slide-body">
     <div class="col-full">
-      <div class="section-label">Case Example &mdash; "Fresh Water PSs" (Achieve FRs Without Compromise)</div>
+      <div class="section-label">Fresh Water &mdash; Pouring a New System Into the Old Container</div>
 
-      <!-- Top callout -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:8px;font-size:11px;color:#222;line-height:1.45;">
-        <b style="color:#5C4A21;">Goal:</b> Achieve <b>all FRs</b> with the <b>least resources</b>, <i>without compromise</i>. The <b>Manufacturing System Design (MSD)</b> framework names <b>seven such FRs</b> &mdash; the <i>fresh-water</i> alternative to optimizing single operations.
+      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:9px;font-size:11px;color:#222;line-height:1.45;">
+        <b style="color:#5C4A21;">The Goal:</b> achieve <b>all FRs</b> with the <b>least resources</b>, <i>without compromise</i>. The <b>Manufacturing System Design (MSD)</b> framework names <b>seven such FRs</b> &mdash; the <i>fresh-water</i> alternative to optimizing single operations.
       </div>
 
-      <!-- MSD diagram -->
-      <img src="Images/Step 7 - MSD.png" alt="The 7 Functional Requirements of Manufacturing System Design — FR.0 through FR.6 (green cards) with empty PS.0 through PS.6 cards (yellow) for student fill-in" style="width:100%;max-height:230px;height:auto;object-fit:contain;display:block;margin:0 0 8px 0;border-radius:3px;">
+      <div style="display:grid;grid-template-columns:0.85fr 1.15fr;gap:10px;">
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <img src="Images/Fresh water into Salt Water.png" alt="Fresh Water (Lean / TPS / New Methodology) being poured through a funnel into a tank of Sea (Salt) Water — the Existing Enterprise / Manufacturing System" style="max-width:100%;max-height:280px;height:auto;width:auto;object-fit:contain;display:block;">
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:center;font-size:11px;color:#222;line-height:1.5;">
+          <p style="margin:0 0 8px 0;">We fail because we try to <b>pour fresh water</b> (the new system) into the <b>old system</b> (salt water) &mdash; and we're left with salt water.</p>
+          <p style="margin:0 0 8px 0;">We have to <b>build a container</b> &mdash; a term coined by <b>David Kantor and William Isaacs</b> in their work on dialogue &mdash; to hold the new system design.</p>
+          <p style="margin:0;">The old system is the one driven by <b>unit cost of an operation</b> instead of achieving the functions of the system well.</p>
+        </div>
+      </div>
 
-      <!-- Annotations row -->
+    </div>
+  </div>
+  <div class="key-points">
+    <div class="kp-label">Key Points</div>
+    <ul>
+      <li>The <b>collective agreement</b> of an FR is the foundation of system change &mdash; if the team can't name the FR, they can't achieve it.</li>
+      <li>The challenge to implementing systems change within an organization is building a team comfortable working together <b>without fear</b> of negatively impacting their careers &mdash; Kantor and Isaacs call this a <b>"container"</b> at the most fundamental level.</li>
+      <li>Without the container, the new methodology (fresh water) gets diluted by the existing culture (salt water). Without the FRs, the design degrades.</li>
+    </ul>
+  </div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 94</div></div>
+</div>
+
+<!-- Why FRs — Bridge: The Alternative (NEW) -->
+<div class="slide">
+  <div class="slide-header">
+    <div><div class="header-title">Why FRs?</div></div>
+    <div class="step-badge">The Alternative</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">So What is the Alternative?</div>
+
+      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:9px 16px;margin-bottom:14px;font-size:13.5px;color:#222;line-height:1.55;">
+        <b style="color:#5C4A21;">So what is the alternative</b> to the <b>Unit Cost Equation</b> being used to drive system design and investment decisions?
+      </div>
+
+      <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:9px 16px;margin-bottom:14px;font-size:13.5px;color:#222;line-height:1.55;">
+        <b style="color:#2e7d32;font-size:16px;">Walla!</b> &nbsp;&mdash;&nbsp; <b>The CSD Language</b> and the <b>collective agreement</b> of the FRs that a system <b>MUST</b> achieve.
+      </div>
+
+      <div style="background:#deebf7;border-left:4px solid #1976d2;padding:9px 16px;font-size:13.5px;color:#222;line-height:1.55;">
+        <b style="color:#1976d2;font-size:16px;">Tada!</b> &nbsp;&mdash;&nbsp; <b>The 7 FRs of Manufacturing System Design</b> are the concrete instantiation. <i>(Next slide.)</i>
+      </div>
+
+    </div>
+  </div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 95</div></div>
+</div>
+
+<!-- Why FRs — The 7 FRs of MSD -->
+<div class="slide">
+  <div class="slide-header">
+    <div><div class="header-title">Why FRs?</div></div>
+    <div class="step-badge">The 7 FRs of MSD</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">The 7 FRs of Manufacturing System Design</div>
+
+      <img src="Images/Step 7 - MSD.png" alt="The 7 Functional Requirements of Manufacturing System Design — FR.0 through FR.6 (green cards) with empty PS.0 through PS.6 cards (yellow) for student fill-in" style="width:100%;max-height:280px;height:auto;object-fit:contain;display:block;margin:0 0 8px 0;border-radius:3px;">
+
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-        <!-- Takt Zeit -->
         <div style="border:1px solid #b89a5e;border-radius:3px;background:#fff;padding:6px 11px;font-size:10.5px;color:#222;line-height:1.45;">
           <b style="color:#5C4A21;">Takt Zeit:</b> <span style="font-style:italic;">not "more is better."</span>
-          <div style="margin-top:3px;">Match the <b>demand rate</b>, don't maximize output. This is the reason for <b>enterprise-design FRs</b>.</div>
+          <div style="margin-top:3px;">Match the <b>demand pace</b>, don't maximize output. This is the reason for <b>enterprise-design FRs</b>.</div>
         </div>
-        <!-- Axiom 1 question -->
         <div style="background:#fef6c8;border-left:3px solid #5C4A21;padding:6px 11px;font-size:10.5px;color:#222;line-height:1.45;">
           <b style="color:#5C4A21;">The recurring question (Axiom 1):</b>
           <div style="margin-top:3px;font-style:italic;color:#5C4A21;font-weight:600;">"Does PS<sub>j</sub> affect the achievement of FR<sub>i</sub>?"</div>
@@ -6870,7 +6941,65 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 94</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 96</div></div>
+</div>
+
+<!-- Why FRs — Path-Dependent Enterprise (NEW) -->
+<div class="slide">
+  <div class="slide-header">
+    <div><div class="header-title">Why FRs?</div></div>
+    <div class="step-badge">Path-Dependent Enterprise</div>
+  </div>
+  <div class="slide-body">
+    <div class="col-full">
+      <div class="section-label">The Enterprise Design is Path-Dependent</div>
+
+      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:9px;font-size:11px;color:#222;line-height:1.45;">
+        <b style="color:#5C4A21;">Most enterprises are large systems</b> &mdash; many people, many elements. The enterprise design itself is <b>path-dependent</b>: the order in which the 7 FRs are addressed determines whether downstream FRs are achievable at all.
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;margin-bottom:8px;">
+
+        <div style="border:1.5px solid #2e7d32;border-radius:4px;overflow:hidden;background:#fff;">
+          <div style="background:#2e7d32;color:#fff;padding:4px 10px;font-weight:bold;font-size:11.5px;letter-spacing:0.4px;">&#10003; PATH-DEPENDENT (TRIANGULAR)</div>
+          <div style="padding:10px;display:flex;justify-content:center;align-items:center;gap:14px;">
+            <div style="display:inline-grid;grid-template-columns:repeat(3,28px);grid-template-rows:repeat(3,28px);gap:2px;background:#bbb;padding:2px;border-radius:3px;">
+              <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">X</div>
+              <div style="background:#f3f3f3;color:#bbb;display:flex;align-items:center;justify-content:center;font-size:10px;">O</div>
+              <div style="background:#f3f3f3;color:#bbb;display:flex;align-items:center;justify-content:center;font-size:10px;">O</div>
+              <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">X</div>
+              <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">X</div>
+              <div style="background:#f3f3f3;color:#bbb;display:flex;align-items:center;justify-content:center;font-size:10px;">O</div>
+              <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">X</div>
+              <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">X</div>
+              <div style="background:#2e7d32;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">X</div>
+            </div>
+            <div style="font-size:10.5px;color:#222;line-height:1.5;text-align:left;">
+              <b>FR.1</b> first &rarr; <br><b>FR.2</b> next &rarr; <br><b>FR.3</b> next &rarr;
+              <div style="margin-top:5px;font-style:italic;color:#1f5128;">Predictable when set in order.</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="border:1.5px solid #c62828;border-radius:4px;overflow:hidden;background:#fff;">
+          <div style="background:#c62828;color:#fff;padding:4px 10px;font-weight:bold;font-size:11.5px;letter-spacing:0.4px;">&#10007; THE TRAP</div>
+          <div style="padding:8px 11px;font-size:10.5px;color:#222;line-height:1.45;">
+            <p style="margin:0 0 6px 0;">Without recognizing path-dependency, teams default to <b>"reduce inventory"</b> as the PS for "Become Lean."</p>
+            <p style="margin:0;">But the <b>real FRs</b> are the <b>7 FRs of MSD</b> &mdash; <b>FR.4 (don't advance defects)</b>, <b>FR.5 (identify abnormal conditions)</b>, and <b>FR.6 (achieve in spite of variation)</b> must be in place <b>before</b> FR.2 / FR.3 / FR.0 are achievable.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="key-points">
+    <div class="kp-label">Key Point</div>
+    <ul>
+      <li>Without recognizing path-dependency, people focus on <b>reducing inventory</b> as the PS for FR: "Become Lean" &mdash; when the real FRs are the <b>7 FRs of MSD</b>, sequenced.</li>
+    </ul>
+  </div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 97</div></div>
 </div>
 
 <!-- Why FRs — Page 7: The Salt-Into-Fresh Trap -->
@@ -6885,7 +7014,7 @@
 
       <!-- Top metaphor callout -->
       <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:7px;font-size:11px;color:#222;line-height:1.45;">
-        We fail because we try to <b>pour fresh water</b> (the new system) into the <b>old system</b> (salt water) &mdash; and we're left with salt water. We have to <b>build a container</b> (Kantor / Isaacs) to hold the new system design. The old system is the one driven by <b>unit cost of an operation</b> focus instead of achieving the functions of the system well.
+        Even when the team agrees on the FRs, the existing culture &mdash; driven by <b>unit cost of one operation</b> instead of achieving the functions of the system &mdash; pulls every action back toward salt water. Recognizing the <b>unconscious thinking</b> behind common solutions is the first step to escaping it.
       </div>
 
       <!-- Body: visual + Action/Thinking table -->
@@ -6923,7 +7052,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 95</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 98</div></div>
 </div>
 
 <!-- Why FRs — Page 8: The Message -->
@@ -7013,16 +7142,23 @@
         <div style="border:1px solid #b89a5e;border-radius:3px;padding:3px 4px;background:#fff;">
           <div style="font-size:9.5px;font-weight:bold;color:#c62828;text-align:center;letter-spacing:0.4px;text-transform:uppercase;margin-bottom:1px;">Plant M &mdash; Before</div>
           <img src="Images/Why-FRs- MSDD Plant M.png" alt="Plant M MSDD — many FRs unmet (red, yellow, orange)" style="display:block;width:100%;max-height:120px;height:auto;object-fit:contain;">
+          <div style="font-size:9px;color:#666;font-style:italic;text-align:center;line-height:1.3;margin-top:2px;">Plant M &mdash; many FRs unmet (red / yellow / orange).</div>
         </div>
         <div style="border:1px solid #b89a5e;border-radius:3px;padding:3px 4px;background:#fff;">
           <div style="font-size:9.5px;font-weight:bold;color:#2e7d32;text-align:center;letter-spacing:0.4px;text-transform:uppercase;margin-bottom:1px;">Plant L &mdash; After</div>
           <img src="Images/Why-FRs- MSDD Plant L.png" alt="Plant L MSDD — most FRs achieved (green)" style="display:block;width:100%;max-height:120px;height:auto;object-fit:contain;">
+          <div style="font-size:9px;color:#666;font-style:italic;text-align:center;line-height:1.3;margin-top:2px;">Plant L &mdash; most FRs satisfied after the MSDD pass (green).</div>
         </div>
+      </div>
+
+      <!-- Closing line -->
+      <div style="background:#e8f5e9;border-left:4px solid #2e7d32;padding:6px 12px;margin-top:8px;font-size:11px;color:#222;line-height:1.45;">
+        <b style="color:#2e7d32;">Why FRs?</b> By defining the FRs we establish the criteria to evaluate the design of the <b>entire system</b> to meet customer needs &mdash; instead of <b>local sub-optimization</b> driven by the Unit Cost Equation.
       </div>
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 96</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 99</div></div>
 </div>
 
 <!-- Why FRs — New Page 9: Are there any new high-level functions? -->
@@ -7079,7 +7215,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 97</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 100</div></div>
 </div>
 
 <!-- Why FRs — Page 10: For Products / Evolving Designs -->
@@ -7171,7 +7307,7 @@
 
     </div>
   </div>
-  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 98</div></div>
+  <div class="slide-footer"><img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo"><div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 101</div></div>
 </div>
 <!-- GLOSSARY 1 of 2 — CSD CORE TERMS (NEW) -->
 <div class="slide">
@@ -7209,7 +7345,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 99</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 102</div>
   </div>
 </div>
 
@@ -7253,7 +7389,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 100</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 103</div>
   </div>
 </div>
 
@@ -7295,7 +7431,7 @@
   </div>
   <div class="slide-footer">
     <img src="Images/PFW_ETC-Cente-V-BG-RGB-EDIT.png" alt="Logo">
-    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 101</div>
+    <div class="footer-text"><span style="display:block;margin-bottom:2px;">Purdue University Fort Wayne - Center of Excellence in Systems Engineering</span>Copyright © 2023 - 2026, by David S. Cochran and Joseph J. Smith, All rights reserved<br>Slide 104</div>
   </div>
 </div>
 
@@ -7466,7 +7602,7 @@
   <div class="np-item" data-slide="86" onclick="goToSlide(86)">12 Steps Complete &mdash; Reflection</div>
 
   <div class="np-section">Why FRs?</div>
-  <div class="np-item np-parent" data-slide="87" data-first="87" data-last="97" onclick="toggleStep(this, 87)">
+  <div class="np-item np-parent" data-slide="87" data-first="87" data-last="100" onclick="toggleStep(this, 87)">
     <span class="np-parent-label">Why FRs?</span>
     <span class="np-arrow">&#9654;</span>
   </div>
@@ -7477,17 +7613,20 @@
     <div class="np-child" data-slide="90" onclick="goToSlide(90)">Suh's Two Axioms</div>
     <div class="np-child" data-slide="91" onclick="goToSlide(91)">The Approach</div>
     <div class="np-child" data-slide="92" onclick="goToSlide(92)">Salt Water PSs</div>
-    <div class="np-child" data-slide="93" onclick="goToSlide(93)">Fresh Water PSs</div>
-    <div class="np-child" data-slide="94" onclick="goToSlide(94)">The Salt-Into-Fresh Trap</div>
-    <div class="np-child" data-slide="95" onclick="goToSlide(95)">The Message</div>
-    <div class="np-child" data-slide="96" onclick="goToSlide(96)">Are FRs Really New?</div>
-    <div class="np-child" data-slide="97" onclick="goToSlide(97)">For Products &mdash; Evolving Designs</div>
+    <div class="np-child" data-slide="93" onclick="goToSlide(93)">Fresh Water — The Concept</div>
+    <div class="np-child" data-slide="94" onclick="goToSlide(94)">The Alternative</div>
+    <div class="np-child" data-slide="95" onclick="goToSlide(95)">The 7 FRs of MSD</div>
+    <div class="np-child" data-slide="96" onclick="goToSlide(96)">Path-Dependent Enterprise</div>
+    <div class="np-child" data-slide="97" onclick="goToSlide(97)">The Salt-Into-Fresh Trap</div>
+    <div class="np-child" data-slide="98" onclick="goToSlide(98)">The Message</div>
+    <div class="np-child" data-slide="99" onclick="goToSlide(99)">Are FRs Really New?</div>
+    <div class="np-child" data-slide="100" onclick="goToSlide(100)">For Products &mdash; Evolving Designs</div>
   </div>
 
   <div class="np-section">Reference</div>
-  <div class="np-item" data-slide="98" onclick="goToSlide(98)">Glossary &mdash; Core CSD Terms</div>
-  <div class="np-item" data-slide="99" onclick="goToSlide(99)">Glossary &mdash; Methodology &amp; Acronyms</div>
-  <div class="np-item" data-slide="100" onclick="goToSlide(100)">Thank You</div>
+  <div class="np-item" data-slide="101" onclick="goToSlide(101)">Glossary &mdash; Core CSD Terms</div>
+  <div class="np-item" data-slide="102" onclick="goToSlide(102)">Glossary &mdash; Methodology &amp; Acronyms</div>
+  <div class="np-item" data-slide="103" onclick="goToSlide(103)">Thank You</div>
 </div>
 
 </div><!-- end #main-layout -->

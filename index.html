@@ -4271,38 +4271,38 @@
   <div class="slide-body">
     <div class="col-full">
       <div class="section-label">Common Procedural Errors in a Design Decomposition</div>
-      <div style="display:grid;grid-template-columns:1fr 2.4fr;gap:12px;flex:1;min-height:0;align-items:start;">
-        <ol style="list-style:none;counter-reset:err;margin:0;padding:0;display:flex;flex-direction:column;gap:5px;font-size:10.5px;line-height:1.4;color:#222;">
-          <li style="counter-increment:err;display:flex;gap:8px;align-items:flex-start;">
-            <span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">1</span>
-            <div><b>Incorrect wording of Functional Requirements:</b> An FR begins with a <b>verb</b>. Think about an <i>action</i> or <i>transformation</i> that must occur.</div>
+      <div style="display:grid;grid-template-columns:1fr 2.4fr;gap:10px;flex:1;min-height:0;align-items:start;">
+        <ol style="list-style:none;counter-reset:err;margin:0;padding:0;display:flex;flex-direction:column;gap:3px;font-size:9.5px;line-height:1.3;color:#222;">
+          <li style="counter-increment:err;display:flex;gap:6px;align-items:flex-start;">
+            <span style="flex-shrink:0;width:16px;height:16px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">1</span>
+            <div><b>Incorrect FR wording:</b> An FR begins with a <b>verb</b> &mdash; an <i>action</i> or <i>transformation</i>.</div>
           </li>
-          <li style="counter-increment:err;display:flex;gap:8px;align-items:flex-start;">
-            <span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">2</span>
-            <div><b>Incorrect wording of Physical Solutions:</b> A PS begins with a <b>noun</b>. A PS is something <i>observable</i> or <i>quantifiable</i> intended to achieve an FR.</div>
+          <li style="counter-increment:err;display:flex;gap:6px;align-items:flex-start;">
+            <span style="flex-shrink:0;width:16px;height:16px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">2</span>
+            <div><b>Incorrect PS wording:</b> A PS begins with a <b>noun</b> &mdash; something observable / quantifiable that achieves an FR.</div>
           </li>
-          <li style="counter-increment:err;display:flex;gap:8px;align-items:flex-start;">
-            <span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">3</span>
-            <div><b>Unacceptable cases:</b> Check for the four unacceptable cases (<i>coupled, incomplete, redundant, not process-capable</i>) within a branch <b>before</b> decomposing to the next level.</div>
+          <li style="counter-increment:err;display:flex;gap:6px;align-items:flex-start;">
+            <span style="flex-shrink:0;width:16px;height:16px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">3</span>
+            <div><b>Unacceptable cases:</b> Check for <i>coupled, incomplete, redundant, not process-capable</i> within a branch <b>before</b> the next level.</div>
           </li>
-          <li style="counter-increment:err;display:flex;gap:8px;align-items:flex-start;">
-            <span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">4</span>
-            <div><b>Inadequate branching:</b> A design can only be decomposed to the next level if <b>two or more FRs</b> expand on the preceding higher-level PS.</div>
+          <li style="counter-increment:err;display:flex;gap:6px;align-items:flex-start;">
+            <span style="flex-shrink:0;width:16px;height:16px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">4</span>
+            <div><b>Inadequate branching:</b> A design only decomposes if <b>two or more FRs</b> expand on the preceding PS.</div>
           </li>
-          <li style="counter-increment:err;display:flex;gap:8px;align-items:flex-start;">
-            <span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">5</span>
-            <div><b>PS &rarr; FR relationship across levels:</b> Relationship arrows must <b>not</b> cross between levels.</div>
+          <li style="counter-increment:err;display:flex;gap:6px;align-items:flex-start;">
+            <span style="flex-shrink:0;width:16px;height:16px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">5</span>
+            <div><b>PS &rarr; FR across levels:</b> Relationship arrows must <b>not</b> cross levels.</div>
           </li>
-          <li style="counter-increment:err;display:flex;gap:8px;align-items:flex-start;">
-            <span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">6</span>
-            <div><b>PS &rarr; FR relationship across branches:</b> PS-to-FR relationships are only expressed <b>within the same branch at the same level</b>.</div>
+          <li style="counter-increment:err;display:flex;gap:6px;align-items:flex-start;">
+            <span style="flex-shrink:0;width:16px;height:16px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">6</span>
+            <div><b>PS &rarr; FR across branches:</b> PS-to-FR only within the <b>same branch, same level</b>.</div>
           </li>
-          <li style="counter-increment:err;display:flex;gap:8px;align-items:flex-start;">
-            <span style="flex-shrink:0;width:20px;height:20px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:11px;">7</span>
-            <div><b>Incorrect arrow:</b> <b>Arrows</b> are drawn only from the PS to the FR within a given branch and level. <b>Lines</b> (no arrowhead) are used to decompose a PS into two or more child FRs.</div>
+          <li style="counter-increment:err;display:flex;gap:6px;align-items:flex-start;">
+            <span style="flex-shrink:0;width:16px;height:16px;border-radius:50%;background:#5C4A21;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:10px;">7</span>
+            <div><b>Incorrect arrow:</b> <b>Arrows</b> = PS &rarr; FR within branch + level. <b>Lines</b> (no head) = PS decomposed into child FRs.</div>
           </li>
         </ol>
-        <img src="Images/Step 4 Procedural Errors Decomp.png" alt="Decomposition tree annotated with 7 common procedural errors" style="width:100%;max-height:430px;height:auto;object-fit:contain;display:block;border-radius:3px;border:1px solid #ddd;">
+        <img src="Images/Step 4 Procedural Errors Decomp.png" alt="Decomposition tree annotated with 7 common procedural errors" style="width:100%;max-height:340px;height:auto;object-fit:contain;display:block;border-radius:3px;border:1px solid #ddd;">
       </div>
     </div>
   </div>
@@ -5124,22 +5124,22 @@
     <div class="step-badge">Terminology</div>
   </div>
   <div class="slide-body">
-    <div class="col-left" style="overflow:hidden; font-size:10px; line-height:1.3;">
-      <div class="section-label" style="margin-bottom:3px;">Overview</div>
-      <p style="font-size:11px; font-weight:bold; color:#1a1a1a; margin-bottom:3px;">The objective of FMEA is predictive failure prevention.</p>
-      <p style="margin-bottom:4px;">A PS-ALT introduces a <strong>Failure Mode</strong>. A Failure Mode is caused by a <strong>Failure Cause</strong> and is mitigated by <strong>Mitigation</strong>.</p>
+    <div class="col-left" style="overflow:hidden; font-size:9.5px; line-height:1.25;">
+      <div class="section-label" style="margin-bottom:2px;">Overview</div>
+      <p style="font-size:10px; font-weight:bold; color:#1a1a1a; margin-bottom:2px;">The objective of FMEA is predictive failure prevention.</p>
+      <p style="margin-bottom:3px;">A PS-ALT introduces a <strong>Failure Mode</strong>, caused by a <strong>Failure Cause</strong> and mitigated by <strong>Mitigation</strong>.</p>
 
       <div class="section-label" style="margin-bottom:2px;">Key Terms</div>
-      <p style="margin-bottom:2px;"><strong>FMEA:</strong> Failure Mode and Effects Analysis &mdash; a risk-mitigation approach to understand ways a product / system / service or process can fail and to identify methods to mitigate the failure modes and causes.</p>
-      <p style="margin-bottom:2px;"><strong>Failure Mode:</strong> Describes the actual failure. <em>e.g., "the brakes do not stop the moving car."</em></p>
-      <p style="margin-bottom:2px;"><strong>Failure Cause:</strong> What caused the failure to occur. <em>e.g., "low brake fluid level."</em></p>
-      <p style="margin-bottom:4px;"><strong>Mitigation:</strong> The planned method to prevent the failure cause. <em>e.g., "a sensor to indicate low brake fluid levels."</em></p>
+      <p style="margin-bottom:2px;"><strong>FMEA:</strong> Failure Mode and Effects Analysis &mdash; a risk-mitigation approach to surface ways a product / system / service can fail and identify methods to mitigate.</p>
+      <p style="margin-bottom:2px;"><strong>Failure Mode:</strong> the actual failure. <em>e.g., "brakes do not stop the moving car."</em></p>
+      <p style="margin-bottom:2px;"><strong>Failure Cause:</strong> what caused the failure. <em>e.g., "low brake fluid level."</em></p>
+      <p style="margin-bottom:3px;"><strong>Mitigation:</strong> planned method to prevent the cause. <em>e.g., "low-fluid sensor."</em></p>
 
-      <div style="background:#f4f0e8; border-left:3px solid #CFB991; padding:3px 8px; margin-bottom:3px;">
-        <strong style="font-size:10.5px;">RPN = Severity &times; Likelihood of Failure &times; Detectability</strong>
+      <div style="background:#f4f0e8; border-left:3px solid #CFB991; padding:2px 7px; margin-bottom:2px;">
+        <strong style="font-size:10px;">RPN = Severity &times; Likelihood &times; Detectability</strong>
       </div>
-      <p style="margin-bottom:1px;"><strong>Severity:</strong> consequences of the failure mode (1&ndash;10).</p>
-      <p style="margin-bottom:1px;"><strong>Likelihood:</strong> how likely the failure occurs (1&ndash;10).</p>
+      <p style="margin-bottom:0;"><strong>Severity:</strong> consequences of the failure mode (1&ndash;10).</p>
+      <p style="margin-bottom:0;"><strong>Likelihood:</strong> how likely the failure occurs (1&ndash;10).</p>
       <p style="margin-bottom:0;"><strong>Detectability:</strong> can the failure mode be detected? (1&ndash;10).</p>
     </div>
     <div class="col-right" style="display:flex; flex-direction:column; align-items:center; justify-content:center; overflow:hidden;">
@@ -5600,8 +5600,8 @@
   <div class="slide-body">
     <div class="col-full">
       <div class="section-label">Goal of DFM</div>
-      <p style="margin-bottom:6px;">Reduce unnecessary design complexities that impact manufacturing in terms of quality, cost, lead time, etc.</p>
-      <table style="margin-top:4px;font-size:11px;">
+      <p style="margin-bottom:4px;font-size:11px;line-height:1.35;">Reduce unnecessary design complexities that impact manufacturing in terms of quality, cost, lead time, etc.</p>
+      <table style="margin-top:3px;font-size:10px;">
         <colgroup>
           <col style="width:5%;">
           <col style="width:67%;">
@@ -5609,66 +5609,66 @@
         </colgroup>
         <thead>
           <tr>
-            <th style="text-align:center;padding:3px 7px;">#</th>
-            <th style="padding:3px 7px;">Question</th>
-            <th style="text-align:center;padding:3px 7px;">Answer</th>
+            <th style="text-align:center;padding:2px 6px;">#</th>
+            <th style="padding:2px 6px;">Question</th>
+            <th style="text-align:center;padding:2px 6px;">Answer</th>
           </tr>
         </thead>
         <tbody>
           <tr><td colspan="3" style="background:#e8d4a8;color:#5C4A21;font-weight:bold;text-transform:uppercase;letter-spacing:0.8px;font-size:10px;padding:3px 8px;">Material</td></tr>
           <tr>
-            <td style="text-align:center;padding:3px 7px;">1</td>
-            <td style="padding:3px 7px;">What are the applicable material choices for your design?</td>
-            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+            <td style="text-align:center;padding:2px 6px;">1</td>
+            <td style="padding:2px 6px;">What are the applicable material choices for your design?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:18px;"></td>
           </tr>
           <tr>
-            <td style="text-align:center;padding:3px 7px;">2</td>
-            <td style="padding:3px 7px;">What material did you choose for your design and why?</td>
-            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+            <td style="text-align:center;padding:2px 6px;">2</td>
+            <td style="padding:2px 6px;">What material did you choose for your design and why?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:18px;"></td>
           </tr>
           <tr>
-            <td style="text-align:center;padding:3px 7px;">3</td>
-            <td style="padding:3px 7px;">What impact does your material choice have on the manufacturing process?</td>
-            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+            <td style="text-align:center;padding:2px 6px;">3</td>
+            <td style="padding:2px 6px;">What impact does your material choice have on the manufacturing process?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:18px;"></td>
           </tr>
           <tr><td colspan="3" style="background:#e8d4a8;color:#5C4A21;font-weight:bold;text-transform:uppercase;letter-spacing:0.8px;font-size:10px;padding:3px 8px;">Process Considerations</td></tr>
           <tr>
-            <td style="text-align:center;padding:3px 7px;">4</td>
-            <td style="padding:3px 7px;">What manufacturing process/technology will you use to produce your design to achieve the desired cost?</td>
-            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+            <td style="text-align:center;padding:2px 6px;">4</td>
+            <td style="padding:2px 6px;">What manufacturing process/technology will you use to produce your design to achieve the desired cost?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:18px;"></td>
           </tr>
           <tr>
-            <td style="text-align:center;padding:3px 7px;">5</td>
-            <td style="padding:3px 7px;">List (or illustrate) the manufacturing processes/operations required to produce your design.</td>
-            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+            <td style="text-align:center;padding:2px 6px;">5</td>
+            <td style="padding:2px 6px;">List (or illustrate) the manufacturing processes/operations required to produce your design.</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:18px;"></td>
           </tr>
           <tr><td colspan="3" style="background:#e8d4a8;color:#5C4A21;font-weight:bold;text-transform:uppercase;letter-spacing:0.8px;font-size:10px;padding:3px 8px;">Design Considerations</td></tr>
           <tr>
-            <td style="text-align:center;padding:3px 7px;">6</td>
-            <td style="padding:3px 7px;">What characteristics of your design affect the manufacturing processes?</td>
-            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+            <td style="text-align:center;padding:2px 6px;">6</td>
+            <td style="padding:2px 6px;">What characteristics of your design affect the manufacturing processes?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:18px;"></td>
           </tr>
           <tr>
-            <td style="text-align:center;padding:3px 7px;">7</td>
-            <td style="padding:3px 7px;">Based on your understanding of the manufacturing processes, how have you removed unnecessary complexity in your design?</td>
-            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+            <td style="text-align:center;padding:2px 6px;">7</td>
+            <td style="padding:2px 6px;">Based on your understanding of the manufacturing processes, how have you removed unnecessary complexity in your design?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:18px;"></td>
           </tr>
           <tr><td colspan="3" style="background:#e8d4a8;color:#5C4A21;font-weight:bold;text-transform:uppercase;letter-spacing:0.8px;font-size:10px;padding:3px 8px;">Environment</td></tr>
           <tr>
-            <td style="text-align:center;padding:3px 7px;">8</td>
-            <td style="padding:3px 7px;">What impact does the operating environment have on your design?</td>
-            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+            <td style="text-align:center;padding:2px 6px;">8</td>
+            <td style="padding:2px 6px;">What impact does the operating environment have on your design?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:18px;"></td>
           </tr>
           <tr><td colspan="3" style="background:#e8d4a8;color:#5C4A21;font-weight:bold;text-transform:uppercase;letter-spacing:0.8px;font-size:10px;padding:3px 8px;">Compliance and Testing</td></tr>
           <tr>
-            <td style="text-align:center;padding:3px 7px;">9</td>
-            <td style="padding:3px 7px;">What standards must your design meet?</td>
-            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+            <td style="text-align:center;padding:2px 6px;">9</td>
+            <td style="padding:2px 6px;">What standards must your design meet?</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:18px;"></td>
           </tr>
           <tr>
-            <td style="text-align:center;padding:3px 7px;">10</td>
-            <td style="padding:3px 7px;">Identify the basic tests that your design must undergo.</td>
-            <td style="background:#fff;border:1px dashed #b89a5e;height:22px;"></td>
+            <td style="text-align:center;padding:2px 6px;">10</td>
+            <td style="padding:2px 6px;">Identify the basic tests that your design must undergo.</td>
+            <td style="background:#fff;border:1px dashed #b89a5e;height:18px;"></td>
           </tr>
         </tbody>
       </table>
@@ -5931,48 +5931,48 @@
     <div class="step-badge">Step 8</div>
   </div>
   <div class="slide-body">
-    <div class="col-left">
+    <div class="col-left" style="font-size:11px;line-height:1.35;">
       <div class="section-label">Verification — Did we build it right?</div>
-      <p style="margin-bottom:6px;">Verification is a set of activities that determines whether a system <b>as built</b> achieves the required characteristics and design specifications.</p>
-      <p style="margin-bottom:6px;"><b>Two key questions:</b></p>
-      <ul>
+      <p style="margin-bottom:4px;">Verification is a set of activities that determines whether a system <b>as built</b> achieves the required characteristics and design specifications.</p>
+      <p style="margin-bottom:3px;"><b>Two key questions:</b></p>
+      <ul style="margin-bottom:6px;">
         <li>Did we build the product / system <b>correctly</b> &mdash; to the design specifications?</li>
         <li>Does the design <b>meet specifications (FRms)</b>?</li>
       </ul>
-      <div class="section-label" style="margin-top:10px;">Glossary</div>
-      <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Verification Requirement</b> &mdash; defines the characteristic of the system to be verified.</p>
-      <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Verification Event</b> &mdash; the specific event (test) that satisfies the requirement.</p>
-      <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Test Configuration</b> &mdash; the items, devices, software, and people required to run the test.</p>
-      <p style="margin-bottom:3px;font-size:12px;"><b style="color:#5C4A21;">Test Procedure</b> &mdash; the step-by-step process to conduct the verification event.</p>
+      <div class="section-label" style="margin-top:6px;">Glossary</div>
+      <p style="margin-bottom:2px;font-size:10.5px;"><b style="color:#5C4A21;">Verification Requirement</b> &mdash; defines the characteristic of the system to be verified.</p>
+      <p style="margin-bottom:2px;font-size:10.5px;"><b style="color:#5C4A21;">Verification Event</b> &mdash; the specific event (test) that satisfies the requirement.</p>
+      <p style="margin-bottom:2px;font-size:10.5px;"><b style="color:#5C4A21;">Test Configuration</b> &mdash; items, devices, software, and people required to run the test.</p>
+      <p style="margin-bottom:2px;font-size:10.5px;"><b style="color:#5C4A21;">Test Procedure</b> &mdash; the step-by-step process to conduct the verification event.</p>
     </div>
     <div class="col-right">
       <div class="section-label">Verification Information Model</div>
       <div style="display:flex;flex-direction:column;align-items:center;font-family:Arial,sans-serif;color:#1a3a5c;margin-top:4px;">
 
         <!-- FRm — darker blue -->
-        <div style="background:#5b9bd5;color:#1a3a5c;border:1.5px solid #2e75b6;border-radius:10px;padding:10px 22px;font-weight:bold;text-align:center;font-size:13px;line-height:1.2;min-width:170px;">
+        <div style="background:#5b9bd5;color:#1a3a5c;border:1.5px solid #2e75b6;border-radius:10px;padding:6px 18px;font-weight:bold;text-align:center;font-size:11.5px;line-height:1.2;min-width:150px;">
           Functional<br>Requirement Measure<br>(FRm)
         </div>
 
         <!-- arrow + verified by -->
-        <div style="display:flex;flex-direction:column;align-items:center;line-height:1;margin:4px 0 0;">
-          <div style="font-size:11.5px;font-weight:bold;color:#1a3a5c;">verified by</div>
-          <div style="font-size:18px;color:#444;line-height:1;">&darr;</div>
+        <div style="display:flex;flex-direction:column;align-items:center;line-height:1;margin:2px 0 0;">
+          <div style="font-size:10.5px;font-weight:bold;color:#1a3a5c;">verified by</div>
+          <div style="font-size:15px;color:#444;line-height:1;">&darr;</div>
         </div>
 
         <!-- Verification Requirement — light blue -->
-        <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:9px 22px;font-weight:bold;text-align:center;font-size:13px;line-height:1.2;min-width:170px;">
+        <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:6px 18px;font-weight:bold;text-align:center;font-size:11.5px;line-height:1.2;min-width:150px;">
           Verification<br>Requirement
         </div>
 
         <!-- arrow + verified by -->
-        <div style="display:flex;flex-direction:column;align-items:center;line-height:1;margin:4px 0 0;">
-          <div style="font-size:11.5px;font-weight:bold;color:#1a3a5c;">verified by</div>
-          <div style="font-size:18px;color:#444;line-height:1;">&darr;</div>
+        <div style="display:flex;flex-direction:column;align-items:center;line-height:1;margin:2px 0 0;">
+          <div style="font-size:10.5px;font-weight:bold;color:#1a3a5c;">verified by</div>
+          <div style="font-size:15px;color:#444;line-height:1;">&darr;</div>
         </div>
 
         <!-- Verification Event — light blue -->
-        <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:9px 22px;font-weight:bold;text-align:center;font-size:13px;line-height:1.2;min-width:170px;">
+        <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:6px 18px;font-weight:bold;text-align:center;font-size:11.5px;line-height:1.2;min-width:150px;">
           Verification<br>Event
         </div>
 
@@ -5993,10 +5993,10 @@
 
         <!-- Two boxes at bottom -->
         <div style="display:flex;gap:30px;">
-          <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:9px 16px;font-weight:bold;text-align:center;font-size:12.5px;line-height:1.2;min-width:90px;">
+          <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:6px 14px;font-weight:bold;text-align:center;font-size:11px;line-height:1.2;min-width:80px;">
             Test<br>Configuration
           </div>
-          <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:9px 16px;font-weight:bold;text-align:center;font-size:12.5px;line-height:1.2;min-width:90px;">
+          <div style="background:#deebf7;color:#1a3a5c;border:1.5px solid #5b9bd5;border-radius:10px;padding:6px 14px;font-weight:bold;text-align:center;font-size:11px;line-height:1.2;min-width:80px;">
             Test<br>Procedure
           </div>
         </div>

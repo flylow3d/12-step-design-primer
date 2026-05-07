@@ -9,6 +9,73 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
+  /* ── Design-system tokens ──────────────────────────────────────────
+     CSS custom properties for the deck's visual language. Define once
+     here so future tweaks (e.g., "tighten every callout") happen in one
+     place instead of across hundreds of inline styles. */
+  :root {
+    /* Brand */
+    --gold: #CFB991;
+    --gold-deep: #5C4A21;
+    /* Functional palette */
+    --green: #2e7d32;
+    --green-soft: #93c47d;
+    --blue: #1976d2;
+    --blue-soft: #5b9bd5;
+    --orange: #bf6d00;
+    --orange-soft: #ffd966;
+    --red: #c62828;
+    /* Backgrounds */
+    --bg-yellow: #fef6c8;
+    --bg-green: #e8f5e9;
+    --bg-blue: #deebf7;
+    --bg-cream: #fdfaf4;
+    --bg-red: #fef0f0;
+  }
+
+  /* ── Reusable callout classes ──────────────────────────────────────
+     Replace dozens of inline-style copies of these exact patterns. */
+  .callout-gold {
+    background: var(--bg-yellow);
+    border-left: 4px solid var(--gold-deep);
+    padding: 6px 12px;
+    font-size: 11px;
+    color: #222;
+    line-height: 1.4;
+  }
+  .callout-green {
+    background: var(--bg-green);
+    border-left: 4px solid var(--green);
+    padding: 6px 12px;
+    font-size: 11px;
+    color: #222;
+    line-height: 1.4;
+  }
+  .callout-blue {
+    background: var(--bg-blue);
+    border-left: 4px solid var(--blue);
+    padding: 6px 12px;
+    font-size: 11px;
+    color: #222;
+    line-height: 1.4;
+  }
+  .callout-cream {
+    background: var(--bg-cream);
+    border-left: 3px solid var(--gold);
+    padding: 6px 10px;
+    font-size: 11px;
+    color: #333;
+    line-height: 1.4;
+  }
+  .callout-red {
+    background: var(--bg-red);
+    border-left: 4px solid var(--red);
+    padding: 6px 12px;
+    font-size: 11px;
+    color: #222;
+    line-height: 1.4;
+  }
+
   body {
     font-family: Arial, sans-serif;
     background: #555;
@@ -964,7 +1031,7 @@
     <div class="col-full">
       <div class="section-label">Building Blocks of Collective System Design</div>
 
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:6px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold" style="margin-bottom:6px;">
         <b style="color:#5C4A21;">ISO/IEC/IEEE 42010</b> establishes the foundational principle that a complex system cannot be understood from a <b>single</b> perspective. <b>Collective System Design (CSD)</b> is built on multiple complementary <b>viewpoints</b> &mdash; each discipline below contributes a viewpoint we use across the 12 steps.
       </div>
 
@@ -1995,7 +2062,7 @@
     <div class="col-full">
 
       <!-- Intro -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:12px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold" style="margin-bottom:12px;">
         <b style="color:#5C4A21;">Why this refresher first?</b> <b>Step 1.4</b> (next slide) will ask you to label every given "requirement" by its <b>class of information</b> &mdash; <b>Need, FR, FRm, or PS-ALT</b>. Those are the same foundational classes defined by the <b>CSD Language</b>. Use the four terms below &mdash; <b>Function, FR, FRm, PS</b> &mdash; as the lens to correctly classify what the customer, SME, stakeholder, or advisor gives you.
       </div>
 
@@ -2675,7 +2742,7 @@
       <div class="section-label"><span style="color:#1976d2;">Functional Requirement Measures (FRm)</span> &mdash; Going Deeper</div>
 
       <!-- Definition + Expression -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:7px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold" style="margin-bottom:7px;">
         <b style="color:#5C4A21;">Definition:</b> An FRm is a <b>performance measure that defines how well the system must perform the FR</b>.
         <div style="margin-top:3px;"><b style="color:#5C4A21;">Expression:</b> Measurable characteristic stated as a <b>vector including units</b> (e.g., <i>Minimize temperature in &deg;C</i>) above the <b>threshold</b>. <span style="color:#5C4A21;font-style:italic;">(1:m relationship &mdash; one FR may have many FRms.)</span></div>
       </div>
@@ -3612,7 +3679,7 @@
       <div class="section-label">Five Types of FR &times; PS Mappings (Axiomatic Design)</div>
 
       <!-- Axiom 1 callout -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:6px;font-size:11px;color:#222;line-height:1.4;">
+      <div class="callout-gold" style="margin-bottom:6px;">
         <b style="color:#5C4A21;">Axiom 1 &mdash; The Independence Axiom:</b> Maintain Independence of Functional Requirements. The mapping <b>{FR} = [DM]{PS}</b> should be diagonal &mdash; each PS affects only one FR. When this holds (or when [DM] is upper- or lower-triangular), the design is <b>predictable</b>.
       </div>
 
@@ -3788,7 +3855,7 @@
       <div class="section-label">Faucet Example &mdash; Same FRs, Different Physical Solutions</div>
 
       <!-- Shared FRs callout -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:8px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold" style="margin-bottom:8px;">
         <b style="color:#5C4A21;">Functional Requirements (shared by both designs):</b>
         <div style="margin-top:3px;"><b>FR<sub>1</sub>:</b> Control the water flow rate <b>Q</b> <i>(without affecting water temperature)</i></div>
         <div><b>FR<sub>2</sub>:</b> Control the water temperature <b>T</b> <i>(without affecting flow rate)</i></div>
@@ -3938,7 +4005,7 @@
       </div>
 
       <!-- Key insight -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold">
         <b style="color:#5C4A21;">Key Insight:</b> Independence is not just about choosing <i>different</i> mechanisms &mdash; it requires that the physical solutions can be <b>manipulated independently</b>. <b>Welding (integrating) parts couples them; separating them preserves independence.</b> The PS choice creates the coupling, even when the FRs themselves are independent.
       </div>
 
@@ -6500,7 +6567,7 @@
       <div class="section-label">Recap &mdash; Collective System Design (CSD) Language</div>
 
       <!-- Intro -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:12px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold" style="margin-bottom:12px;">
         <b style="color:#5C4A21;">Quick Recap: The CSD Language...</b> gives every member of the team the same words and the same relationships. The four terms below &mdash; <b>Function, FR, FRm, PS</b> &mdash; are the foundation.
       </div>
 
@@ -6564,7 +6631,7 @@
       <div class="section-label">Why FRs? &mdash; For the Design of Systems</div>
 
       <!-- Top intro callout: where FRs come from + enterprise vs product framing -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:7px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold" style="margin-bottom:7px;">
         <b style="color:#5C4A21;">Where do FRs come from?</b> FRs are derived from <b>Use Cases</b>, <b>Customer Needs</b>, <b>Risk Mitigation</b>, and <b>Constraints</b> (the non-FRs). <b>Enterprise Systems</b> and <b>Product Design</b> have similarities &mdash; both translate FRs into PSs &mdash; but they diverge in how those PSs are implemented.
         <div style="margin-top:3px;font-size:10px;color:#888;font-style:italic;">(Reminds me of Art Linkletter &mdash; <i>"Where do babies come from?"</i>)</div>
       </div>
@@ -6622,7 +6689,7 @@
       <div class="section-label">Suh's Three Domains &mdash; The Interplay That Defines Design</div>
 
       <!-- Intro -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:10px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold" style="margin-bottom:10px;">
         Nam P. Suh characterized design as the <b>interplay or relationships between three domains</b>. The translation from <b>fuzzy customer needs</b> into <b>functions</b> &mdash; and the choice of solutions to satisfy them &mdash; is what turns <i>"I know what I want when I see it"</i> into engineering language.
         <div style="margin-top:4px;font-size:10.5px;font-style:italic;color:#5C4A21;">
           <b style="font-style:normal;">Note:</b> these are <b style="font-style:normal;">Suh's original three domains</b>. <b style="font-style:normal;">CSD</b> splits the Functional Domain into two pieces &mdash; <b style="font-style:normal;color:#2e7d32;">FR</b> (the agreed function) and <b style="font-style:normal;color:#1976d2;">FRm</b> (the measure of how well). Suh's later book <b style="font-style:normal;">Principles of Design</b> adds a fourth &mdash; the <b style="font-style:normal;">Process Domain</b>.
@@ -6779,7 +6846,7 @@
       </div>
 
       <!-- Process capability hook -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold">
         <b style="color:#5C4A21;">Why this matters:</b> minimizing information content means the System Range fits tightly inside the Design Range &mdash; the <b>process capability (C<sub>pk</sub>) improves</b>.
       </div>
 
@@ -6802,7 +6869,7 @@
       <div class="section-label">The Approach &mdash; Two Paths to a Better Design</div>
 
       <!-- Top callout -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:10px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold" style="margin-bottom:10px;">
         <b style="color:#5C4A21;">Design is about decision making</b> &mdash; understanding the <b>functions</b> to meet, then choosing how to meet them. Two paths drive every improvement:
       </div>
 
@@ -7083,7 +7150,7 @@
     <div class="col-full">
       <div class="section-label">The Enterprise Design is Path-Dependent</div>
 
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:9px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold" style="margin-bottom:9px;">
         <b style="color:#5C4A21;">Most enterprises are large systems</b> &mdash; many people, many elements. The enterprise design itself is <b>path-dependent</b>: the order in which the 7 FRs are addressed determines whether downstream FRs are achievable at all.
       </div>
 
@@ -7142,7 +7209,7 @@
       <div class="section-label">Why Designs Don't Evolve &mdash; Pouring Fresh Water Into Salt Water</div>
 
       <!-- Top metaphor callout -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:7px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold" style="margin-bottom:7px;">
         Even when the team agrees on the FRs, the existing culture &mdash; driven by <b>unit cost of one operation</b> instead of achieving the functions of the system &mdash; pulls every action back toward salt water. Recognizing the <b>unconscious thinking</b> behind common solutions is the first step to escaping it.
       </div>
 
@@ -7358,7 +7425,7 @@
       <div class="section-label">For Products &mdash; The Context Evolves, So the Design Evolves</div>
 
       <!-- Top callout (bullets stacked, no ampersand) -->
-      <div style="background:#fef6c8;border-left:4px solid #5C4A21;padding:6px 12px;margin-bottom:7px;font-size:11px;color:#222;line-height:1.45;">
+      <div class="callout-gold" style="margin-bottom:7px;">
         The <b>context of product use</b> must be understood. Most product designs <b>evolve</b> to satisfy:
         <div style="margin-top:3px;line-height:1.5;">
           <div><b style="color:#5C4A21;">&bull; FRms becoming more stringent</b></div>

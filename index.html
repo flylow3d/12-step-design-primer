@@ -160,6 +160,40 @@
     gap: 0;
     min-height: 0;
     overflow: hidden;
+    position: relative; /* anchors the overflow badge */
+  }
+
+  /* ── Overflow safety net ──────────────────────────────────────────────
+     A JS pass on every slide change compares slide-body scrollHeight to
+     clientHeight. If content is too tall, the slide-body gets this class,
+     painting a red outline + corner badge so authors can SPOT the overflow
+     in browser-mode instead of discovering it later in widescreen present
+     mode. Suppressed in print so the PDF never shows the warning. */
+  .slide-body.slide-body-overflow {
+    outline: 2px solid #c62828;
+    outline-offset: -2px;
+  }
+  .slide-body.slide-body-overflow::after {
+    content: "⚠ overflow";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background: #c62828;
+    color: #fff;
+    font: bold 10px Arial, sans-serif;
+    letter-spacing: 0.4px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    z-index: 9999;
+    pointer-events: none;
+  }
+  @media print {
+    .slide-body.slide-body-overflow {
+      outline: none;
+    }
+    .slide-body.slide-body-overflow::after {
+      display: none;
+    }
   }
   .col-left {
     flex: 1;
@@ -7770,7 +7804,27 @@
     });
 
     fitNavPane();
+    flagOverflow();
   }
+
+  /* ── Overflow safety net ──────────────────────────────────────────────
+     Compares scrollHeight to clientHeight on the active slide-body. When
+     content overflows the visible area, paints a red outline + ⚠ badge
+     (via the .slide-body-overflow CSS class). Browser-only; @media print
+     suppresses the marker so the PDF stays clean. */
+  function flagOverflow() {
+    // requestAnimationFrame so layout is settled before we measure.
+    requestAnimationFrame(() => {
+      const active = document.querySelector('.slide.active');
+      if (!active) return;
+      const body = active.querySelector('.slide-body');
+      if (!body) return;
+      const overflowing = body.scrollHeight - body.clientHeight > 1;
+      body.classList.toggle('slide-body-overflow', overflowing);
+    });
+  }
+  // Re-evaluate on widescreen toggle and on any window resize.
+  window.addEventListener('resize', flagOverflow);
 
   function toggleStep(el, slideIdx) {
     if (el.classList.contains('open')) {

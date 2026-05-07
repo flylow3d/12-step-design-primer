@@ -291,11 +291,16 @@
      centering / flex divs also shrink properly. object-fit:contain
      preserves natural aspect ratio when the flex container squashes the
      box vertically; without it, width:100% stays fixed while height
-     shrinks and the image looks stretched. */
+     shrinks and the image looks stretched.
+     image-rendering hints tell the browser to use high-quality interpolation
+     when downscaling — helps soften the blur when present-mode's
+     transform:scale stacks on top of the initial downsample. */
   .col-left img, .col-right img, .col-full img {
     flex: 0 1 auto;
     min-height: 0;
     object-fit: contain;
+    image-rendering: -webkit-optimize-contrast; /* Chrome / Edge legacy hint */
+    image-rendering: crisp-edges;               /* Firefox / sharp-line-art preference */
   }
 
   /* ── Content within columns ── */

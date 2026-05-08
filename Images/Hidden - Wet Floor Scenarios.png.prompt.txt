@@ -1,0 +1,16 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration showing four common installation contexts for a small wet-floor sensor in a home, suitable for a project-brief slide.
+
+Four panels arranged side-by-side, each separated by a thin vertical dashed line. Each panel shows a small sensor device on the floor in a different location:
+
+Panel 1 — UNDER A KITCHEN SINK: the sensor sits on the floor of a kitchen cabinet beneath a sink, near supply lines and a P-trap drain. Caption beneath: 'Under-sink (kitchen)'.
+
+Panel 2 — NEXT TO A WASHING MACHINE: the sensor sits on the floor next to a top-loader washer in a laundry room, near the supply hoses. Caption beneath: 'Laundry'.
+
+Panel 3 — BESIDE A WATER HEATER: the sensor sits on the floor next to a tall cylindrical water heater in a utility closet. Caption beneath: 'Water heater'.
+
+Panel 4 — IN A BASEMENT NEAR A SUMP PUMP: the sensor sits on a concrete basement floor near a sump-pit cover and pipes. Caption beneath: 'Basement / sump'.
+
+Each panel uses the same simple line-drawn sensor device (small box with a green LED on top). Style: hand-drafted technical-diagram, thin dark-brown ink on cream (#fdfaf4), gold accents on the sensor LEDs and any small detail, light blue accents only where water/pipes appear. No photorealism, no 3D rendering, no heavy shading. Sans-serif labels. Calm didactic composition. Wide 4:1 aspect ratio.

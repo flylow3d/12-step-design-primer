@@ -1,0 +1,12 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration showing a homeowner receiving a basement-flooding notification on their phone, suitable for a project-brief slide.
+
+A simple line-drawn person stands in their living room (couch, window with daylight). They are holding a smartphone in their hand. The smartphone screen is enlarged and clearly visible, showing a notification: a red alert banner with a water-drop icon and the text 'BASEMENT FLOODING — water shut off automatically'. Below the alert text, the phone shows two small lines: 'Sensor: Basement near sump pump' and a green checkmark with 'Main valve closed'.
+
+The person has a relieved expression — eyebrows up, slight smile, hand on chest in mild relief. They are not panicked because the system already handled it.
+
+To the upper-left of the person, a small inset bubble shows a tiny sketch of the basement with the spreading water and the sensor device sending a Bluetooth signal upward — connecting the cause to the alert.
+
+Style: hand-drafted technical-diagram feel, thin dark-brown ink on cream (#fdfaf4), red accent on the alert banner, green accent on the checkmark, light blue accent on the basement water in the inset, gold accent on the phone's Bluetooth icon. No photorealism, no 3D, no heavy shading. Sans-serif labels. Warm human-centered composition. Wide 4:1 aspect ratio.

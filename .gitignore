@@ -13,6 +13,8 @@
 !/package-lock.json
 !/build-pdf.js
 !/12-step-design-primer.pdf
+!/12-step-design-primer-report-template.docx
+!/12-step-design-primer-review-form.docx
 !/.github/
 
 # Inside whitelisted directories, ignore typical OS/editor noise

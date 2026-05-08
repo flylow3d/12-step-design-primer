@@ -1,0 +1,14 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration of a small battery-powered wet-floor sensor in context.
+
+A palm-sized closed plastic enclosure (~2x3x3 inches, rounded corners) sits on a tiled bathroom floor near the base of a sink. A small green status LED on the top face. Two metal probe contacts on the bottom touching the floor. A spreading water puddle (light blue) under the sink approaching the device.
+
+A stylized Bluetooth signal radiates from the device in arc waves toward a smaller box on the wall labeled 'BASE UNIT'. Above the waves: 'BLE'.
+
+To the lower right: a small AA battery icon with label '2x AA - 3 yr life'.
+
+Caption beneath the device: 'Battery-Powered Wet-Floor Sensor - detect, notify, shut off.'
+
+Style: hand-drafted technical-diagram, thin dark-brown ink on cream (#fdfaf4), light blue for water, green for LED, gold for batteries. No photorealism, no 3D, no heavy shading. Sans-serif labels. Calm didactic composition. Wide 4:1 aspect ratio.

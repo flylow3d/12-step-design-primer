@@ -1,0 +1,34 @@
+model: gemini-3-pro-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration showing a Design For Assembly (DFA) before/after example — parts reduction — for a systems-engineering university lecture slide.
+
+The Before panel must show EXACTLY FOUR L-shaped brackets and EXACTLY FOUR screws. Count them carefully — four brackets and four screws — matching the labels '(×4)'. Each screw is fastened through one bracket, so the count of brackets equals the count of screws.
+
+LEFT panel labeled 'BEFORE — 11 PARTS': an exploded-view technical drawing of a small electronic device enclosure broken into 11 distinct labeled parts, arranged top-to-bottom in a vertical exploded layout. From top to bottom:
+
+1. 'Top Cover' — a closed rectangular lid with rounded corners, drawn in 3/4 isometric so the closed top surface is clearly visible. Slight downward dashed line indicating exploded position.
+
+2. A horizontal row of EXACTLY FOUR identical L-shaped brackets — count: one ··· two ··· three ··· four. Place them evenly spaced. Do NOT draw a fifth or third — exactly four. Label this row 'Bracket (×4)'.
+
+3. 'PCB' (printed circuit board) — a flat horizontal green rectangle with a few small visible chips/components.
+
+4. A horizontal row of EXACTLY FOUR identical screws — count: one ··· two ··· three ··· four. Place them evenly spaced beneath the PCB. Each screw is a small Phillips-head screw drawn from the side. Above this row of four screws, draw one large red X mark crossing through them all — indicating they are eliminated. Label this row 'Screw (×4)'.
+
+5. 'Bottom Cover' — an open rectangular tray, lower half of the enclosure, drawn in 3/4 isometric. Same shape and outline as the Top Cover.
+
+Total parts: 1 (Top) + 4 (brackets) + 1 (PCB) + 4 (screws) + 1 (Bottom) = 11.
+A small badge in the bottom-left corner reads '11 parts · 4 fasteners · 15 assembly steps'.
+
+A thick gold horizontal arrow with the word 'DFA' centered in it points from the left panel to the right panel.
+
+RIGHT panel labeled 'AFTER — 3 PARTS': an exploded view of the SAME device, now reduced to exactly THREE parts stacked top-to-bottom:
+1. 'Top Cover (snap features molded in)' — same closed rectangular lid as the Before panel, identical shape, with faint molded snap-fit features visible on the underside.
+2. 'PCB' — same green flat circuit board with chips, identical style.
+3. 'Bottom Cover (snap features molded in)' — same lower tray, with faint molded snap-fit features visible on the inside walls.
+NO separate brackets and NO separate fasteners in the After panel.
+Small badge in the bottom-right corner reads '3 parts · 0 fasteners · 4 assembly steps'.
+
+Style: hand-drafted technical-diagram feel, thin dark-brown ink strokes (#5C4A21) on a soft cream background (#fdfaf4), with selective gold accents on the central DFA arrow, green tint on the PCB, and a single red X over the four screws in the Before panel. NO photorealism, NO 3D rendering, NO heavy shading — flat exploded-view technical drawing style. Sans-serif engineering font on all labels. Wide aspect ratio (roughly 4:1 horizontal banner). Top Cover and Bottom Cover MUST look IDENTICAL between Before and After panels.
+
+CRITICAL: count the brackets and screws in the Before panel before finalizing — exactly 4 of each, in two distinct horizontal rows.

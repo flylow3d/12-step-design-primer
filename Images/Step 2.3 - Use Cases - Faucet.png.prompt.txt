@@ -1,0 +1,16 @@
+model: gemini-3-pro-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration showing the same kitchen faucet being used in four distinct contexts side-by-side, suitable for a systems-engineering university lecture slide.
+
+LEFT panel: a person washing their hands under the faucet — soap bubbles visible. Caption beneath: 'WASH HANDS'.
+
+SECOND panel: the same faucet positioned over a sink full of dishes; a hand holds a sponge scrubbing a plate under the running water. Caption beneath: 'WASH DISHES'.
+
+THIRD panel: the same faucet filling a stainless-steel water bottle held below the spout. Caption beneath: 'FILL WATER BOTTLE'.
+
+RIGHT panel: a small child standing on a step-stool, leaning forward and trying to drink directly from the faucet spout (an unintended use case). Caption beneath: 'UNINTENDED USE'.
+
+Separate the four panels with thin vertical dashed lines. The faucet design should be IDENTICAL in all four panels — same fixture, same handle style — emphasizing that one product serves multiple Use Cases.
+
+Style: hand-drafted technical-diagram feel, thin dark-brown ink strokes (#5C4A21) on a soft cream background (#fdfaf4), with selective gold accents on the faucet metal and small accent colors only where needed (a hint of blue for water flow, a small red flag on the unintended-use panel). NO photorealism, NO 3D rendering, NO heavy shading — clean line art with minimal flat color fills. Sans-serif engineering font for the captions. Composition is balanced, calm, didactic. Wide aspect ratio (roughly 4:1 horizontal banner).

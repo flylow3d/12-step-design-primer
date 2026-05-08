@@ -26,6 +26,10 @@ desktop.ini
 Images/*.csv
 Images/*.xlsx
 
+# Local-only image archive — old / superseded figures kept for reference but
+# not published to GitHub Pages.
+Images/Not Used/
+
 # Personal working notes — do not publish
 Images/Joes Build Notes.md
 

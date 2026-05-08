@@ -1,0 +1,18 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration titled 'Are FRs Really New?'
+
+A timeline of three fastening implements arranged left-to-right with year markers and a single shared FR label across the top.
+
+ACROSS THE TOP: small green callout 'FR: Fasten things together — UNCHANGED' spanning the banner.
+
+LEFT panel ('c. 1800'): wooden-handled claw hammer driving a nail into a board. Caption: 'PS — direct percussion.'
+
+CENTER panel ('c. 1950'): early plug-in power drill driving a screw into wood. Caption: 'PS — rotational torque.'
+
+RIGHT panel ('c. 2020'): modern cordless impact driver with battery pack, driving a torx-head fastener. Caption: 'PS — electric pulse drive.'
+
+Below: thin caption 'Same FR. Three different PSs. The FRs were always there.'
+
+Style: hand-drafted technical-diagram, thin dark-brown ink on cream (#fdfaf4), gold accents on tool metal, green accent on top FR callout. No photorealism, no 3D, no heavy shading. Sans-serif labels. Chronological calm composition.

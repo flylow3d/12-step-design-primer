@@ -1,0 +1,12 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration of Validation in a 12-step design methodology.
+
+A homeowner in their kitchen happily using a finished kitchen faucet to wash a dish. Their expression: satisfied. Speech bubble above their head reads 'Yes — this is what I needed.'
+
+Right side: a stylized clipboard with a green checkmark badge and 4 lines, each line ending with a small green checkmark: 'flow rate', 'handle reach', 'drain time', 'customer satisfied'.
+
+Below: thin caption 'VALIDATION — DOES IT MEET THE CUSTOMER NEED?'
+
+Style: hand-drafted technical-diagram, thin dark-brown ink on cream (#fdfaf4), gold accents on faucet metal, green accents on checkmarks, light blue hint for water flow. No photorealism, no 3D, no heavy shading. Sans-serif labels. Warm human-centered.

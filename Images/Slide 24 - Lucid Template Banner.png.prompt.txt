@@ -1,0 +1,10 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration of a designer beginning to fill in the 12-step Lucid template, suitable for a systems-engineering university lecture slide.
+
+A simple line-drawing of a hand holding a pencil, mid-stroke, filling in the first row of an open worksheet folder. The folder is open and shows a stack of 12 horizontal sections numbered 1 through 12 down the side, plus two clearly-labeled boxes at the very top: 'PARKING LOT' (top-left) and 'LIST OF QUESTIONS' (top-right).
+
+Section 1 has a few hand-drawn ink marks indicating it has just been started; sections 2 through 12 are blank. A small thought-bubble cloud floats off the side with the caption 'STEP-BY-STEP' next to a forward-pointing arrow.
+
+Style: hand-drafted technical-diagram feel, thin dark-brown ink strokes on a soft cream background, with selective gold accents on the pencil and the section numbers. Light blue tint on the worksheet page. No photorealism, no 3D rendering, no heavy shading. Sans-serif engineering font on any labels. Calm didactic composition. Wide aspect ratio (roughly 4:1).

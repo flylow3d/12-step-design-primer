@@ -1,0 +1,17 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration of Elon Musk's 5-step algorithm for cost reduction.
+
+Five circular numbered nodes arranged horizontally, connected by thick forward arrows. A curved dashed iteration loop arrow underneath returns from node 5 back to node 1.
+
+Each node label:
+1. 'QUESTION every requirement'
+2. 'DELETE the part'
+3. 'SIMPLIFY'
+4. 'ACCELERATE'
+5. 'AUTOMATE'
+
+Beneath the row: caption 'Order matters — do not skip ahead.' Top-right corner: small SpaceX-style rocket silhouette.
+
+Style: hand-drafted technical-diagram, thin dark-brown ink on cream (#fdfaf4), gold accents on node circles and rocket, single green accent on simplify icon, single red strikethrough on delete icon. No photorealism, no 3D, no heavy shading. Sans-serif labels.

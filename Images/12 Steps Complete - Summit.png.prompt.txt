@@ -1,0 +1,10 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration marking completion of a 12-step design methodology.
+
+A stylized mountain rising left to right with a winding path. Twelve numbered footprints (1 through 12) ascending the path toward the summit. At the summit: a small gold flag and a stylized completed device. A pale cream / pale-gold sunrise sky behind. Lower-left: 'IDEA / PROBLEM' starting marker.
+
+Beneath the mountain: thin caption '12 STEPS COMPLETE — REFLECT BEFORE YOU CLOSE.'
+
+Style: hand-drafted technical-diagram, thin dark-brown ink on cream (#fdfaf4), gold accents on summit flag and path, single green accent on completed device. No photorealism, no 3D, no heavy shading. Sans-serif labels. Calm contemplative composition.

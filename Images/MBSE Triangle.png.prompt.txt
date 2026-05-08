@@ -1,0 +1,13 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration of the 'Three Pillars of MBSE' (Model-Based Systems Engineering).
+
+Three large circles arranged as the vertices of an equilateral triangle, connected by a thin dashed dark-brown triangle outline:
+- TOP CENTER (gold-cream fill, brown border): 'LANGUAGE' bold uppercase, 'SysML · OPM' smaller below.
+- BOTTOM-LEFT (light blue fill, blue border): 'METHOD' bold uppercase, 'CSD · OOSEM' smaller below.
+- BOTTOM-RIGHT (light green fill, green border): 'TOOL' bold uppercase, 'Genesys · Cameo' smaller below.
+
+Below the triangle: italic caption — 'All three are needed. A tool without a method — or a method without a language — misses the point.'
+
+Style: hand-drafted technical-diagram, thin dark-brown ink on cream (#fdfaf4). Selective fills inside circles. No photorealism, no 3D, no heavy shading. Sans-serif labels. Calm didactic composition.

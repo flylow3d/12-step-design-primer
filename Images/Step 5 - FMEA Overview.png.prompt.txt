@@ -1,0 +1,14 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration of FMEA (Failure Mode and Effects Analysis) for a university lecture.
+
+A kitchen faucet (gold/brass fixture, gooseneck spout, side handle) centered on cream background. Six small warning tags radiate around the faucet with red dashed connector lines pointing to specific spots:
+- 'LEAK at handle' (handle pivot)
+- 'DRIP at spout' (spout tip)
+- 'CORROSION' (body)
+- 'CRACK in casting' (base)
+- 'WORN seats' (interior)
+- 'STIFF handle' (handle joint)
+
+Style: hand-drafted technical-diagram, thin dark-brown ink on cream (#fdfaf4), gold accents on the faucet, caution-yellow warning tags with thin red borders. No photorealism, no 3D, no heavy shading. Sans-serif font on labels. Calm didactic composition.

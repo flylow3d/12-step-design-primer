@@ -1,0 +1,16 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+Wide horizontal banner illustration showing a designer at the center surrounded by five question-source avatars, suitable for a systems-engineering university lecture slide.
+
+CENTER: a young designer / engineer (stick-figure or simple line drawing) holding a clipboard with question marks on it, viewed from above or 3/4 angle. They sit at a small desk.
+
+Around the designer, arranged in a horizontal arc, are FIVE small avatar circles, each connected to the designer by a thin dashed line. Each avatar has a small speech bubble above it containing a single question mark. Below each avatar is a label naming the source:
+
+LEFT MOST: 'CUSTOMER' — avatar wearing simple business attire, holding a small bag suggesting a buyer.
+LEFT-CENTER: 'SME' — avatar with glasses and a book / lab coat, suggesting subject-matter expertise.
+CENTER (above the designer): 'STAKEHOLDER' — avatar in business attire holding a clipboard.
+RIGHT-CENTER: 'PROJECT ADVISOR' — avatar with academic / professorial style (cap or tie).
+RIGHT MOST: 'YOURSELF' — a small mirror or thought-bubble pointing back toward the designer (self-reflection).
+
+Style: hand-drafted technical-diagram feel, thin dark-brown ink strokes (#5C4A21) on a soft cream background (#fdfaf4), with selective gold accents on the speech-bubble question marks and the central clipboard. NO photorealism, NO 3D rendering, NO heavy shading. Sans-serif engineering font for the labels. Composition: balanced, calm, didactic. Wide aspect ratio (roughly 4:1 horizontal banner).

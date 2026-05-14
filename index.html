@@ -8665,6 +8665,7 @@
     const vw = window.innerWidth;
     const vh = window.innerHeight - navH;
     const scale = Math.min(vw / slideW, vh / slideH) * 0.97;
+    stage.style.zoom = '';            // clear any browse-mode zoom so transforms don't compound
     stage.style.transform = 'scale(' + scale + ')';
     stage.style.transformOrigin = 'top center';
     stage.style.marginBottom = (-(slideH * (1 - scale))) + 'px';
@@ -8680,11 +8681,16 @@
   /* Browse mode (non-fullscreen): scale the slide stage up so the deck looks
      comfortable on big monitors instead of a tiny 780x660 box in the middle.
      Capped between 1.0x (don't shrink) and 1.5x (don't go cartoon-large).
+     Uses CSS `zoom` (not transform: scale) so the layout box scales too —
+     keeps scrollIntoView, flex sizing, and the nav-pane all in sync.
      No-op while presenting — scaleStage() owns that path. */
   function fitBrowserStage() {
     const stage = document.getElementById('slide-stage');
     if (!stage) return;
-    if (document.body.classList.contains('presenting')) return;
+    if (document.body.classList.contains('presenting')) {
+      stage.style.zoom = '';
+      return;
+    }
     const slideW = 780;
     const slideH = 660;
     const reservedH = 140; // nav bar + body padding + breathing room
@@ -8693,15 +8699,11 @@
     const vh = window.innerHeight - reservedH;
     const fitScale = Math.min(vw / slideW, vh / slideH);
     const scale = Math.max(1.0, Math.min(fitScale, 1.5));
-    if (Math.abs(scale - 1) < 0.01) {
-      stage.style.transform = '';
-      stage.style.transformOrigin = '';
-      stage.style.marginBottom = '';
-    } else {
-      stage.style.transform = 'scale(' + scale + ')';
-      stage.style.transformOrigin = 'top center';
-      stage.style.marginBottom = (slideH * (scale - 1)) + 'px';
-    }
+    // Belt-and-suspenders: clear any stale transform from earlier code paths
+    stage.style.transform = '';
+    stage.style.transformOrigin = '';
+    stage.style.marginBottom = '';
+    stage.style.zoom = (Math.abs(scale - 1) < 0.01) ? '' : scale;
   }
 
   function togglePresentMenu(e) {

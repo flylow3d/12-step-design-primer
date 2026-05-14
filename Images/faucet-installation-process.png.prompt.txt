@@ -1,0 +1,4 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+A clean technical line-drawing illustration of a residential two-handle water faucet being installed onto a kitchen countertop. Cutaway side view: the faucet body and two valve handles above the counter; below the counter, the mounting hardware — threaded shank, mounting nut, and two flexible supply lines connecting to a hot valve and a cold valve. Thin black strokes on a cream/off-white background, hand-drafted technical-diagram feel, no shading or color fills, no text labels. Wide horizontal composition.

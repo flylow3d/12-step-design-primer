@@ -1,0 +1,4 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+A clean technical line-drawing illustration of a residential two-handle water faucet in operation: water flowing from the spout into a sink basin, a hot valve handle and a cold valve handle on either side, one handle shown slightly turned. Thin black strokes on a cream/off-white background, hand-drafted technical-diagram feel, no shading or color fills, no text labels. Wide horizontal composition.

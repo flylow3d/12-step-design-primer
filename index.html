@@ -681,7 +681,10 @@
       display: none !important;
     }
 
-    /* Layout containers should be linear so each slide starts on its own page */
+    /* Layout containers should be linear so each slide starts on its own page.
+       transform:none clears any inline scale fitBrowserStage() applied on load
+       (it runs against Puppeteer's small viewport and would otherwise shrink
+       every slide inside its PDF page). */
     #main-layout,
     #slide-stage {
       display: block !important;
@@ -689,6 +692,7 @@
       padding: 0 !important;
       margin: 0 !important;
       width: 100% !important;
+      transform: none !important;
     }
 
     /* Reveal every slide and pin it to exact browser dimensions.

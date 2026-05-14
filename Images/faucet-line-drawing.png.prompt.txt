@@ -1,0 +1,4 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+A clean technical line drawing of a modern residential single-lever bathroom faucet mounted on a basin/sink. Three-quarter view. Thin black strokes on a cream/off-white background. Hand-drafted technical-diagram feel, no shading, no color fills, no text labels. Centered composition with generous margins. Square aspect ratio. Style: didactic engineering sketch for a slide deck.

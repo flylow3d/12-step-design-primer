@@ -1,0 +1,4 @@
+model: gemini-3-pro-image-preview
+refs: []
+prompt:
+Clean editorial illustration: a small icon-style figure of a design engineer standing at a desk with a notebook, pausing thoughtfully with a hand on chin. Above the engineer's head, a thought bubble contains three connected boxes stacked vertically: top box labeled 'FR' in green, middle box labeled 'FRm' in blue, bottom box labeled 'PS' in gold. Thin arrows between the boxes showing the FR-FRm-PS triplet relationship. Style: clean modern flat-vector with thin black outlines, cream background with subtle blueprint-grid texture, no shading. The figure should be didactic and friendly, suitable for an engineering teaching slide. Square 1024x1024 composition with the engineer on the left and the thought bubble on the right, balanced. Sharp legible text labels in bold sans-serif.

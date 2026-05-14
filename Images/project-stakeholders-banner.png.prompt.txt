@@ -1,0 +1,4 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+A horizontal banner illustration showing three groups arranged left-to-right in a project communication setup. Left: an academic Advisor figure (professor with notebook, suggestion of a university building behind). Center: a small Design Team of three people huddled around a worktable with sketches and a laptop. Right: a Sponsor/Customer figure in business attire holding documents, with a hint of a corporate building behind. Subtle dotted-line connectors between the three groups suggest communication. Hand-drafted technical-diagram style, thin black strokes on a cream/off-white background, minimal color with muted Purdue-gold (warm tan #CFB991) accents on the connector lines only. No text labels. Wide horizontal banner aspect — composition should fill the canvas left-to-right with all three groups clearly visible.

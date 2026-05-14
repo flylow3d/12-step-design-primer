@@ -1,0 +1,4 @@
+model: gemini-3.1-flash-image-preview
+refs: []
+prompt:
+A hand-drafted technical-diagram illustration of a classic two-pan balance scale, perfectly level (both pans at equal height). The left pan holds a small stack of coins and a price tag with a dollar sign. The right pan holds two interlocking mechanical gears and a small folded engineering blueprint. The scale's central beam and stand are shown in clean thin black strokes on a cream/off-white background. Minimal use of color — only muted Purdue-gold (warm tan #CFB991) accents on the pan contents. No text labels. Hand-drafted didactic engineering sketch style for a slide deck. Wide horizontal banner aspect, centered composition with generous side margins.

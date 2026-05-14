@@ -8658,6 +8658,9 @@
   /* ── Fullscreen / presentation mode ── */
   function scaleStage() {
     const stage = document.getElementById('slide-stage');
+    const main = document.getElementById('main-layout');
+    // Clear any browse-mode fit transform so the two scaling paths can't compound
+    if (main) { main.style.transform = ''; main.style.transformOrigin = ''; main.style.marginBottom = ''; main.style.willChange = ''; }
     const isWide = document.body.classList.contains('widescreen');
     const navH = 50;
     const slideW = isWide ? 1040 : 780;
@@ -8675,6 +8678,46 @@
     stage.style.transform = '';
     stage.style.transformOrigin = '';
     stage.style.marginBottom = '';
+  }
+
+  /* Browse mode: scale the whole slide + nav-pane unit (#main-layout) so the
+     deck fills the screen instead of loading as a small box. Scales UP on big
+     monitors, DOWN to fit on small laptops — the result always fits the
+     viewport, so the page never needs to scroll and the scrollIntoView() calls
+     in goToSlide() can't shift the nav-bar off-screen. Transform sits on
+     #main-layout (not #slide-stage) so fitNavPane()'s measurements stay in
+     untransformed space and the slide + nav-pane scale together. No-op while
+     presenting — scaleStage() owns that path. */
+  function fitBrowserStage() {
+    const main = document.getElementById('main-layout');
+    if (!main) return;
+    if (document.body.classList.contains('presenting')) {
+      main.style.transform = ''; main.style.transformOrigin = '';
+      main.style.marginBottom = ''; main.style.willChange = '';
+      return;
+    }
+    // Clear prior transform so we measure the natural (unscaled) size
+    main.style.transform = '';
+    main.style.marginBottom = '';
+    const navBar = document.querySelector('.nav-bar');
+    const navBarH = navBar ? navBar.getBoundingClientRect().height : 40;
+    const naturalW = main.offsetWidth;
+    const naturalH = main.offsetHeight;
+    if (!naturalW || !naturalH) return;
+    const bodyPadV = 40, bodyPadH = 40, gap = 12, safety = 8;
+    const availH = window.innerHeight - bodyPadV - navBarH - gap - safety;
+    const availW = window.innerWidth - bodyPadH - safety;
+    let scale = Math.min(availH / naturalH, availW / naturalW);
+    scale = Math.max(0.65, Math.min(scale, 2.0));
+    if (Math.abs(scale - 1) < 0.02) {
+      main.style.transform = ''; main.style.transformOrigin = '';
+      main.style.marginBottom = ''; main.style.willChange = '';
+    } else {
+      main.style.transform = 'scale(' + scale.toFixed(4) + ')';
+      main.style.transformOrigin = 'top center';
+      main.style.marginBottom = (naturalH * (scale - 1)) + 'px';
+      main.style.willChange = 'transform';
+    }
   }
 
   function togglePresentMenu(e) {
@@ -8723,15 +8766,17 @@
       document.body.classList.remove('presenting');
       document.body.classList.remove('widescreen');
       resetStage();
+      fitNavPane();
+      fitBrowserStage();
     }
   });
 
   window.addEventListener('resize', () => {
     if (document.body.classList.contains('presenting')) scaleStage();
-    else fitNavPane();
+    else { fitNavPane(); fitBrowserStage(); }
   });
 
-  window.addEventListener('load', fitNavPane);
+  window.addEventListener('load', () => { fitNavPane(); fitBrowserStage(); });
 
   /* ── PDF Export ── */
   async function downloadPDF() {
@@ -8863,6 +8908,8 @@
   });
 
   showSlide(0);
+  fitNavPane();
+  fitBrowserStage();
 </script>
 
 </body>

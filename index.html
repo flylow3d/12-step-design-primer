@@ -8677,6 +8677,33 @@
     stage.style.marginBottom = '';
   }
 
+  /* Browse mode (non-fullscreen): scale the slide stage up so the deck looks
+     comfortable on big monitors instead of a tiny 780x660 box in the middle.
+     Capped between 1.0x (don't shrink) and 1.5x (don't go cartoon-large).
+     No-op while presenting — scaleStage() owns that path. */
+  function fitBrowserStage() {
+    const stage = document.getElementById('slide-stage');
+    if (!stage) return;
+    if (document.body.classList.contains('presenting')) return;
+    const slideW = 780;
+    const slideH = 660;
+    const reservedH = 140; // nav bar + body padding + breathing room
+    const reservedW = 60;
+    const vw = window.innerWidth - reservedW;
+    const vh = window.innerHeight - reservedH;
+    const fitScale = Math.min(vw / slideW, vh / slideH);
+    const scale = Math.max(1.0, Math.min(fitScale, 1.5));
+    if (Math.abs(scale - 1) < 0.01) {
+      stage.style.transform = '';
+      stage.style.transformOrigin = '';
+      stage.style.marginBottom = '';
+    } else {
+      stage.style.transform = 'scale(' + scale + ')';
+      stage.style.transformOrigin = 'top center';
+      stage.style.marginBottom = (slideH * (scale - 1)) + 'px';
+    }
+  }
+
   function togglePresentMenu(e) {
     if (e) e.stopPropagation();
     document.getElementById('present-menu').classList.toggle('open');
@@ -8723,15 +8750,16 @@
       document.body.classList.remove('presenting');
       document.body.classList.remove('widescreen');
       resetStage();
+      fitBrowserStage();
     }
   });
 
   window.addEventListener('resize', () => {
     if (document.body.classList.contains('presenting')) scaleStage();
-    else fitNavPane();
+    else { fitNavPane(); fitBrowserStage(); }
   });
 
-  window.addEventListener('load', fitNavPane);
+  window.addEventListener('load', () => { fitNavPane(); fitBrowserStage(); });
 
   /* ── PDF Export ── */
   async function downloadPDF() {
